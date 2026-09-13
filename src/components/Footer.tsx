@@ -5,10 +5,10 @@ import { Mail, MapPin } from "lucide-react";
 
 const footerLinks = {
   Company: [
-    { name: "About Us", href: "/about" },
+    { name: "About Us", href: "/about-us" },
     { name: "All Services", href: "/services" },
     { name: "FAQ", href: "/faq" },
-    { name: "Contact Us", href: "/contact" }
+    { name: "Contact Us", href: "/services/contact" }
   ],
   Services: [
     { name: "SEO", href: "/services/seo" },
