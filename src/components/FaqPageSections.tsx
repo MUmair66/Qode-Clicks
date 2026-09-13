@@ -135,7 +135,7 @@ export function FaqLayout() {
               className="w-full bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 rounded-full py-4 pl-14 pr-12 text-slate-900 dark:text-white placeholder:text-slate-500 focus:outline-none focus:border-cyan-400 transition-colors text-base"
             />
             {query && (
-              <button onClick={() => setQuery("")} className="absolute right-6 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white transition-colors">
+              <button onClick={() => setQuery("")} className="absolute right-6 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-900 dark:text-white transition-colors">
                 <X className="w-5 h-5" />
               </button>
             )}
@@ -169,7 +169,7 @@ export function FaqLayout() {
                   <li key={group.id}>
                     <a 
                       href={`#${group.id}`}
-                      className={`flex items-center justify-between px-4 py-2.5 rounded-lg text-sm transition-colors ${activeTab === group.id && !query ? 'bg-cyan-500/10 text-cyan-400 font-semibold' : 'text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-white'}`}
+                      className={`flex items-center justify-between px-4 py-2.5 rounded-lg text-sm transition-colors ${activeTab === group.id && !query ? 'bg-cyan-500/10 text-cyan-400 font-semibold' : 'text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:text-white'}`}
                       onClick={() => { setActiveTab(group.id); setQuery(""); }}
                     >
                       {group.category}
@@ -201,7 +201,7 @@ export function FaqLayout() {
               <div className="bg-slate-50 dark:bg-[#0a0d14] rounded-2xl p-12 text-center border border-slate-100 dark:border-white/5">
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Nothing matched that search.</h3>
                 <p className="text-slate-500 dark:text-slate-400 mb-8 max-w-md mx-auto">Try a shorter phrase, or ask us directly and we will answer within one working day.</p>
-                <Link href="/services/contact" className="inline-flex items-center justify-center gap-2 bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold rounded-full px-6 py-3 hover:bg-slate-200 transition-colors">
+                <Link href="/services/contact" className="inline-flex items-center justify-center gap-2 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white dark:bg-white dark:text-slate-900 font-bold rounded-full px-6 py-3 hover:bg-slate-200 transition-colors">
                   Ask a specialist
                 </Link>
               </div>

@@ -104,7 +104,7 @@ export function FilterablePortfolio() {
                 key={category}
                 onClick={() => setActiveTab(category)}
                 className={`relative rounded-full px-6 py-2.5 text-sm font-medium transition-colors ${
-                  activeTab === category ? "text-slate-950 font-bold" : "text-slate-500 dark:text-slate-400 hover:text-white"
+                  activeTab === category ? "text-slate-950 font-bold" : "text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:text-white"
                 }`}
               >
                 {activeTab === category && (

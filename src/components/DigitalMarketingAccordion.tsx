@@ -55,28 +55,27 @@ export function DigitalMarketingAccordion() {
           <p className="mt-5 text-lg text-slate-600 dark:text-slate-300">A proven framework to turn your website into a predictable revenue engine.</p>
         </div>
 
-        <div className="flex flex-col lg:flex-row h-[600px] lg:h-[450px] w-full gap-3">
+        <div className="flex flex-col lg:flex-row h-[750px] lg:h-[450px] w-full gap-3">
           {steps.map((step, index) => {
             const isHovered = hoveredIndex === index;
-            // Note: Not using icons in the center to match the purple design precisely, or we can keep it above the title.
-            // In the purple image there is no icon. I will remove the icon from the center to match the "purple pic" perfectly.
 
             return (
               <motion.div
                 key={step.num}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
+                onClick={() => setHoveredIndex(index)}
                 animate={{
                   flex: isHovered ? 4 : 1,
                 }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className={`relative overflow-hidden rounded-3xl cursor-pointer p-6 border border-slate-200 dark:border-white/10 ${
-                  isHovered ? "bg-cyan-950/40" : "bg-slate-50 dark:bg-white/[0.03]"
+                className={`relative overflow-hidden rounded-3xl cursor-pointer p-4 md:p-6 border transition-colors ${
+                  isHovered ? "bg-cyan-50 border-cyan-200 dark:bg-cyan-950/40 dark:border-cyan-900/50" : "bg-slate-50 border-slate-200 dark:bg-white/[0.03] dark:border-white/10"
                 }`}
               >
                 {/* Number at Top Left */}
-                <div className="absolute top-6 left-6 flex items-center justify-center">
-                  <span className="text-3xl font-bold text-slate-900 dark:text-white">{step.num}</span>
+                <div className="absolute top-4 left-4 md:top-6 md:left-6 flex items-center justify-center">
+                  <span className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">{step.num}</span>
                 </div>
                 
                 {/* Unhovered vertical text at the bottom */}
@@ -89,16 +88,27 @@ export function DigitalMarketingAccordion() {
                     {step.title}
                   </h3>
                 </motion.div>
+                
+                {/* Unhovered horizontal text at the right for mobile */}
+                <motion.div
+                  animate={{ opacity: isHovered ? 0 : 1 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute inset-y-0 right-4 left-16 flex lg:hidden items-center pointer-events-none"
+                >
+                  <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white truncate">
+                    {step.title}
+                  </h3>
+                </motion.div>
 
                 {/* Hovered content in the center */}
                 <motion.div
                   animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 20 }}
                   transition={{ duration: 0.3, delay: isHovered ? 0.2 : 0 }}
-                  className={`absolute inset-0 flex-col justify-center px-10 ${isHovered ? "flex" : "hidden"}`}
+                  className={`absolute inset-0 flex-col justify-center px-6 md:px-10 ${isHovered ? "flex" : "hidden"}`}
                 >
-                  <div className="max-w-md mx-auto w-full">
-                    <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">{step.title}</h3>
-                    <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">{step.desc}</p>
+                  <div className="max-w-md mx-auto w-full pt-10 lg:pt-0">
+                    <h3 className="text-xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2 md:mb-4">{step.title}</h3>
+                    <p className="text-sm md:text-base text-slate-700 dark:text-slate-300 leading-relaxed">{step.desc}</p>
                   </div>
                 </motion.div>
               </motion.div>

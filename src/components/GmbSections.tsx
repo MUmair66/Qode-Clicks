@@ -30,7 +30,7 @@ export function GmbHero() {
             Most GMB work stops at filling in fields. We optimise for the three things Google actually ranks on, then measure it with a geo-grid so you can see visibility across your whole service area rather than from wherever you happen to be standing.
           </p>
           <div className="flex flex-wrap gap-4 mb-12">
-            <a href="#quote" className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-900 dark:bg-cyan-400 px-8 py-4 text-sm font-semibold text-white dark:text-slate-950 transition hover:bg-slate-800 dark:hover:bg-cyan-300">
+            <a href="#quote" className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-100 dark:bg-slate-900 dark:bg-cyan-400 px-8 py-4 text-sm font-semibold text-slate-900 dark:text-white dark:text-slate-950 transition hover:bg-slate-800 dark:hover:bg-cyan-300">
               Get a free grid report
             </a>
             <a href="#geo" className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 dark:border-white/20 bg-transparent px-8 py-4 text-sm font-semibold text-slate-900 dark:text-white transition hover:bg-slate-50 dark:hover:bg-white/5">
@@ -108,7 +108,7 @@ export function GmbLogos() {
         <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Managing profiles for</p>
         <div className="flex flex-wrap items-center gap-8 md:gap-12">
           {logos.map(logo => (
-            <span key={logo} className="font-serif text-xl font-bold tracking-tight text-slate-400 dark:text-slate-500">{logo}</span>
+            <span key={logo} className="font-serif text-xl font-bold tracking-tight text-slate-500">{logo}</span>
           ))}
         </div>
       </div>

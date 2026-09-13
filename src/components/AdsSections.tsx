@@ -338,7 +338,7 @@ export function AdsAuditCTA() {
             </div>
           </div>
           <div className="flex flex-col gap-4 w-full lg:w-auto min-w-[280px]">
-            <Link href="#audit" className="bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold px-8 py-4 rounded-full text-center hover:scale-105 transition-transform">
+            <Link href="#audit" className="bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white dark:bg-white dark:text-slate-900 font-bold px-8 py-4 rounded-full text-center hover:scale-105 transition-transform">
               Get a free audit
             </Link>
           </div>

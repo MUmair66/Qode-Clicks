@@ -44,7 +44,7 @@ export function AnimatedServiceCard({ item, index }: { item: IconItem; index: nu
           {item.title}
         </h3>
         
-        <p className="text-sm leading-relaxed text-slate-500 dark:text-slate-400 transition-colors duration-300 group-hover:text-slate-300">
+        <p className="text-sm leading-relaxed text-slate-500 dark:text-slate-400 transition-colors duration-300 group-hover:text-slate-600 dark:text-slate-300">
           {item.description}
         </p>
 

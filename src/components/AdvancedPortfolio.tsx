@@ -102,7 +102,7 @@ export function AdvancedPortfolio() {
                     {project.desc}
                   </p>
                   <div className="flex justify-end">
-                    <Link href="#contact" className="group flex items-center gap-3 bg-slate-900 text-white dark:bg-white dark:text-slate-950 px-6 py-4 rounded-full font-semibold hover:bg-cyan-300 transition-colors">
+                    <Link href="#contact" className="group flex items-center gap-3 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white dark:bg-white dark:text-slate-950 px-6 py-4 rounded-full font-semibold hover:bg-cyan-300 transition-colors">
                       View Case Study
                       <div className="h-8 w-8 rounded-full bg-white dark:bg-slate-950 text-slate-900 dark:text-white flex items-center justify-center group-hover:bg-white group-hover:text-slate-950 transition-colors">
                          <ArrowUpRight className="h-4 w-4" />
