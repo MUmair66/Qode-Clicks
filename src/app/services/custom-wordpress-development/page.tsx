@@ -16,7 +16,7 @@ export default function WordPressPage() {
           
           {/* Left Text */}
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
-            <span className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-1.5 text-sm font-semibold text-cyan-300 mb-6">
+            <span className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-1.5 text-sm font-semibold text-cyan-600 dark:text-cyan-300 mb-6">
               Premium Web Engineering
             </span>
             <h1 className="text-5xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
@@ -134,7 +134,7 @@ export default function WordPressPage() {
               { icon: Search, title: "Technical SEO", desc: "Schema markup, dynamic XML sitemaps, and optimized canonical architecture." },
             ].map((feat, i) => (
               <div key={i} className="p-8 rounded-3xl bg-slate-50 dark:bg-white/[0.02] border border-slate-100 dark:border-white/5 hover:border-cyan-500/30 transition-colors">
-                <div className="w-12 h-12 rounded-xl bg-cyan-100 dark:bg-cyan-900/30 flex items-center justify-center text-cyan-400 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-cyan-100 dark:bg-cyan-900/30 flex items-center justify-center text-cyan-700 dark:text-cyan-400 mb-6">
                   <feat.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{feat.title}</h3>
@@ -168,9 +168,9 @@ export default function WordPressPage() {
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-6">Perfect for small businesses needing a fast, professional presence.</p>
               <div className="text-4xl font-bold text-slate-900 dark:text-white mb-8">$3,500+</div>
               <ul className="space-y-3 mb-8">
-                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-400 shrink-0" /> Up to 5 custom pages</li>
-                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-400 shrink-0" /> Contact forms & maps</li>
-                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-400 shrink-0" /> Basic SEO setup</li>
+                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-700 dark:text-cyan-400 shrink-0" /> Up to 5 custom pages</li>
+                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-700 dark:text-cyan-400 shrink-0" /> Contact forms & maps</li>
+                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-700 dark:text-cyan-400 shrink-0" /> Basic SEO setup</li>
               </ul>
               <button className="w-full py-3 rounded-xl border border-slate-300 dark:border-white/20 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors font-medium">Inquire</button>
             </div>
@@ -182,10 +182,10 @@ export default function WordPressPage() {
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-6">For growing companies that need dynamic content and lead generation.</p>
               <div className="text-4xl font-bold text-slate-900 dark:text-white mb-8">$7,500+</div>
               <ul className="space-y-3 mb-8">
-                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-400 shrink-0" /> Up to 15 custom pages</li>
-                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-400 shrink-0" /> 2 Custom Post Types</li>
-                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-400 shrink-0" /> Advanced animations</li>
-                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-400 shrink-0" /> CRM integrations</li>
+                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-700 dark:text-cyan-400 shrink-0" /> Up to 15 custom pages</li>
+                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-700 dark:text-cyan-400 shrink-0" /> 2 Custom Post Types</li>
+                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-700 dark:text-cyan-400 shrink-0" /> Advanced animations</li>
+                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-700 dark:text-cyan-400 shrink-0" /> CRM integrations</li>
               </ul>
               <button className="w-full py-3 rounded-xl bg-cyan-400 text-slate-950 hover:bg-white transition-colors font-bold">Inquire</button>
             </div>
@@ -196,9 +196,9 @@ export default function WordPressPage() {
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-6">Complex platforms, large migrations, and headless architecture.</p>
               <div className="text-4xl font-bold text-slate-900 dark:text-white mb-8">$15k+</div>
               <ul className="space-y-3 mb-8">
-                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-400 shrink-0" /> Unlimited pages</li>
-                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-400 shrink-0" /> Multi-language support</li>
-                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-400 shrink-0" /> Custom API integrations</li>
+                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-700 dark:text-cyan-400 shrink-0" /> Unlimited pages</li>
+                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-700 dark:text-cyan-400 shrink-0" /> Multi-language support</li>
+                <li className="flex gap-2 text-sm text-slate-600 dark:text-slate-300"><Check className="w-4 h-4 text-cyan-700 dark:text-cyan-400 shrink-0" /> Custom API integrations</li>
               </ul>
               <button className="w-full py-3 rounded-xl border border-slate-300 dark:border-white/20 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors font-medium">Inquire</button>
             </div>

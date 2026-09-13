@@ -12,7 +12,7 @@ export function AdsHero() {
         
         {/* Left Side */}
         <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
-          <p className="text-cyan-400 font-bold text-sm mb-6 uppercase tracking-wider">Google Ads Management</p>
+          <p className="text-cyan-700 dark:text-cyan-400 font-bold text-sm mb-6 uppercase tracking-wider">Google Ads Management</p>
           <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]">
             Ads run by the people who{" "}
             <motion.span 
@@ -204,7 +204,7 @@ export function AdsCampaignTypes() {
     <section id="campaigns" className="py-24 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d] border-t border-slate-100 dark:border-white/5">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 max-w-2xl">
-          <p className="text-cyan-400 font-semibold text-sm mb-3">Campaign types</p>
+          <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3">Campaign types</p>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
             Six campaign types we run, and when each is right.
           </h2>

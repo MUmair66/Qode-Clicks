@@ -16,7 +16,7 @@ export function ReviewSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">Client Success</p>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Client Success</p>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
               Don't just take our word for it.
             </h2>
@@ -27,11 +27,11 @@ export function ReviewSection() {
             <div className="flex gap-12">
               <div>
                 <p className="text-4xl font-bold text-slate-900 dark:text-white mb-2">95%</p>
-                <p className="text-sm text-slate-500 font-medium uppercase tracking-wider">Retention Rate</p>
+                <p className="text-sm text-slate-600 dark:text-slate-500 font-medium uppercase tracking-wider">Retention Rate</p>
               </div>
               <div>
                 <p className="text-4xl font-bold text-slate-900 dark:text-white mb-2">$5M+</p>
-                <p className="text-sm text-slate-500 font-medium uppercase tracking-wider">Ad Spend Managed</p>
+                <p className="text-sm text-slate-600 dark:text-slate-500 font-medium uppercase tracking-wider">Ad Spend Managed</p>
               </div>
             </div>
           </motion.div>
@@ -44,10 +44,10 @@ export function ReviewSection() {
             className="relative"
           >
             <div className="absolute -top-6 -left-6 z-0">
-              <Quote className="w-24 h-24 text-cyan-900/40" />
+              <Quote className="w-24 h-24 text-cyan-200 dark:text-cyan-900/40" />
             </div>
-            <div className="relative z-10 bg-slate-900/80 backdrop-blur-xl border border-slate-200 dark:border-white/10 p-10 md:p-12 rounded-3xl shadow-2xl">
-              <div className="flex gap-1 mb-8 text-amber-400">
+            <div className="relative z-10 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200 dark:border-white/10 p-10 md:p-12 rounded-3xl shadow-xl dark:shadow-2xl">
+              <div className="flex gap-1 mb-8 text-amber-500 dark:text-amber-400">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Star key={i} className="w-5 h-5 fill-current" />
                 ))}
@@ -56,12 +56,12 @@ export function ReviewSection() {
                 "QodeClick completely transformed our digital strategy. They didn't just build a website; they engineered a lead generation machine. Our cost per acquisition dropped by 40% in the first three months."
               </blockquote>
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-cyan-900 flex items-center justify-center text-xl font-bold text-cyan-300 border border-cyan-700/50">
+                <div className="w-14 h-14 rounded-full bg-cyan-100 dark:bg-cyan-900 flex items-center justify-center text-xl font-bold text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-700/50">
                   MC
                 </div>
                 <div>
                   <p className="text-slate-900 dark:text-white font-bold text-lg">Marcus Chen</p>
-                  <p className="text-cyan-400 text-sm">CMO, TechFlow Solutions</p>
+                  <p className="text-cyan-700 dark:text-cyan-400 text-sm">CMO, TechFlow Solutions</p>
                 </div>
               </div>
             </div>

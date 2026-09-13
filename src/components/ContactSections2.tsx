@@ -31,7 +31,7 @@ export function ContactTeam() {
               </div>
               <div>
                 <h3 className="font-bold text-slate-900 dark:text-white text-base">{t.name}</h3>
-                <p className="text-cyan-400 text-xs font-medium mb-2">{t.role}</p>
+                <p className="text-cyan-700 dark:text-cyan-400 text-xs font-medium mb-2">{t.role}</p>
                 <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{t.desc}</p>
               </div>
             </div>
@@ -55,7 +55,7 @@ export function ContactOffices() {
                 <p className="text-slate-500 text-xs font-bold uppercase tracking-wider mb-1">United States</p>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white">Frisco, Texas</h3>
               </div>
-              <a href="https://maps.google.com/?q=2500+Legacy+Drive+Frisco+TX" target="_blank" rel="noopener" className="text-cyan-400 text-sm hover:underline">
+              <a href="https://maps.google.com/?q=2500+Legacy+Drive+Frisco+TX" target="_blank" rel="noopener" className="text-cyan-700 dark:text-cyan-400 text-sm hover:underline">
                 Map
               </a>
             </div>
@@ -72,7 +72,7 @@ export function ContactOffices() {
                 <p className="text-slate-500 text-xs font-bold uppercase tracking-wider mb-1">Pakistan</p>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white">Lahore</h3>
               </div>
-              <a href="https://maps.google.com/?q=Arfa+Software+Technology+Park+Lahore" target="_blank" rel="noopener" className="text-cyan-400 text-sm hover:underline">
+              <a href="https://maps.google.com/?q=Arfa+Software+Technology+Park+Lahore" target="_blank" rel="noopener" className="text-cyan-700 dark:text-cyan-400 text-sm hover:underline">
                 Map
               </a>
             </div>
@@ -106,7 +106,7 @@ export function ContactDepartments() {
             <div key={i}>
               <h3 className="font-bold text-slate-900 dark:text-white text-base mb-2">{d.title}</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-3">{d.desc}</p>
-              <a href={`mailto:${d.email}`} className="text-cyan-400 text-sm hover:underline">
+              <a href={`mailto:${d.email}`} className="text-cyan-700 dark:text-cyan-400 text-sm hover:underline">
                 {d.email}
               </a>
             </div>

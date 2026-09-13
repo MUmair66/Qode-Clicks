@@ -106,7 +106,7 @@ export function LsaProcess() {
     <section className="py-24 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]" id="process">
       <div className="mx-auto max-w-7xl">
         <div className="bg-slate-50 dark:bg-[#0a0d14] rounded-[2.5rem] p-10 lg:p-16 border border-slate-200 dark:border-white/10 shadow-xl">
-          <p className="text-cyan-400 font-bold text-xs uppercase tracking-wider mb-4">Verification</p>
+          <p className="text-cyan-700 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider mb-4">Verification</p>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
             Getting you verified and live.
           </h2>
@@ -118,7 +118,7 @@ export function LsaProcess() {
             {steps.map((s, i) => (
               <div key={i} className="relative">
                 <div className="absolute -top-[47px] left-0 w-3 h-3 rounded-full bg-cyan-400" />
-                <p className="text-cyan-400 text-xs font-bold mb-2">Step {s.num}</p>
+                <p className="text-cyan-700 dark:text-cyan-400 text-xs font-bold mb-2">Step {s.num}</p>
                 <h3 className="font-bold text-slate-900 dark:text-white mb-2">{s.title}</h3>
                 <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{s.desc}</p>
               </div>
@@ -138,14 +138,14 @@ export function LsaProcess() {
           <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Two operational changes worth knowing</h3>
           <div className="grid lg:grid-cols-2 gap-6">
             <div className="bg-white dark:bg-[#11131a] border border-slate-100 dark:border-white/5 rounded-2xl p-8">
-              <span className="text-cyan-400 font-bold text-xs uppercase tracking-wider mb-3 block">From 1 October 2026</span>
+              <span className="text-cyan-700 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider mb-3 block">From 1 October 2026</span>
               <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Missed calls become billable</h4>
               <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
                 Google's updated call policy makes some missed calls and qualifying follow up calls billable. Answering the phone is now a direct cost control measure as well as a ranking factor. We include call handling recommendations in every engagement because of this.
               </p>
             </div>
             <div className="bg-white dark:bg-[#11131a] border border-slate-100 dark:border-white/5 rounded-2xl p-8">
-              <span className="text-cyan-400 font-bold text-xs uppercase tracking-wider mb-3 block">Since mid 2025</span>
+              <span className="text-cyan-700 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider mb-3 block">Since mid 2025</span>
               <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Reviews come from your Business Profile</h4>
               <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
                 There is no separate LSA review system any more. Your Google Business Profile reviews are your LSA reviews, which means review generation and profile management are now part of the same job rather than two.

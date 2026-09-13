@@ -40,7 +40,7 @@ export function AnimatedServiceCard({ item, index }: { item: IconItem; index: nu
           <Icon className="h-6 w-6" />
         </div>
         
-        <h3 className="mb-3 text-xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors duration-300 group-hover:text-cyan-300">
+        <h3 className="mb-3 text-xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors duration-300 group-hover:text-cyan-600 dark:hover:text-cyan-300">
           {item.title}
         </h3>
         

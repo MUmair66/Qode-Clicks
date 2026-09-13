@@ -117,9 +117,9 @@ export function FaqLayout() {
       {/* Hero & Search */}
       <section className="pt-28 pb-16 lg:pt-28 lg:pb-24 px-5 sm:px-6 lg:px-8 border-b border-slate-100 dark:border-white/5">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-cyan-400 font-semibold text-sm mb-4 uppercase tracking-wider">FAQ</p>
+          <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-4 uppercase tracking-wider">FAQ</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 dark:text-white mb-6 leading-tight">
-            Everything clients ask <span className="text-cyan-400">before</span> they sign.
+            Everything clients ask <span className="text-cyan-700 dark:text-cyan-400">before</span> they sign.
           </h1>
           <p className="text-lg text-slate-500 dark:text-slate-400 mb-12 max-w-2xl mx-auto">
             Pricing, contracts, timelines and how we actually work. If the answer is not here, ask us directly and we will add it.
@@ -169,7 +169,7 @@ export function FaqLayout() {
                   <li key={group.id}>
                     <a 
                       href={`#${group.id}`}
-                      className={`flex items-center justify-between px-4 py-2.5 rounded-lg text-sm transition-colors ${activeTab === group.id && !query ? 'bg-cyan-500/10 text-cyan-400 font-semibold' : 'text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:text-white'}`}
+                      className={`flex items-center justify-between px-4 py-2.5 rounded-lg text-sm transition-colors ${activeTab === group.id && !query ? 'bg-cyan-500/10 text-cyan-700 dark:text-cyan-400 font-semibold' : 'text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:text-white'}`}
                       onClick={() => { setActiveTab(group.id); setQuery(""); }}
                     >
                       {group.category}
@@ -192,7 +192,7 @@ export function FaqLayout() {
           {/* FAQ List */}
           <div>
             {query && (
-              <p className="text-cyan-400 text-sm font-semibold mb-8">
+              <p className="text-cyan-700 dark:text-cyan-400 text-sm font-semibold mb-8">
                 {totalMatches === 1 ? '1 question matches' : `${totalMatches} questions match`} "{query}"
               </p>
             )}
@@ -243,18 +243,18 @@ export function FaqLayout() {
       <section className="py-20 px-5 sm:px-6 lg:px-8 border-t border-slate-100 dark:border-white/5 bg-slate-100 dark:bg-[#080b12]">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-2xl">
-            <p className="text-cyan-400 font-semibold text-sm mb-3 uppercase tracking-wider">Still not answered</p>
+            <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3 uppercase tracking-wider">Still not answered</p>
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Three ways to get a real answer from a real person.</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-slate-50 dark:bg-[#0a0d14] rounded-2xl p-8 border border-slate-100 dark:border-white/5 group">
               <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
-                <Mail className="w-5 h-5 text-cyan-400" />
+                <Mail className="w-5 h-5 text-cyan-700 dark:text-cyan-400" />
               </div>
               <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-3">Email a specialist</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Straight to the team, not a shared inbox that nobody reads. Reply within one working day.</p>
-              <a href="mailto:hello@qodeclicks.com" className="text-cyan-400 font-bold text-sm hover:underline">hello@qodeclicks.com</a>
+              <a href="mailto:hello@qodeclicks.com" className="text-cyan-700 dark:text-cyan-400 font-bold text-sm hover:underline">hello@qodeclicks.com</a>
             </div>
             
             <div className="bg-slate-50 dark:bg-[#0a0d14] rounded-2xl p-8 border border-slate-100 dark:border-white/5 group">

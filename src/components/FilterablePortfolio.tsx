@@ -79,7 +79,7 @@ export function FilterablePortfolio() {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <div className="flex items-center gap-1 mb-4 text-cyan-300">
+            <div className="flex items-center gap-1 mb-4 text-cyan-600 dark:text-cyan-300">
               <Sparkles className="h-6 w-6 fill-current" />
               <Sparkles className="h-4 w-4 fill-current opacity-70" />
               <Sparkles className="h-3 w-3 fill-current opacity-40" />
@@ -148,7 +148,7 @@ export function FilterablePortfolio() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="mb-2 text-xl font-semibold text-slate-900 dark:text-white group-hover:text-cyan-300 transition-colors">
+                  <h3 className="mb-2 text-xl font-semibold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">

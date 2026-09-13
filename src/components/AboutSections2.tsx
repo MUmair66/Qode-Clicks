@@ -16,7 +16,7 @@ export function AboutTeam() {
     <section className="py-24 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 max-w-2xl">
-          <p className="text-cyan-400 font-semibold text-sm mb-3 uppercase tracking-wider">Leadership</p>
+          <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3 uppercase tracking-wider">Leadership</p>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
             Led by practitioners, not salespeople.
           </h2>
@@ -30,7 +30,7 @@ export function AboutTeam() {
             <div key={i} className="bg-slate-50 dark:bg-[#0a0d14] border border-slate-100 dark:border-white/5 rounded-2xl p-6 hover:bg-slate-100 dark:hover:bg-white/[0.02] transition-colors group shadow-lg">
               <div className="w-16 h-16 rounded-xl bg-slate-100 dark:bg-slate-800 mb-6 group-hover:scale-105 transition-transform"></div>
               <h3 className="font-bold text-slate-900 dark:text-white text-lg">{t.name}</h3>
-              <p className="text-cyan-400 text-sm font-medium mb-4">{t.role}</p>
+              <p className="text-cyan-700 dark:text-cyan-400 text-sm font-medium mb-4">{t.role}</p>
               <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{t.desc}</p>
             </div>
           ))}

@@ -56,7 +56,7 @@ export function PricingSection() {
     <section id="pricing" className="px-5 py-32 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">Investment</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Investment</p>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
             Clear pricing, no surprises.
           </h2>
@@ -75,8 +75,8 @@ export function PricingSection() {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className={`relative rounded-[2rem] p-8 md:p-10 ${
                 pkg.highlighted 
-                  ? "bg-gradient-to-b from-cyan-950/80 to-slate-900 border-2 border-cyan-400 shadow-2xl shadow-cyan-900/20 transform lg:-translate-y-4" 
-                  : "bg-slate-100/50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 hover:border-white/20 transition-colors"
+                  ? "bg-gradient-to-b from-cyan-50 to-white dark:from-cyan-950/80 dark:to-slate-900 border-2 border-cyan-400 shadow-xl dark:shadow-2xl shadow-cyan-900/10 dark:shadow-cyan-900/20 transform lg:-translate-y-4" 
+                  : "bg-slate-50/50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 hover:border-slate-300 dark:hover:border-white/20 transition-colors"
               }`}
             >
               {pkg.highlighted && (
@@ -108,7 +108,7 @@ export function PricingSection() {
               <div className="space-y-4">
                 {pkg.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <Check className={`w-5 h-5 shrink-0 ${pkg.highlighted ? "text-cyan-400" : "text-slate-500"}`} />
+                    <Check className={`w-5 h-5 shrink-0 ${pkg.highlighted ? "text-cyan-700 dark:text-cyan-400" : "text-slate-500"}`} />
                     <span className="text-slate-600 dark:text-slate-300 text-sm">{feature}</span>
                   </div>
                 ))}

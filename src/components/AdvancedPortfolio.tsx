@@ -14,7 +14,7 @@ const projects = [
     color: "bg-cyan-900/40",
     border: "border-cyan-500/30",
     icon: Search,
-    accent: "text-cyan-300"
+    accent: "text-cyan-600 dark:text-cyan-300"
   },
   {
     title: "E-Commerce Replatforming",
@@ -60,7 +60,7 @@ export function AdvancedPortfolio() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(34,211,238,0.08),transparent_50%)]" />
       
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 mb-24 text-center">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">Our Portfolio</p>
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Our Portfolio</p>
         <h2 className="text-4xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-6xl">Real Growth.<br />Engineered for Leaders.</h2>
       </div>
 

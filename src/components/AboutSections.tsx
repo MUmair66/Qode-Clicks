@@ -12,7 +12,7 @@ export function AboutHero() {
       
       <div className="mx-auto max-w-7xl relative z-10 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <p className="text-cyan-400 font-bold text-sm mb-6 uppercase tracking-wider">About Qode Clicks</p>
+          <p className="text-cyan-700 dark:text-cyan-400 font-bold text-sm mb-6 uppercase tracking-wider">About Qode Clicks</p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1] max-w-5xl mx-auto">
             We build for <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">revenue</span>,<br /> not just for show.
           </h1>
@@ -96,7 +96,7 @@ export function AboutValues() {
           {values.map((v, i) => (
             <div key={i} className="bg-slate-50 dark:bg-[#0a0d14] border border-slate-100 dark:border-white/5 rounded-2xl p-8 hover:bg-slate-100 dark:hover:bg-white/[0.02] transition-colors group shadow-lg">
               <div className="w-12 h-12 rounded-xl bg-blue-900/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <v.icon className="w-6 h-6 text-cyan-400" />
+                <v.icon className="w-6 h-6 text-cyan-700 dark:text-cyan-400" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{v.title}</h3>
               <p className="text-slate-500 dark:text-slate-400 leading-relaxed">{v.desc}</p>
@@ -114,7 +114,7 @@ export function AboutStory() {
       <div className="mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-cyan-400 font-semibold text-sm mb-3 uppercase tracking-wider">The Story</p>
+            <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3 uppercase tracking-wider">The Story</p>
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-8 tracking-tight leading-tight">
               Bridging the gap between engineering and marketing.
             </h2>
@@ -137,7 +137,7 @@ export function AboutStory() {
               <div className="grid gap-8">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center shrink-0">
-                    <LineChart className="w-5 h-5 text-cyan-400" />
+                    <LineChart className="w-5 h-5 text-cyan-700 dark:text-cyan-400" />
                   </div>
                   <div>
                     <h4 className="text-slate-900 dark:text-white font-bold mb-1">Performance first</h4>

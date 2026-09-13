@@ -12,7 +12,7 @@ export function SeoHero() {
         
         {/* Left Side */}
         <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
-          <p className="text-cyan-400 font-bold text-sm mb-6 uppercase tracking-wider">SEO Services</p>
+          <p className="text-cyan-700 dark:text-cyan-400 font-bold text-sm mb-6 uppercase tracking-wider">SEO Services</p>
           <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]">
             Rankings are not the goal. <br />
             <motion.span 
@@ -108,7 +108,7 @@ export function SeoReasons() {
     <section className="py-24 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 max-w-2xl">
-          <p className="text-cyan-400 font-semibold text-sm mb-3">The usual problem</p>
+          <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3">The usual problem</p>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
             Four reasons SEO stops working, in rough order of how often we see them.
           </h2>
@@ -157,7 +157,7 @@ export function SeoPillars() {
     <section className="py-24 px-5 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#080b12] border-t border-slate-100 dark:border-white/5">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 max-w-2xl">
-          <p className="text-cyan-400 font-semibold text-sm mb-3">How we split the work</p>
+          <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3">How we split the work</p>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
             Three pillars, weighted by what your site actually needs.
           </h2>
@@ -200,7 +200,7 @@ export function SeoDeliverables() {
     <section className="py-24 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 max-w-2xl">
-          <p className="text-cyan-400 font-semibold text-sm mb-3">What you get</p>
+          <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3">What you get</p>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
             Eight deliverables, every month.
           </h2>

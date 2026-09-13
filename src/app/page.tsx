@@ -213,7 +213,7 @@ function SectionIntro({
       transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       className="mx-auto max-w-3xl text-center"
     >
-      <p className={`mb-3 text-sm font-semibold uppercase tracking-[0.18em] ${tone === "dark" ? "text-cyan-300" : "text-teal-700"}`}>{eyebrow}</p>
+      <p className={`mb-3 text-sm font-semibold uppercase tracking-[0.18em] ${tone === "dark" ? "text-cyan-600 dark:text-cyan-300" : "text-teal-700"}`}>{eyebrow}</p>
       <h2 className={`text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl ${tone === "dark" ? "text-slate-900 dark:text-white" : "text-slate-950"}`}>
         {title}
       </h2>
@@ -245,7 +245,7 @@ function IconPanel({ item, index }: { item: IconItem; index: number }) {
           <Icon className="h-6 w-6" />
         </div>
         
-        <h3 className="mb-3 text-xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors duration-300 group-hover:text-cyan-300">
+        <h3 className="mb-3 text-xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors duration-300 group-hover:text-cyan-600 dark:hover:text-cyan-300">
           {item.title}
         </h3>
         
@@ -269,7 +269,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_0.88fr]">
           <motion.div initial="hidden" animate="visible" variants={fadeUp} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}>
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/[0.06] px-4 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 shadow-sm backdrop-blur">
-              <Sparkles className="h-4 w-4 text-cyan-300" />
+              <Sparkles className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
               Growth design for serious service businesses
             </div>
             <h1 className="text-balance text-5xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-6xl lg:text-7xl">
@@ -322,7 +322,7 @@ export default function Home() {
                 <div className="rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-slate-950/60 p-4">
                   <div className="mb-5 flex items-center justify-between">
                     <p className="text-sm font-semibold">Channel Mix</p>
-                    <LineChart className="h-4 w-4 text-cyan-300" />
+                    <LineChart className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
                   </div>
                   <div className="space-y-4">
                     {[
@@ -350,7 +350,7 @@ export default function Home() {
                 <div className="rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-slate-950/60 p-4">
                   <div className="mb-4 flex items-center justify-between">
                     <p className="text-sm font-semibold">Revenue Path</p>
-                    <TrendingUp className="h-4 w-4 text-cyan-300" />
+                    <TrendingUp className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
                   </div>
                   <div className="flex h-44 items-end gap-2">
                     {[36, 52, 44, 68, 61, 84, 74, 92, 88, 100].map((height, index) => (
@@ -403,7 +403,7 @@ export default function Home() {
         <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[600px] h-[600px] rounded-full bg-cyan-900/20 blur-[120px] pointer-events-none" />
         <div className="mx-auto max-w-7xl grid gap-12 lg:grid-cols-2 lg:items-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">About Us</p>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">About Us</p>
             <h2 className="text-balance text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-5xl">Architects of Digital Dominance.</h2>
             <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
               At QodeClick, we don't just build websites; we engineer comprehensive growth ecosystems. Our team of specialists seamlessly integrates modern <span className="text-slate-900 dark:text-white font-medium">WordPress Development</span> with data-driven <span className="text-slate-900 dark:text-white font-medium">SEO, Google Ads, and Meta Ads</span> strategies. 
@@ -430,7 +430,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4 h-full">
               <div className="flex flex-col gap-4 mt-8">
                 <div className="rounded-2xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 p-6 flex flex-col justify-center items-center text-center aspect-square shadow-lg backdrop-blur-sm transition-transform hover:-translate-y-2">
-                   <Target className="h-10 w-10 text-cyan-300 mb-4" />
+                   <Target className="h-10 w-10 text-cyan-600 dark:text-cyan-300 mb-4" />
                    <h3 className="font-semibold text-slate-900 dark:text-white">Precision Targeting</h3>
                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">Google & Meta Ads</p>
                 </div>
@@ -494,7 +494,7 @@ export default function Home() {
       <section className="bg-white dark:bg-[#05070d] px-5 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-center">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">Audit</p>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Audit</p>
             <h2 className="text-balance text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-5xl">Start with the leaks, not the guesswork.</h2>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
               The first sprint reviews positioning, UX, speed, tracking, search coverage, and campaign economics so the redesign solves the right problem.
@@ -505,7 +505,7 @@ export default function Home() {
               return (
                 <div key={label} className="flex items-center justify-between rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.045] p-4">
                   <div className="flex items-center gap-3">
-                    <AuditIcon className="h-5 w-5 text-cyan-300" />
+                    <AuditIcon className="h-5 w-5 text-cyan-600 dark:text-cyan-300" />
                     <span className="font-semibold text-slate-900 dark:text-white">{label}</span>
                   </div>
                   <BadgeCheck className="h-5 w-5 text-emerald-300" />
@@ -537,7 +537,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">Proof</p>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Proof</p>
               <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-5xl">Clients remember the clarity as much as the results.</h2>
             </div>
             <p className="text-lg leading-8 text-slate-600 dark:text-slate-300">
@@ -594,7 +594,7 @@ export default function Home() {
                 <div className="mt-7 space-y-3">
                   {plan.features.map((feature) => (
                     <div key={feature} className="flex items-center gap-3 text-sm font-medium text-slate-600 dark:text-slate-300">
-                      <Check className="h-4 w-4 text-cyan-300" />
+                      <Check className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
                       {feature}
                     </div>
                   ))}
@@ -608,7 +608,7 @@ export default function Home() {
       <section id="faq" className="bg-slate-50 dark:bg-[#07111b] px-5 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">FAQ</p>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">FAQ</p>
             <h2 className="text-balance text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-5xl">Answers before the first call.</h2>
           </div>
           <div className="space-y-3">
@@ -629,7 +629,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-cyan-300/20 bg-[linear-gradient(135deg,rgba(34,211,238,0.16),rgba(255,255,255,0.055)_38%,rgba(245,158,11,0.12))] p-1 shadow-2xl shadow-black/30">
           <div className="grid gap-8 rounded-[1.85rem] bg-white/[0.82] dark:bg-slate-950/[0.82] p-6 backdrop-blur-xl lg:grid-cols-[1fr_0.85fr] lg:p-10">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">Project CTA</p>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Project CTA</p>
               <h2 className="text-balance text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
                 Ready for a website that looks premium and sells clearly?
               </h2>
@@ -638,21 +638,21 @@ export default function Home() {
               </p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 <span className="inline-flex items-center gap-2 rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/[0.055] px-4 py-3 text-sm font-semibold text-slate-800 dark:text-slate-200">
-                  <CircleDollarSign className="h-4 w-4 text-cyan-300" />
+                  <CircleDollarSign className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
                   ROI-focused plans
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/[0.055] px-4 py-3 text-sm font-semibold text-slate-800 dark:text-slate-200">
-                  <ShieldCheck className="h-4 w-4 text-cyan-300" />
+                  <ShieldCheck className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
                   Clear reporting
                 </span>
               </div>
               <div className="mt-8 flex flex-col gap-3 text-sm text-slate-600 dark:text-slate-300 sm:flex-row sm:gap-6">
                 <span className="inline-flex items-center gap-2">
-                  <Mail className="h-4 w-4 text-cyan-300" />
+                  <Mail className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
                   hello@qodeclick.com
                 </span>
                 <span className="inline-flex items-center gap-2">
-                  <PhoneCall className="h-4 w-4 text-cyan-300" />
+                  <PhoneCall className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
                   Strategy call available
                 </span>
               </div>

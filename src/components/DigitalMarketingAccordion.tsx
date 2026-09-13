@@ -50,7 +50,7 @@ export function DigitalMarketingAccordion() {
     <section className="bg-white dark:bg-[#05070d] px-5 py-24 sm:px-6 lg:px-8 border-y border-slate-200 dark:border-white/10">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center max-w-3xl mx-auto">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">Our Methodology</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Our Methodology</p>
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-5xl">Digital Marketing Ecosystem</h2>
           <p className="mt-5 text-lg text-slate-600 dark:text-slate-300">A proven framework to turn your website into a predictable revenue engine.</p>
         </div>

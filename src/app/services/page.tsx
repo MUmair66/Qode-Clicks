@@ -69,7 +69,7 @@ export default function ServicesPage() {
             variants={fadeUp}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-300 backdrop-blur-sm mb-6">
+            <span className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-600 dark:text-cyan-300 backdrop-blur-sm mb-6">
               Our Capabilities
             </span>
             <h1 className="text-5xl font-bold tracking-tight sm:text-7xl mb-8">
@@ -114,10 +114,10 @@ export default function ServicesPage() {
               className="md:col-span-2 rounded-3xl border border-slate-200 dark:border-white/10 bg-gradient-to-br from-cyan-900/30 to-slate-900 p-8 flex flex-col justify-between overflow-hidden relative group"
             >
               <div className="absolute top-0 right-0 p-8 opacity-20 group-hover:opacity-40 transition-opacity">
-                <Code2 className="w-48 h-48 text-cyan-300" />
+                <Code2 className="w-48 h-48 text-cyan-600 dark:text-cyan-300" />
               </div>
               <div className="relative z-10">
-                <span className="text-cyan-300 font-semibold tracking-wider text-sm uppercase">Development</span>
+                <span className="text-cyan-600 dark:text-cyan-300 font-semibold tracking-wider text-sm uppercase">Development</span>
                 <h3 className="text-3xl font-bold mt-2">Next-Gen Web Architecture</h3>
               </div>
               <p className="relative z-10 text-slate-600 dark:text-slate-300 max-w-md">Lightning-fast, accessible, and conversion-optimized websites built on modern frameworks to ensure you never lose a lead to load times.</p>
@@ -182,7 +182,7 @@ export default function ServicesPage() {
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-cyan-500/20 rounded-full blur-[100px]" />
             <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-500/20 rounded-full blur-[100px]" />
 
-            <span className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-1.5 text-sm font-semibold text-cyan-300 mb-6">
+            <span className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-1.5 text-sm font-semibold text-cyan-600 dark:text-cyan-300 mb-6">
               Start Scaling Today
             </span>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">

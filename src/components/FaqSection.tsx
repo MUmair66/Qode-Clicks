@@ -34,7 +34,7 @@ export function FaqSection() {
     <section className="px-5 py-32 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#080b12] border-t border-slate-100 dark:border-white/5">
       <div className="mx-auto max-w-4xl">
         <div className="text-center mb-16">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">FAQ</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">FAQ</p>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
             Common questions.
           </h2>
@@ -55,11 +55,11 @@ export function FaqSection() {
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
-                  <span className={`text-lg font-bold pr-8 transition-colors ${isOpen ? "text-cyan-300" : "text-slate-900 dark:text-white"}`}>
+                  <span className={`text-lg font-bold pr-8 transition-colors ${isOpen ? "text-cyan-600 dark:text-cyan-300" : "text-slate-900 dark:text-white"}`}>
                     {faq.question}
                   </span>
                   <div className={`w-8 h-8 shrink-0 rounded-full flex items-center justify-center transition-colors ${
-                    isOpen ? "bg-cyan-900/50 text-cyan-300" : "bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400"
+                    isOpen ? "bg-cyan-900/50 text-cyan-600 dark:text-cyan-300" : "bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-slate-400"
                   }`}>
                     {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </div>

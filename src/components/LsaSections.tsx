@@ -142,7 +142,7 @@ export function LsaBadges() {
       <div className="mx-auto max-w-7xl">
         <div className="bg-slate-50 dark:bg-[#0a0d14] rounded-[2.5rem] p-10 lg:p-16 border border-slate-200 dark:border-white/10 shadow-2xl relative overflow-hidden">
           
-          <p className="text-cyan-400 font-bold text-xs uppercase tracking-wider mb-4">The badge</p>
+          <p className="text-cyan-700 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider mb-4">The badge</p>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight max-w-2xl">
             What happened to Google Guaranteed.
           </h2>
@@ -152,7 +152,7 @@ export function LsaBadges() {
 
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             <div className="bg-white dark:bg-[#11131a] border border-slate-100 dark:border-white/5 rounded-2xl p-8">
-              <span className="text-cyan-400 font-bold text-xs uppercase tracking-wider mb-4 block">United States</span>
+              <span className="text-cyan-700 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider mb-4 block">United States</span>
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Google Verified</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">
                 One badge across all categories, replacing the three that existed before. It appears on your Local Services Ad and on your Google Business Profile, alongside details of the specific checks your business passed.
@@ -171,7 +171,7 @@ export function LsaBadges() {
             </div>
             
             <div className="bg-white dark:bg-[#11131a] border border-slate-100 dark:border-white/5 rounded-2xl p-8">
-              <span className="text-cyan-400 font-bold text-xs uppercase tracking-wider mb-4 block">United Kingdom</span>
+              <span className="text-cyan-700 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider mb-4 block">United Kingdom</span>
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Google Guaranteed and Screened</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">
                 Google's UK marketing pages still display the older badges. Home services carry Google Guaranteed, legal and property carry Google Screened. UK setup documentation already references Google Verified, so the UK appears to be part way through the same transition.

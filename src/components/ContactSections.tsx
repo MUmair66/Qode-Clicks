@@ -9,9 +9,9 @@ export function ContactHero() {
     <section className="pt-28 pb-10 lg:pt-28 lg:pb-16 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
-          <p className="text-cyan-400 font-semibold text-sm mb-4 uppercase tracking-wider">Contact Us</p>
+          <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-4 uppercase tracking-wider">Contact Us</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 dark:text-white mb-6 leading-tight">
-            Tell us what is not working. <span className="text-cyan-400">We will be honest</span> about it.
+            Tell us what is not working. <span className="text-cyan-700 dark:text-cyan-400">We will be honest</span> about it.
           </h1>
           <p className="text-lg text-slate-500 dark:text-slate-400 mb-8 leading-relaxed max-w-2xl">
             Every enquiry goes to a specialist, not a sales rep working from a script. If we are not the right fit for the problem, we will say so and point you somewhere better.
@@ -111,9 +111,9 @@ export function ContactMain() {
             </div>
 
             <label className="flex items-start gap-3 cursor-pointer group mt-4">
-              <input type="checkbox" className="mt-0.5 w-4 h-4 rounded border-slate-300 dark:border-white/20 bg-slate-100 dark:bg-white/5 text-cyan-400 focus:ring-cyan-400" />
+              <input type="checkbox" className="mt-0.5 w-4 h-4 rounded border-slate-300 dark:border-white/20 bg-slate-100 dark:bg-white/5 text-cyan-700 dark:text-cyan-400 focus:ring-cyan-400" />
               <span className="text-sm text-slate-500 dark:text-slate-400 leading-snug">
-                I agree to Qode Clicks contacting me about this enquiry. Read our <Link href="/#contact" className="text-cyan-400 hover:underline">privacy policy</Link>.
+                I agree to Qode Clicks contacting me about this enquiry. Read our <Link href="/#contact" className="text-cyan-700 dark:text-cyan-400 hover:underline">privacy policy</Link>.
               </span>
             </label>
 
@@ -132,21 +132,21 @@ export function ContactMain() {
             <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6">Reach us directly</h3>
             <div className="space-y-6">
               <a href="mailto:hello@qodeclicks.com" className="flex items-start gap-4 group">
-                <Mail className="w-5 h-5 text-cyan-400 mt-0.5 shrink-0" />
+                <Mail className="w-5 h-5 text-cyan-700 dark:text-cyan-400 mt-0.5 shrink-0" />
                 <div>
                   <b className="block text-slate-900 dark:text-white font-medium mb-1 group-hover:text-cyan-400 transition-colors">hello@qodeclicks.com</b>
                   <span className="text-sm text-slate-500 dark:text-slate-400">New business and general enquiries</span>
                 </div>
               </a>
               <a href="tel:+13125550188" className="flex items-start gap-4 group">
-                <Phone className="w-5 h-5 text-cyan-400 mt-0.5 shrink-0" />
+                <Phone className="w-5 h-5 text-cyan-700 dark:text-cyan-400 mt-0.5 shrink-0" />
                 <div>
                   <b className="block text-slate-900 dark:text-white font-medium mb-1 group-hover:text-cyan-400 transition-colors">+1 312 555 0188</b>
                   <span className="text-sm text-slate-500 dark:text-slate-400">Mon to Fri, 9am to 6pm CT</span>
                 </div>
               </a>
               <Link href="/#contact" className="flex items-start gap-4 group">
-                <Calendar className="w-5 h-5 text-cyan-400 mt-0.5 shrink-0" />
+                <Calendar className="w-5 h-5 text-cyan-700 dark:text-cyan-400 mt-0.5 shrink-0" />
                 <div>
                   <b className="block text-slate-900 dark:text-white font-medium mb-1 group-hover:text-cyan-400 transition-colors">Book a 20 minute call</b>
                   <span className="text-sm text-slate-500 dark:text-slate-400">No deck, no discovery script</span>
@@ -182,7 +182,7 @@ export function ContactMain() {
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
               Three case studies with the numbers before and after, including what didn't go to plan.
             </p>
-            <Link href="/#projects" className="text-cyan-400 text-sm font-semibold hover:underline">
+            <Link href="/#projects" className="text-cyan-700 dark:text-cyan-400 text-sm font-semibold hover:underline">
               Read case studies &rarr;
             </Link>
           </div>
@@ -218,7 +218,7 @@ export function ContactSteps() {
           {steps.map((s, i) => (
             <div key={i} className="pl-6 border-l border-slate-200 dark:border-white/10 relative">
               <div className="absolute top-0 left-0 w-1 h-8 bg-cyan-500 -translate-x-[1px]" />
-              <p className="text-cyan-400 text-xs font-bold mb-2 uppercase tracking-wider">{s.t}</p>
+              <p className="text-cyan-700 dark:text-cyan-400 text-xs font-bold mb-2 uppercase tracking-wider">{s.t}</p>
               <h3 className="font-bold text-slate-900 dark:text-white text-base mb-2">{s.title}</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{s.desc}</p>
             </div>

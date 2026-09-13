@@ -262,7 +262,7 @@ export function SpeedCTA() {
       <div className="mx-auto max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-16 items-center">
           <div>
-            <p className="text-cyan-400 font-bold text-sm mb-4 uppercase tracking-wider">Speed</p>
+            <p className="text-cyan-700 dark:text-cyan-400 font-bold text-sm mb-4 uppercase tracking-wider">Speed</p>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
               Website slow? You are paying for visitors who leave before it loads.
             </h2>

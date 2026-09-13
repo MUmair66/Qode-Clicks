@@ -77,7 +77,7 @@ export function SeoCaseStudy() {
         
         <div className="bg-slate-50 dark:bg-[#0a0d14] border border-slate-200 dark:border-white/10 rounded-[2rem] p-8 lg:p-12 text-slate-900 dark:text-white grid lg:grid-cols-2 gap-12 items-center shadow-xl">
           <div>
-            <p className="text-cyan-400 text-sm font-medium mb-4 uppercase tracking-wide">B2B SaaS, workflow tools</p>
+            <p className="text-cyan-700 dark:text-cyan-400 text-sm font-medium mb-4 uppercase tracking-wide">B2B SaaS, workflow tools</p>
             <h3 className="text-3xl font-bold mb-6 leading-tight">
               Eighteen thousand keywords and nothing to land on
             </h3>
