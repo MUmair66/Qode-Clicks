@@ -553,16 +553,16 @@ export default function Home() {
               {reviewTrack.map((testimonial, index) => (
                 <figure
                   key={`${testimonial.name}-${index}`}
-                  className="min-h-[280px] w-[310px] shrink-0 rounded-2xl border border-white/15 bg-slate-50 dark:bg-white/[0.045] p-6 shadow-xl shadow-black/15 sm:w-[380px]"
+                  className="min-h-[280px] w-[310px] shrink-0 rounded-2xl border border-slate-200 dark:border-white/15 bg-slate-50 dark:bg-white/[0.045] p-6 shadow-xl shadow-slate-200/50 dark:shadow-black/15 sm:w-[380px]"
                 >
-                  <div className="mb-6 flex gap-1 text-amber-300">
+                  <div className="mb-6 flex gap-1 text-amber-500 dark:text-amber-300">
                     {Array.from({ length: 5 }).map((_, starIndex) => (
                       <Star key={starIndex} className="h-4 w-4 fill-current" />
                     ))}
                   </div>
-                  <blockquote className="text-base leading-8 text-slate-100">&ldquo;{testimonial.quote}&rdquo;</blockquote>
+                  <blockquote className="text-base leading-8 text-slate-700 dark:text-slate-100">&ldquo;{testimonial.quote}&rdquo;</blockquote>
                   <figcaption className="mt-8">
-                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="font-semibold text-slate-900 dark:text-white">{testimonial.name}</p>
                     <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{testimonial.role}</p>
                   </figcaption>
                 </figure>
