@@ -15,7 +15,8 @@ const footerLinks = {
     { name: "Google Ads", href: "/services/google-ads" },
     { name: "Local Services Ads", href: "/google-guarantee" },
     { name: "WordPress Development", href: "/services/custom-wordpress-development" },
-    { name: "GMB Optimization", href: "/services/gmb-optimization" }
+    { name: "GMB Optimization", href: "/services/gmb-optimization" },
+    { name: "AEO & GEO Services", href: "/services/aeo-geo" }
   ],
 };
 
