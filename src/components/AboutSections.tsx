@@ -17,7 +17,7 @@ export function AboutHero() {
             We build for <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">revenue</span>,<br /> not just for show.
           </h1>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-            We are a digital performance agency specializing in WordPress development, SEO, and paid media. We don't hide behind vanity metrics—we measure success by the bottom line.
+            We are a digital performance agency specializing in <Link href="/services/custom-wordpress-development" className="text-cyan-600 dark:text-cyan-400 hover:underline">WordPress development</Link>, <Link href="/services/seo" className="text-cyan-600 dark:text-cyan-400 hover:underline">SEO</Link>, and <Link href="/services/google-ads" className="text-cyan-600 dark:text-cyan-400 hover:underline">paid media</Link>. We don't hide behind vanity metrics—we measure success by the bottom line.
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center">
@@ -182,7 +182,7 @@ export function AboutCTA() {
             Ready to scale your business?
           </h2>
           <p className="text-blue-50 text-lg mb-10 max-w-2xl mx-auto relative z-10">
-            Whether you need a high-performance WordPress build, aggressive SEO, or profitable Google Ads management—we're ready to partner with you.
+            Whether you need a high-performance <Link href="/services/custom-wordpress-development" className="text-cyan-400 hover:underline">WordPress build</Link>, aggressive <Link href="/services/seo" className="text-cyan-400 hover:underline">SEO</Link>, or profitable <Link href="/services/google-ads" className="text-cyan-400 hover:underline">Google Ads management</Link>—we're ready to partner with you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
             <Link href="/services/contact" className="bg-blue-50 text-blue-600 dark:bg-white dark:text-blue-600 font-bold px-8 py-4 rounded-full hover:scale-105 transition-transform">

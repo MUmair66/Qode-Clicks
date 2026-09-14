@@ -167,7 +167,7 @@ export function AeoGeoTerms() {
         </div>
         
         <div className="mt-12 rounded-2xl bg-white dark:bg-slate-900 p-6 border-l-4 border-amber-500 text-sm text-slate-600 dark:text-slate-400">
-          In practice they overlap heavily and Google treats optimisation for its own generative features as part of ordinary SEO, stating that AI Overviews draw on the same ranking and quality systems as Search. That is why we do not sell GEO as a replacement for SEO. It is an extension of it.
+          In practice they overlap heavily and Google treats optimisation for its own generative features as part of ordinary SEO, stating that AI Overviews draw on the same ranking and quality systems as Search. That is why we do not sell GEO as a replacement for <Link href="/services/seo" className="text-cyan-600 dark:text-cyan-400 hover:underline">SEO</Link>. It is an extension of it.
         </div>
       </div>
     </section>
