@@ -39,7 +39,7 @@ type IconItem = {
   title: string;
   description: string;
   icon: LucideIcon;
-};
+ href?: string; };
 
 const fadeUp = {
   hidden: { opacity: 0, y: 36, filter: "blur(10px)" },
@@ -64,41 +64,49 @@ const services: IconItem[] = [
     title: "SEO",
     description: "Technical optimization, keyword strategy, content structure, and ranking improvements built for long-term organic growth.",
     icon: Search,
+    href: "/digital-marketing/seo",
   },
   {
-    title: "AEO/GEO",
+    title: "AI SEO",
     description: "Answer Engine and Generative Engine Optimization that helps your brand appear clearly in AI-powered discovery.",
     icon: Globe2,
+    href: "/digital-marketing/ai-seo",
   },
   {
-    title: "WordPress Development",
-    description: "Professional WordPress websites with responsive layouts, fast performance, clean UX, and easy content management.",
-    icon: Code2,
-  },
-  {
-    title: "Google Ads",
-    description: "High-intent search campaigns, landing page alignment, conversion tracking, and budget-focused optimization.",
-    icon: BarChart3,
-  },
-  {
-    title: "Meta Ads",
-    description: "Facebook and Instagram campaigns designed around creative testing, retargeting, and predictable lead flow.",
-    icon: Megaphone,
-  },
-  {
-    title: "GMB Optimization",
+    title: "Google Business Profile",
     description: "Google Business Profile setup, local visibility improvements, review strategy, and map-pack optimization.",
     icon: MapPin,
+    href: "/digital-marketing/google-business-profile",
   },
   {
     title: "Content Writing",
     description: "SEO-friendly website copy, blogs, landing pages, and service content written to inform and convert.",
     icon: PenLine,
+    href: "/digital-marketing/content-writing",
   },
   {
-    title: "Social Media Marketing",
-    description: "Content planning, platform positioning, campaign ideas, and social execution for stronger brand awareness.",
-    icon: Share2,
+    title: "Google Ads",
+    description: "High-intent search campaigns, landing page alignment, conversion tracking, and budget-focused optimization.",
+    icon: BarChart3,
+    href: "/ppc/google-ads",
+  },
+  {
+    title: "Google Guaranteed",
+    description: "Earn the ultimate trust badge from Google. Build credibility and appear at the top of search results.",
+    icon: ShieldCheck,
+    href: "/ppc/google-guaranteed",
+  },
+  {
+    title: "Custom Web Apps",
+    description: "Enterprise-grade web applications built from scratch using React, Next.js, and Node.js.",
+    icon: Layers3,
+    href: "/website-development/custom-web-apps",
+  },
+  {
+    title: "WordPress Development",
+    description: "Professional WordPress websites with responsive layouts, fast performance, clean UX, and easy content management.",
+    icon: Code2,
+    href: "/website-development/wordpress",
   },
 ];
 
@@ -406,10 +414,10 @@ export default function Home() {
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">About Us</p>
             <h2 className="text-balance text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-5xl">Architects of Digital Dominance.</h2>
             <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
-              At QodeClick, we don't just build websites; we engineer comprehensive growth ecosystems. Our team of specialists seamlessly integrates modern <Link href="/services/custom-wordpress-development" className="text-cyan-600 dark:text-cyan-400 font-medium hover:underline">WordPress Development</Link> with data-driven <Link href="/services/seo" className="text-cyan-600 dark:text-cyan-400 font-medium hover:underline">SEO</Link>, <Link href="/services/google-ads" className="text-cyan-600 dark:text-cyan-400 font-medium hover:underline">Google Ads</Link>, and Meta Ads strategies. 
+              At QodeClick, we don't just build websites; we engineer comprehensive growth ecosystems. Our team of specialists seamlessly integrates modern <Link href="/website-development/wordpress" className="text-cyan-600 dark:text-cyan-400 font-medium hover:underline">WordPress Development</Link> with data-driven <Link href="/digital-marketing/seo" className="text-cyan-600 dark:text-cyan-400 font-medium hover:underline">SEO</Link>, <Link href="/ppc/google-ads" className="text-cyan-600 dark:text-cyan-400 font-medium hover:underline">Google Ads</Link>, and Meta Ads strategies. 
             </p>
             <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-300">
-              By staying ahead of the curve with <Link href="/services/aeo-geo" className="text-cyan-600 dark:text-cyan-400 font-medium hover:underline">AEO/GEO optimization</Link> and compelling <Link href="/services/content-writing" className="text-cyan-600 dark:text-cyan-400 font-medium hover:underline">Content Writing</Link>, alongside targeted <span className="text-slate-900 dark:text-white font-medium">Social Media Marketing</span> and <Link href="/services/gmb-optimization" className="text-cyan-600 dark:text-cyan-400 font-medium hover:underline">GMB Optimization</Link>, we turn your brand into a market leader.
+              By staying ahead of the curve with <Link href="/digital-marketing/ai-seo" className="text-cyan-600 dark:text-cyan-400 font-medium hover:underline">AI SEO</Link> and compelling <Link href="/digital-marketing/content-writing" className="text-cyan-600 dark:text-cyan-400 font-medium hover:underline">Content Writing</Link>, alongside targeted <span className="text-slate-900 dark:text-white font-medium">Social Media Marketing</span> and <Link href="/digital-marketing/google-business-profile" className="text-cyan-600 dark:text-cyan-400 font-medium hover:underline">Google Business Profile</Link>, we turn your brand into a market leader.
             </p>
             <div className="mt-8 grid grid-cols-2 gap-4">
               {[
@@ -649,19 +657,16 @@ export default function Home() {
               <div className="mt-8 flex flex-col gap-3 text-sm text-slate-600 dark:text-slate-300 sm:flex-row sm:gap-6">
                 <span className="inline-flex items-center gap-2">
                   <Mail className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
-                  hello@qodeclick.com
+                  info@qodeclicks.com
                 </span>
-                <span className="inline-flex items-center gap-2">
-                  <PhoneCall className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
-                  Strategy call available
-                </span>
+                
               </div>
             </div>
-            <form className="grid gap-4 rounded-3xl border border-slate-200 dark:border-white/10 bg-white/[0.06] p-5">
+            <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="grid gap-4 rounded-3xl border border-slate-200 dark:border-white/10 bg-white/[0.06] p-5">
               <input className="h-[52px] rounded-xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-slate-950/70 px-4 text-sm text-slate-900 dark:text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/70" placeholder="Name" />
               <input className="h-[52px] rounded-xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-slate-950/70 px-4 text-sm text-slate-900 dark:text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/70" placeholder="Email" />
               <input className="h-[52px] rounded-xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-slate-950/70 px-4 text-sm text-slate-900 dark:text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/70" placeholder="Website" />
-              <textarea className="min-h-[128px] rounded-xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-slate-950/70 p-4 text-sm text-slate-900 dark:text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/70" placeholder="What do you want to improve?" />
+              <textarea name="message" className="min-h-[128px] rounded-xl border border-slate-200 dark:border-white/10 bg-white/70 dark:bg-slate-950/70 p-4 text-sm text-slate-900 dark:text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/70" placeholder="What do you want to improve?" />
               <button className="inline-flex h-[52px] items-center justify-center gap-2 rounded-xl bg-cyan-300 px-5 text-sm font-semibold text-slate-950 transition hover:bg-white">
                 Request Proposal
                 <ArrowRight className="h-4 w-4" />

@@ -17,11 +17,11 @@ export function AboutHero() {
             We build for <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">revenue</span>,<br /> not just for show.
           </h1>
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-            We are a digital performance agency specializing in <Link href="/services/custom-wordpress-development" className="text-cyan-600 dark:text-cyan-400 hover:underline">WordPress development</Link>, <Link href="/services/seo" className="text-cyan-600 dark:text-cyan-400 hover:underline">SEO</Link>, and <Link href="/services/google-ads" className="text-cyan-600 dark:text-cyan-400 hover:underline">paid media</Link>. We don't hide behind vanity metrics—we measure success by the bottom line.
+            We are a digital performance agency specializing in <Link href="/website-development/wordpress" className="text-cyan-600 dark:text-cyan-400 hover:underline">WordPress development</Link>, <Link href="/digital-marketing/seo" className="text-cyan-600 dark:text-cyan-400 hover:underline">SEO</Link>, and <Link href="/ppc/google-ads" className="text-cyan-600 dark:text-cyan-400 hover:underline">paid media</Link>. We don't hide behind vanity metrics—we measure success by the bottom line.
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/services" className="rounded-full bg-blue-600 px-8 py-4 text-slate-900 dark:text-white font-bold hover:bg-blue-500 transition-colors text-lg inline-flex items-center gap-2">
+            <Link href="/" className="rounded-full bg-blue-600 px-8 py-4 text-slate-900 dark:text-white font-bold hover:bg-blue-500 transition-colors text-lg inline-flex items-center gap-2">
               Explore our services <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -182,13 +182,13 @@ export function AboutCTA() {
             Ready to scale your business?
           </h2>
           <p className="text-blue-50 text-lg mb-10 max-w-2xl mx-auto relative z-10">
-            Whether you need a high-performance <Link href="/services/custom-wordpress-development" className="text-cyan-400 hover:underline">WordPress build</Link>, aggressive <Link href="/services/seo" className="text-cyan-400 hover:underline">SEO</Link>, or profitable <Link href="/services/google-ads" className="text-cyan-400 hover:underline">Google Ads management</Link>—we're ready to partner with you.
+            Whether you need a high-performance <Link href="/website-development/wordpress" className="text-cyan-400 hover:underline">WordPress build</Link>, aggressive <Link href="/digital-marketing/seo" className="text-cyan-400 hover:underline">SEO</Link>, or profitable <Link href="/ppc/google-ads" className="text-cyan-400 hover:underline">Google Ads management</Link>—we're ready to partner with you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-            <Link href="/services/contact" className="bg-blue-50 text-blue-600 dark:bg-white dark:text-blue-600 font-bold px-8 py-4 rounded-full hover:scale-105 transition-transform">
+            <Link href="/contact" className="bg-blue-50 text-blue-600 dark:bg-white dark:text-blue-600 font-bold px-8 py-4 rounded-full hover:scale-105 transition-transform">
               Book a Strategy Call
             </Link>
-            <Link href="/services" className="bg-transparent text-slate-900 dark:text-white border-2 border-white/30 font-bold px-8 py-4 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
+            <Link href="/" className="bg-transparent text-slate-900 dark:text-white border-2 border-white/30 font-bold px-8 py-4 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
               View Our Services
             </Link>
           </div>

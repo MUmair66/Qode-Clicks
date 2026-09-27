@@ -12,7 +12,7 @@ export function AeoGeoHero() {
         <div className="mb-8 flex items-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400">
           <Link href="/" className="hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors">Home</Link>
           <ChevronRight className="w-4 h-4" />
-          <Link href="/services" className="hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors">Services</Link>
+          <Link href="/" className="hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors">Services</Link>
           <ChevronRight className="w-4 h-4" />
           <span className="text-slate-900 dark:text-white">AEO and GEO</span>
         </div>
@@ -71,26 +71,26 @@ export function AeoGeoHero() {
               We run a set of real buying questions from your category across six AI surfaces and send you what they say, who they cite, and whether you appear at all.
             </p>
 
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="space-y-5" onSubmit={(e) => e.preventDefault()}>
               <div>
                 <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Your name</label>
-                <input type="text" placeholder="Priya Raman" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <input name="name" type="text" placeholder="Priya Raman" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Work email</label>
-                <input type="email" placeholder="priya@company.com" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <input name="email" type="email" placeholder="priya@company.com" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Website</label>
-                <input type="url" placeholder="company.com" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <input name="website" type="url" placeholder="company.com" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">What do you sell, in a sentence</label>
-                <input type="text" placeholder="Workflow software for logistics teams" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <input name="name" type="text" placeholder="Workflow software for logistics teams" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Main competitors, comma separated</label>
-                <input type="text" placeholder="Competitor A, Competitor B" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <input name="name" type="text" placeholder="Competitor A, Competitor B" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
               </div>
               <button className="w-full rounded-xl bg-cyan-600 dark:bg-cyan-500 py-3.5 text-sm font-bold text-white transition-colors hover:bg-cyan-700 dark:hover:bg-cyan-400">
                 Send me the report
@@ -167,7 +167,7 @@ export function AeoGeoTerms() {
         </div>
         
         <div className="mt-12 rounded-2xl bg-white dark:bg-slate-900 p-6 border-l-4 border-amber-500 text-sm text-slate-600 dark:text-slate-400">
-          In practice they overlap heavily and Google treats optimisation for its own generative features as part of ordinary SEO, stating that AI Overviews draw on the same ranking and quality systems as Search. That is why we do not sell GEO as a replacement for <Link href="/services/seo" className="text-cyan-600 dark:text-cyan-400 hover:underline">SEO</Link>. It is an extension of it.
+          In practice they overlap heavily and Google treats optimisation for its own generative features as part of ordinary SEO, stating that AI Overviews draw on the same ranking and quality systems as Search. That is why we do not sell GEO as a replacement for <Link href="/digital-marketing/seo" className="text-cyan-600 dark:text-cyan-400 hover:underline">SEO</Link>. It is an extension of it.
         </div>
       </div>
     </section>

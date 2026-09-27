@@ -236,7 +236,7 @@ export function LsaCompare() {
           </table>
         </div>
         <p className="text-sm text-slate-500 mt-6">
-          One thing people assume wrongly: Local Services Ads appear on Google Search, not inside Google Maps. Advertising on the map itself runs through location assets and store goal campaigns, which is covered on the <Link href="/services/google-ads" className="text-blue-400 hover:underline">Google Ads page</Link>.
+          One thing people assume wrongly: Local Services Ads appear on Google Search, not inside Google Maps. Advertising on the map itself runs through location assets and store goal campaigns, which is covered on the <Link href="/ppc/google-ads" className="text-blue-400 hover:underline">Google Ads page</Link>.
         </p>
       </div>
     </section>
@@ -351,7 +351,7 @@ export function LsaPricing() {
         </div>
         
         <p className="text-sm text-slate-500 mt-10">
-          Running standard Google Ads too? Take the combined retainer on the <Link href="/services/google-ads" className="text-blue-400 hover:underline">Google Ads page</Link> instead of paying for both separately. Three month minimum, then rolling with thirty days notice.
+          Running standard Google Ads too? Take the combined retainer on the <Link href="/ppc/google-ads" className="text-blue-400 hover:underline">Google Ads page</Link> instead of paying for both separately. Three month minimum, then rolling with thirty days notice.
         </p>
       </div>
     </section>

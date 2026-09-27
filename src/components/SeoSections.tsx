@@ -62,18 +62,18 @@ export function SeoHero() {
               A specialist reviews your site, then sends a written document covering what is broken, what it is costing you, and what we would fix first.
             </p>
             
-            <form className="space-y-5 relative z-10">
+            <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="space-y-5 relative z-10">
               <div className="space-y-1.5">
                 <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Your name</label>
-                <input type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Priya Raman" />
+                <input name="name" type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Priya Raman" />
               </div>
               <div className="space-y-1.5">
                 <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Work email</label>
-                <input type="email" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="priya@company.com" />
+                <input name="email" type="email" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="priya@company.com" />
               </div>
               <div className="space-y-1.5">
                 <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Website</label>
-                <input type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="company.com" />
+                <input name="name" type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="company.com" />
               </div>
               <div className="space-y-1.5">
                 <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Main goal</label>

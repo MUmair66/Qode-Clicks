@@ -63,18 +63,18 @@ export function LsaHero() {
               Tell us your trade and your city. We confirm within a day whether your category is covered in your market, which badge applies and what Google will ask for.
             </p>
             
-            <form className="space-y-5 relative z-10">
+            <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="space-y-5 relative z-10">
               <div className="space-y-1.5">
                 <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Your name</label>
-                <input type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="Priya Raman" />
+                <input name="name" type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="Priya Raman" />
               </div>
               <div className="space-y-1.5">
                 <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Work email</label>
-                <input type="email" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="priya@company.com" />
+                <input name="email" type="email" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="priya@company.com" />
               </div>
               <div className="space-y-1.5">
                 <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Business name</label>
-                <input type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="Raman Plumbing" />
+                <input name="name" type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="Raman Plumbing" />
               </div>
               <div className="space-y-1.5">
                 <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Market</label>
@@ -86,11 +86,11 @@ export function LsaHero() {
               </div>
               <div className="space-y-1.5">
                 <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Trade or category</label>
-                <input type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="Plumber, family lawyer, dentist" />
+                <input name="name" type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="Plumber, family lawyer, dentist" />
               </div>
               <div className="space-y-1.5">
                 <label className="text-sm font-medium text-slate-600 dark:text-slate-300">City or service area</label>
-                <input type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="Dallas TX, or Manchester" />
+                <input name="name" type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors" placeholder="Dallas TX, or Manchester" />
               </div>
               <button type="button" className="w-full bg-blue-600 hover:bg-blue-500 text-slate-900 dark:text-white font-bold rounded-xl px-4 py-4 transition-colors mt-4 text-lg">
                 Check my eligibility

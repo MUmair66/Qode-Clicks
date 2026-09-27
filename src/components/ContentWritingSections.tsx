@@ -13,7 +13,7 @@ export function ContentHero() {
         <div className="mb-8 flex items-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400">
           <Link href="/" className="hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors">Home</Link>
           <ChevronRight className="w-4 h-4" />
-          <Link href="/services" className="hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors">Services</Link>
+          <Link href="/" className="hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors">Services</Link>
           <ChevronRight className="w-4 h-4" />
           <span className="text-slate-900 dark:text-white">Content Writing</span>
         </div>
@@ -72,18 +72,18 @@ export function ContentHero() {
               Send us the site. We will tell you which existing pages to rewrite, which to merge, which to delete, and what is actually worth commissioning new.
             </p>
 
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="space-y-5" onSubmit={(e) => e.preventDefault()}>
               <div>
                 <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Your name</label>
-                <input type="text" placeholder="Priya Raman" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <input name="name" type="text" placeholder="Priya Raman" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Work email</label>
-                <input type="email" placeholder="priya@company.com" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <input name="email" type="email" placeholder="priya@company.com" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Website</label>
-                <input type="url" placeholder="company.com" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <input name="website" type="url" placeholder="company.com" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">What do you need most</label>

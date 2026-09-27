@@ -47,26 +47,26 @@ export function ContactMain() {
             The more you tell us, the more specific the reply. Everything except the message is optional if you would rather keep it short.
           </p>
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="space-y-6">
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Your name</label>
-                <input type="text" className="w-full bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Priya Raman" />
+                <input name="name" type="text" className="w-full bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Priya Raman" />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Work email</label>
-                <input type="email" className="w-full bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="priya@company.com" />
+                <input name="email" type="email" className="w-full bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="priya@company.com" />
               </div>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Website</label>
-                <input type="url" className="w-full bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="company.com" />
+                <input name="website" type="url" className="w-full bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="company.com" />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Phone <span className="text-slate-500 font-normal ml-1">optional</span></label>
-                <input type="tel" className="w-full bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="+1 555 0100" />
+                <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Phone </label>
+                <input name="phone" type="tel" className="w-full bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="+1 555 0100" />
               </div>
             </div>
 
@@ -107,7 +107,7 @@ export function ContactMain() {
 
             <div className="space-y-2">
               <label className="text-sm font-medium text-slate-600 dark:text-slate-300">What is the problem you want solved</label>
-              <textarea className="w-full bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors min-h-[140px]" placeholder="Leads have been flat for six months. We spend around $8,000 on Google Ads and cannot tell which campaigns are producing anything..."></textarea>
+              <textarea name="message" className="w-full bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors min-h-[140px]" placeholder="Leads have been flat for six months. We spend around $8,000 on Google Ads and cannot tell which campaigns are producing anything..."></textarea>
             </div>
 
             <label className="flex items-start gap-3 cursor-pointer group mt-4">
@@ -131,20 +131,14 @@ export function ContactMain() {
           <div>
             <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6">Reach us directly</h3>
             <div className="space-y-6">
-              <a href="mailto:hello@qodeclicks.com" className="flex items-start gap-4 group">
+              <a href="mailto:info@qodeclicks.com" className="flex items-start gap-4 group">
                 <Mail className="w-5 h-5 text-cyan-700 dark:text-cyan-400 mt-0.5 shrink-0" />
                 <div>
-                  <b className="block text-slate-900 dark:text-white font-medium mb-1 group-hover:text-cyan-400 transition-colors">hello@qodeclicks.com</b>
+                  <b className="block text-slate-900 dark:text-white font-medium mb-1 group-hover:text-cyan-400 transition-colors">info@qodeclicks.com</b>
                   <span className="text-sm text-slate-500 dark:text-slate-400">New business and general enquiries</span>
                 </div>
               </a>
-              <a href="tel:+13125550188" className="flex items-start gap-4 group">
-                <Phone className="w-5 h-5 text-cyan-700 dark:text-cyan-400 mt-0.5 shrink-0" />
-                <div>
-                  <b className="block text-slate-900 dark:text-white font-medium mb-1 group-hover:text-cyan-400 transition-colors">+1 312 555 0188</b>
-                  <span className="text-sm text-slate-500 dark:text-slate-400">Mon to Fri, 9am to 6pm CT</span>
-                </div>
-              </a>
+              
               <Link href="/#contact" className="flex items-start gap-4 group">
                 <Calendar className="w-5 h-5 text-cyan-700 dark:text-cyan-400 mt-0.5 shrink-0" />
                 <div>

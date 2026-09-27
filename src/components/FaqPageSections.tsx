@@ -127,7 +127,7 @@ export function FaqLayout() {
 
           <div className="relative max-w-2xl mx-auto mb-8">
             <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
-            <input 
+            <input name="name" 
               type="text" 
               value={query}
               onChange={(e) => setQuery(e.target.value)}
@@ -183,7 +183,7 @@ export function FaqLayout() {
             <div className="bg-slate-50 dark:bg-[#0a0d14] rounded-xl p-6 border border-slate-100 dark:border-white/5">
               <strong className="block text-slate-900 dark:text-white font-bold mb-2">Still stuck?</strong>
               <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">Email a specialist directly. We reply within one working day.</p>
-              <Link href="/services/contact" className="inline-block border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white text-sm font-semibold rounded-full px-5 py-2 hover:bg-white hover:text-slate-900 transition-colors">
+              <Link href="/contact" className="inline-block border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white text-sm font-semibold rounded-full px-5 py-2 hover:bg-white hover:text-slate-900 transition-colors">
                 Email us
               </Link>
             </div>
@@ -201,7 +201,7 @@ export function FaqLayout() {
               <div className="bg-slate-50 dark:bg-[#0a0d14] rounded-2xl p-12 text-center border border-slate-100 dark:border-white/5">
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Nothing matched that search.</h3>
                 <p className="text-slate-500 dark:text-slate-400 mb-8 max-w-md mx-auto">Try a shorter phrase, or ask us directly and we will answer within one working day.</p>
-                <Link href="/services/contact" className="inline-flex items-center justify-center gap-2 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white dark:bg-white dark:text-slate-900 font-bold rounded-full px-6 py-3 hover:bg-slate-200 transition-colors">
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white dark:bg-white dark:text-slate-900 font-bold rounded-full px-6 py-3 hover:bg-slate-200 transition-colors">
                   Ask a specialist
                 </Link>
               </div>
@@ -254,7 +254,7 @@ export function FaqLayout() {
               </div>
               <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-3">Email a specialist</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Straight to the team, not a shared inbox that nobody reads. Reply within one working day.</p>
-              <a href="mailto:hello@qodeclicks.com" className="text-cyan-700 dark:text-cyan-400 font-bold text-sm hover:underline">hello@qodeclicks.com</a>
+              <a href="mailto:info@qodeclicks.com" className="text-cyan-700 dark:text-cyan-400 font-bold text-sm hover:underline">info@qodeclicks.com</a>
             </div>
             
             <div className="bg-slate-50 dark:bg-[#0a0d14] rounded-2xl p-8 border border-slate-100 dark:border-white/5 group">
@@ -263,7 +263,7 @@ export function FaqLayout() {
               </div>
               <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-3">Book a 20 minute call</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">No deck, no discovery script. Tell us the problem and we will tell you whether we can help.</p>
-              <Link href="/services/contact" className="text-blue-400 font-bold text-sm hover:underline">Pick a time</Link>
+              <Link href="/contact" className="text-blue-400 font-bold text-sm hover:underline">Pick a time</Link>
             </div>
             
             <div className="bg-slate-50 dark:bg-[#0a0d14] rounded-2xl p-8 border border-slate-100 dark:border-white/5 group">
@@ -272,7 +272,7 @@ export function FaqLayout() {
               </div>
               <h3 className="font-bold text-slate-900 dark:text-white text-lg mb-3">Get the free audit</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">The fastest way to a specific answer about your account rather than a general one.</p>
-              <Link href="/services/contact" className="text-emerald-400 font-bold text-sm hover:underline">Request an audit</Link>
+              <Link href="/contact" className="text-emerald-400 font-bold text-sm hover:underline">Request an audit</Link>
             </div>
           </div>
         </div>
@@ -289,7 +289,7 @@ export function FaqLayout() {
               Send us the site and a specialist will reply with what is actually worth fixing first, in order, with what it would cost.
             </p>
             <div className="flex flex-wrap justify-center gap-4 relative z-10">
-              <Link href="/services/contact" className="bg-blue-50 text-blue-600 dark:bg-white dark:text-blue-600 font-bold px-8 py-3.5 rounded-full hover:scale-105 transition-transform">
+              <Link href="/contact" className="bg-blue-50 text-blue-600 dark:bg-white dark:text-blue-600 font-bold px-8 py-3.5 rounded-full hover:scale-105 transition-transform">
                 Request my free audit
               </Link>
               <Link href="/#projects" className="bg-transparent text-slate-900 dark:text-white border-2 border-white/30 font-bold px-8 py-3.5 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">

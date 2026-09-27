@@ -53,20 +53,20 @@ export default function WordPressPage() {
             <div className="bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-xl border border-slate-200 dark:border-white/10 p-8 rounded-3xl shadow-2xl relative">
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-cyan-500/20 blur-3xl rounded-full -z-10" />
               <h3 className="text-2xl font-bold mb-6">Get a Custom Estimate</h3>
-              <form className="space-y-4">
+              <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
                     <label className="text-xs font-medium text-slate-500 dark:text-slate-400">First Name</label>
-                    <input type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-400 transition-colors" placeholder="John" />
+                    <input name="name" type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-400 transition-colors" placeholder="John" />
                   </div>
                   <div className="space-y-1">
                     <label className="text-xs font-medium text-slate-500 dark:text-slate-400">Last Name</label>
-                    <input type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Doe" />
+                    <input name="name" type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Doe" />
                   </div>
                 </div>
                 <div className="space-y-1">
                   <label className="text-xs font-medium text-slate-500 dark:text-slate-400">Email Address</label>
-                  <input type="email" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-400 transition-colors" placeholder="john@company.com" />
+                  <input name="email" type="email" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-400 transition-colors" placeholder="john@company.com" />
                 </div>
                 <div className="space-y-1">
                   <label className="text-xs font-medium text-slate-500 dark:text-slate-400">Project Budget</label>
@@ -79,7 +79,7 @@ export default function WordPressPage() {
                 </div>
                 <div className="space-y-1">
                   <label className="text-xs font-medium text-slate-500 dark:text-slate-400">Project Details</label>
-                  <textarea rows={3} className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-400 transition-colors resize-none" placeholder="Tell us about your project goals..." />
+                  <textarea name="message" rows={3} className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-400 transition-colors resize-none" placeholder="Tell us about your project goals..." />
                 </div>
                 <button type="button" className="w-full bg-blue-600 hover:bg-blue-500 text-slate-900 dark:text-white font-bold rounded-xl px-4 py-4 transition-colors mt-2">
                   Submit Request

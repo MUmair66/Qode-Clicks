@@ -90,10 +90,10 @@ export function ContactOffices() {
 
 export function ContactDepartments() {
   const depts = [
-    { title: "Existing clients", desc: "Use your shared Slack channel for anything urgent.", email: "support@qodeclicks.com" },
-    { title: "Careers", desc: "Open roles are listed on the careers page.", email: "careers@qodeclicks.com" },
-    { title: "Press and speaking", desc: "Commentary, podcast and conference requests.", email: "press@qodeclicks.com" },
-    { title: "Invoices and accounts", desc: "Billing questions and remittance advice.", email: "accounts@qodeclicks.com" }
+    { title: "Existing clients", desc: "Use your shared Slack channel for anything urgent.", email: "info@qodeclicks.com" },
+    { title: "Careers", desc: "Open roles are listed on the careers page.", email: "info@qodeclicks.com" },
+    { title: "Press and speaking", desc: "Commentary, podcast and conference requests.", email: "info@qodeclicks.com" },
+    { title: "Invoices and accounts", desc: "Billing questions and remittance advice.", email: "info@qodeclicks.com" }
   ];
 
   return (

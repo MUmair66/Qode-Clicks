@@ -6,19 +6,21 @@ import { Mail, MapPin } from "lucide-react";
 const footerLinks = {
   Company: [
     { name: "About Us", href: "/about-us" },
-    { name: "All Services", href: "/services" },
     { name: "FAQ", href: "/faq" },
-    { name: "Contact Us", href: "/services/contact" }
+    { name: "Contact Us", href: "/contact" }
   ],
-  Services: [
-    { name: "SEO", href: "/services/seo" },
-    { name: "Google Ads", href: "/services/google-ads" },
-    { name: "Local Services Ads", href: "/google-guarantee" },
-    { name: "WordPress Development", href: "/services/custom-wordpress-development" },
-    { name: "GMB Optimization", href: "/services/gmb-optimization" },
-    { name: "AEO & GEO Services", href: "/services/aeo-geo" },
-    { name: "Content Writing", href: "/services/content-writing" }
+  "Digital Marketing": [
+    { name: "SEO", href: "/digital-marketing/seo" },
+    { name: "Google Business Profile", href: "/digital-marketing/google-business-profile" },
+    { name: "AI SEO", href: "/digital-marketing/ai-seo" },
+    { name: "Content Writing", href: "/digital-marketing/content-writing" }
   ],
+  "Paid & Web": [
+    { name: "Google Ads", href: "/ppc/google-ads" },
+    { name: "Google Guaranteed", href: "/google-guarantee" },
+    { name: "Custom Web Apps", href: "/website-development/custom-web-apps" },
+    { name: "WordPress Development", href: "/website-development/wordpress" }
+  ]
 };
 
 export function Footer() {
@@ -37,7 +39,7 @@ export function Footer() {
           <div className="mt-6 flex flex-col gap-2 text-sm text-slate-600 dark:text-slate-300">
             <span className="inline-flex items-center gap-2">
               <Mail className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
-              hello@qodeclick.com
+              info@qodeclicks.com
             </span>
             <span className="inline-flex items-center gap-2">
               <MapPin className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
@@ -63,8 +65,8 @@ export function Footer() {
       <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-4 border-t border-slate-200 dark:border-white/10 pt-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
         <p>© 2026 QodeClick. All rights reserved.</p>
         <div className="flex gap-5">
-          <Link href="/services/contact" className="transition hover:text-cyan-600 dark:hover:text-cyan-300">Privacy Policy</Link>
-          <Link href="/services/contact" className="transition hover:text-cyan-600 dark:hover:text-cyan-300">Terms of Service</Link>
+          <Link href="/contact" className="transition hover:text-cyan-600 dark:hover:text-cyan-300">Privacy Policy</Link>
+          <Link href="/contact" className="transition hover:text-cyan-600 dark:hover:text-cyan-300">Terms of Service</Link>
         </div>
       </div>
     </footer>

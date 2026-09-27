@@ -59,26 +59,26 @@ export function GmbHero() {
           <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Free geo-grid report</h3>
           <p className="text-sm text-slate-600 dark:text-slate-300 mb-8">We run a 7 by 7 grid across your service area and send you a map showing where you rank, where you disappear, and who is beating you in each square.</p>
           
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+          <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="space-y-4" onSubmit={(e) => e.preventDefault()}>
             <div>
               <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2 uppercase tracking-wider">Your name</label>
-              <input type="text" placeholder="Priya Raman" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
+              <input name="name" type="text" placeholder="Priya Raman" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
             </div>
             <div>
               <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2 uppercase tracking-wider">Work email</label>
-              <input type="email" placeholder="priya@company.com" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
+              <input name="email" type="email" placeholder="priya@company.com" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
             </div>
             <div>
               <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2 uppercase tracking-wider">Business name</label>
-              <input type="text" placeholder="Raman Plumbing" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
+              <input name="name" type="text" placeholder="Raman Plumbing" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
             </div>
             <div>
               <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2 uppercase tracking-wider">City or service area</label>
-              <input type="text" placeholder="Dallas TX, or Manchester" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
+              <input name="name" type="text" placeholder="Dallas TX, or Manchester" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
             </div>
             <div>
               <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2 uppercase tracking-wider">Main search term you want to win</label>
-              <input type="text" placeholder="emergency plumber, dental implants" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
+              <input name="name" type="text" placeholder="emergency plumber, dental implants" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
             </div>
             <div>
               <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2 uppercase tracking-wider">Number of locations</label>

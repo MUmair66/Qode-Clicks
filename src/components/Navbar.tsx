@@ -24,37 +24,37 @@ export function Navbar() {
           </Link>
           
           <div className="relative group">
-            <Link href="/services" className="flex items-center gap-1 rounded-full px-4 py-2 transition hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white">
+            <button className="flex items-center gap-1 rounded-full px-4 py-2 transition hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white cursor-pointer">
               Services <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
-            </Link>
+            </button>
             {/* Dropdown Menu */}
             <div className="absolute left-0 top-full pt-4 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <div className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-2xl p-2 shadow-xl shadow-black/50 backdrop-blur-xl flex flex-col gap-1">
-                <Link href="/services" className="px-4 py-2.5 rounded-xl hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">
-                  All Services
-                </Link>
-                <div className="h-px bg-slate-200 dark:bg-white/10 mx-2 my-1" />
-                <Link href="/services/seo" className="px-4 py-2.5 rounded-xl hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">
-                  SEO
-                </Link>
-                <Link href="/services/google-ads" className="px-4 py-2.5 rounded-xl hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">
-                  Google Ads
-                </Link>
-                <Link href="/google-guarantee" className="px-4 py-2.5 rounded-xl hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">
-                  Local Services Ads
-                </Link>
-                <Link href="/services/custom-wordpress-development" className="px-4 py-2.5 rounded-xl hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">
-                  WordPress Development
-                </Link>
-                <Link href="/services/gmb-optimization" className="px-4 py-2.5 rounded-xl hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">
-                  GMB Optimization
-                </Link>
-                <Link href="/services/aeo-geo" className="px-4 py-2.5 rounded-xl hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">
-                  AEO & GEO Services
-                </Link>
-                <Link href="/services/content-writing" className="px-4 py-2.5 rounded-xl hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">
-                  Content Writing
-                </Link>
+              <div className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-2xl p-4 shadow-xl shadow-black/50 backdrop-blur-xl flex flex-col gap-4 min-w-[260px]">
+                
+                <div className="flex flex-col gap-1">
+                  <Link href="/digital-marketing" className="text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 mb-1 px-3 hover:text-cyan-500 transition-colors">Digital Marketing</Link>
+                  <Link href="/digital-marketing/seo" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">SEO</Link>
+                  <Link href="/digital-marketing/google-business-profile" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">Google Business Profile</Link>
+                  <Link href="/digital-marketing/ai-seo" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">AI SEO</Link>
+                  <Link href="/digital-marketing/content-writing" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">Content Writing</Link>
+                </div>
+
+                <div className="h-px bg-slate-200 dark:bg-white/10 mx-3" />
+
+                <div className="flex flex-col gap-1">
+                  <Link href="/ppc" className="text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 mb-1 px-3 hover:text-cyan-500 transition-colors">Paid Advertising</Link>
+                  <Link href="/ppc/google-ads" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">Google Ads</Link>
+                  <Link href="/ppc/google-guaranteed" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">Google Guaranteed</Link>
+                </div>
+
+                <div className="h-px bg-slate-200 dark:bg-white/10 mx-3" />
+
+                <div className="flex flex-col gap-1">
+                  <Link href="/website-development" className="text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 mb-1 px-3 hover:text-cyan-500 transition-colors">Web Development</Link>
+                  <Link href="/website-development/custom-web-apps" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">Custom Web Apps</Link>
+                  <Link href="/website-development/wordpress" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">WordPress Development</Link>
+                </div>
+
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@ export function Navbar() {
         <div className="flex items-center gap-2 sm:gap-3">
           <ThemeToggle />
           <Link
-            href="/services/contact"
+            href="/contact"
             className="hidden sm:inline-flex items-center gap-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-950 px-4 py-2.5 text-sm font-semibold transition hover:bg-cyan-600 dark:hover:bg-cyan-300"
           >
             Contact Us
@@ -119,14 +119,27 @@ export function Navbar() {
                     className="flex flex-col gap-1 px-4 overflow-hidden"
                   >
                     <div className="h-2" />
-                    <Link href="/services" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">All Services</Link>
-                    <Link href="/services/seo" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">SEO</Link>
-                    <Link href="/services/google-ads" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Google Ads</Link>
-                    <Link href="/google-guarantee" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Local Services Ads</Link>
-                    <Link href="/services/custom-wordpress-development" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">WordPress Development</Link>
-                    <Link href="/services/gmb-optimization" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">GMB Optimization</Link>
-                    <Link href="/services/aeo-geo" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">AEO & GEO</Link>
-                    <Link href="/services/content-writing" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Content Writing</Link>
+                    
+                    <div className="flex flex-col gap-1 mb-3">
+                      <Link href="/digital-marketing" onClick={() => setIsOpen(false)} className="px-4 py-1 text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Digital Marketing</Link>
+                      <Link href="/digital-marketing/seo" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">SEO</Link>
+                      <Link href="/digital-marketing/google-business-profile" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Google Business Profile</Link>
+                      <Link href="/digital-marketing/ai-seo" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">AI SEO</Link>
+                      <Link href="/digital-marketing/content-writing" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Content Writing</Link>
+                    </div>
+
+                    <div className="flex flex-col gap-1 mb-3">
+                      <Link href="/ppc" onClick={() => setIsOpen(false)} className="px-4 py-1 text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Paid Advertising</Link>
+                      <Link href="/ppc/google-ads" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Google Ads</Link>
+                      <Link href="/ppc/google-guaranteed" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Google Guaranteed</Link>
+                    </div>
+
+                    <div className="flex flex-col gap-1 mb-2">
+                      <Link href="/website-development" onClick={() => setIsOpen(false)} className="px-4 py-1 text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Web Development</Link>
+                      <Link href="/website-development/custom-web-apps" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Custom Web Apps</Link>
+                      <Link href="/website-development/wordpress" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">WordPress Development</Link>
+                    </div>
+                    
                     <div className="h-2" />
                   </motion.div>
                 )}
@@ -142,7 +155,7 @@ export function Navbar() {
             </Link>
             
             <Link 
-              href="/services/contact" 
+              href="/contact" 
               className="mt-2 px-4 py-3 rounded-xl font-bold bg-slate-900 text-white dark:bg-white dark:text-slate-950 flex items-center justify-between transition-colors"
               onClick={() => setIsOpen(false)}
             >
@@ -155,3 +168,4 @@ export function Navbar() {
     </nav>
   );
 }
+

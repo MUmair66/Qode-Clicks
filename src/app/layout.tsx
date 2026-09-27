@@ -14,7 +14,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="h-full antialiased scroll-smooth" suppressHydrationWarning>
-      <body className="min-h-full flex flex-col bg-white dark:bg-[#05070d] text-slate-900 dark:text-white overflow-x-hidden transition-colors duration-300">
+      <body className="min-h-full flex flex-col bg-white dark:bg-[#05070d] text-slate-900 dark:text-white overflow-x-hidden transition-colors duration-300" suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Navbar />
           <main className="flex-1">
