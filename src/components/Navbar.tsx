@@ -8,7 +8,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [dmOpen, setDmOpen] = useState(false);
+  const [paOpen, setPaOpen] = useState(false);
+  const [wdOpen, setWdOpen] = useState(false);
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6">
@@ -19,47 +21,55 @@ export function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden items-center rounded-full border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/[0.04] px-2 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-300 lg:flex gap-1">
-          <Link href="/about-us" className="rounded-full px-4 py-2 transition hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white">
+          <Link href="/about-us" className="rounded-full px-4 py-2 transition hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400">
             About
           </Link>
           
           <div className="relative group">
-            <button className="flex items-center gap-1 rounded-full px-4 py-2 transition hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white cursor-pointer">
-              Services <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
-            </button>
-            {/* Dropdown Menu */}
+            <Link href="/digital-marketing" className="flex items-center gap-1 rounded-full px-4 py-2 transition hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer">
+              Digital Marketing <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
+            </Link>
             <div className="absolute left-0 top-full pt-4 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <div className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-2xl p-4 shadow-xl shadow-black/50 backdrop-blur-xl flex flex-col gap-4 min-w-[260px]">
-                
+              <div className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-2xl p-4 shadow-xl shadow-black/50 backdrop-blur-xl flex flex-col gap-4 min-w-[220px]">
                 <div className="flex flex-col gap-1">
-                  <Link href="/digital-marketing" className="text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 mb-1 px-3 hover:text-cyan-500 transition-colors">Digital Marketing</Link>
-                  <Link href="/digital-marketing/seo" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">SEO</Link>
-                  <Link href="/digital-marketing/google-business-profile" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">Google Business Profile</Link>
-                  <Link href="/digital-marketing/ai-seo" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">AI SEO</Link>
-                  <Link href="/digital-marketing/content-writing" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">Content Writing</Link>
+                  <Link href="/digital-marketing/seo" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">SEO</Link>
+                  <Link href="/digital-marketing/google-business-profile" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Google Business Profile</Link>
+                  <Link href="/digital-marketing/ai-seo" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">AI SEO</Link>
+                  <Link href="/digital-marketing/content-writing" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Content Writing</Link>
                 </div>
-
-                <div className="h-px bg-slate-200 dark:bg-white/10 mx-3" />
-
-                <div className="flex flex-col gap-1">
-                  <Link href="/ppc" className="text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 mb-1 px-3 hover:text-cyan-500 transition-colors">Paid Advertising</Link>
-                  <Link href="/ppc/google-ads" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">Google Ads</Link>
-                  <Link href="/ppc/google-guaranteed" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">Google Guaranteed</Link>
-                </div>
-
-                <div className="h-px bg-slate-200 dark:bg-white/10 mx-3" />
-
-                <div className="flex flex-col gap-1">
-                  <Link href="/website-development" className="text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 mb-1 px-3 hover:text-cyan-500 transition-colors">Web Development</Link>
-                  <Link href="/website-development/custom-web-apps" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">Custom Web Apps</Link>
-                  <Link href="/website-development/wordpress" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white transition-colors">WordPress Development</Link>
-                </div>
-
               </div>
             </div>
           </div>
 
-          <Link href="/faq" className="rounded-full px-4 py-2 transition hover:bg-slate-200 dark:hover:bg-white/10 hover:text-slate-900 dark:text-white">
+          <div className="relative group">
+            <Link href="/ppc" className="flex items-center gap-1 rounded-full px-4 py-2 transition hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer">
+              Paid Advertisement <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
+            </Link>
+            <div className="absolute left-0 top-full pt-4 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-2xl p-4 shadow-xl shadow-black/50 backdrop-blur-xl flex flex-col gap-4 min-w-[220px]">
+                <div className="flex flex-col gap-1">
+                  <Link href="/ppc/google-ads" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Google Ads</Link>
+                  <Link href="/ppc/google-guaranteed" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Google Guaranteed</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative group">
+            <Link href="/website-development" className="flex items-center gap-1 rounded-full px-4 py-2 transition hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer">
+              Web Development <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform" />
+            </Link>
+            <div className="absolute left-0 top-full pt-4 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-2xl p-4 shadow-xl shadow-black/50 backdrop-blur-xl flex flex-col gap-4 min-w-[220px]">
+                <div className="flex flex-col gap-1">
+                  <Link href="/website-development/custom-web-apps" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Custom Web Apps</Link>
+                  <Link href="/website-development/wordpress" className="px-3 py-2 rounded-xl text-sm hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">WordPress Development</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <Link href="/faq" className="rounded-full px-4 py-2 transition hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400">
             FAQ
           </Link>
         </div>
@@ -95,60 +105,91 @@ export function Navbar() {
           >
             <Link 
               href="/about-us" 
-              className="px-4 py-3 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors"
+              className="px-4 py-3 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               About
             </Link>
             
-            <div className="flex flex-col">
-              <button 
-                className="flex items-center justify-between px-4 py-3 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors w-full text-left"
-                onClick={() => setServicesOpen(!servicesOpen)}
-              >
-                Services
-                <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
-              </button>
-              
-              <AnimatePresence>
-                {servicesOpen && (
-                  <motion.div 
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    className="flex flex-col gap-1 px-4 overflow-hidden"
+            <div className="flex flex-col gap-1">
+              <div className="flex flex-col">
+                <div className="flex items-center justify-between w-full rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                  <Link href="/digital-marketing" className="px-4 py-3 font-medium text-slate-700 dark:text-slate-200 flex-1 text-left" onClick={() => setIsOpen(false)}>
+                    Digital Marketing
+                  </Link>
+                  <button 
+                    className="px-4 py-3"
+                    onClick={() => setDmOpen(!dmOpen)}
                   >
-                    <div className="h-2" />
-                    
-                    <div className="flex flex-col gap-1 mb-3">
-                      <Link href="/digital-marketing" onClick={() => setIsOpen(false)} className="px-4 py-1 text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Digital Marketing</Link>
-                      <Link href="/digital-marketing/seo" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">SEO</Link>
-                      <Link href="/digital-marketing/google-business-profile" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Google Business Profile</Link>
-                      <Link href="/digital-marketing/ai-seo" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">AI SEO</Link>
-                      <Link href="/digital-marketing/content-writing" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Content Writing</Link>
-                    </div>
+                    <ChevronDown className={`w-4 h-4 transition-transform ${dmOpen ? "rotate-180" : ""}`} />
+                  </button>
+                </div>
+                <AnimatePresence>
+                  {dmOpen && (
+                    <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="flex flex-col gap-1 px-4 overflow-hidden">
+                      <div className="flex flex-col gap-1 mb-2 mt-1">
+                        <Link href="/digital-marketing/seo" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">SEO</Link>
+                        <Link href="/digital-marketing/google-business-profile" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Google Business Profile</Link>
+                        <Link href="/digital-marketing/ai-seo" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">AI SEO</Link>
+                        <Link href="/digital-marketing/content-writing" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Content Writing</Link>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
-                    <div className="flex flex-col gap-1 mb-3">
-                      <Link href="/ppc" onClick={() => setIsOpen(false)} className="px-4 py-1 text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Paid Advertising</Link>
-                      <Link href="/ppc/google-ads" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Google Ads</Link>
-                      <Link href="/ppc/google-guaranteed" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Google Guaranteed</Link>
-                    </div>
+              <div className="flex flex-col">
+                <div className="flex items-center justify-between w-full rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                  <Link href="/ppc" className="px-4 py-3 font-medium text-slate-700 dark:text-slate-200 flex-1 text-left" onClick={() => setIsOpen(false)}>
+                    Paid Advertisement
+                  </Link>
+                  <button 
+                    className="px-4 py-3"
+                    onClick={() => setPaOpen(!paOpen)}
+                  >
+                    <ChevronDown className={`w-4 h-4 transition-transform ${paOpen ? "rotate-180" : ""}`} />
+                  </button>
+                </div>
+                <AnimatePresence>
+                  {paOpen && (
+                    <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="flex flex-col gap-1 px-4 overflow-hidden">
+                      <div className="flex flex-col gap-1 mb-2 mt-1">
+                        <Link href="/ppc/google-ads" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Google Ads</Link>
+                        <Link href="/ppc/google-guaranteed" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Google Guaranteed</Link>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
-                    <div className="flex flex-col gap-1 mb-2">
-                      <Link href="/website-development" onClick={() => setIsOpen(false)} className="px-4 py-1 text-xs font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Web Development</Link>
-                      <Link href="/website-development/custom-web-apps" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">Custom Web Apps</Link>
-                      <Link href="/website-development/wordpress" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">WordPress Development</Link>
-                    </div>
-                    
-                    <div className="h-2" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              <div className="flex flex-col">
+                <div className="flex items-center justify-between w-full rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+                  <Link href="/website-development" className="px-4 py-3 font-medium text-slate-700 dark:text-slate-200 flex-1 text-left" onClick={() => setIsOpen(false)}>
+                    Web Development
+                  </Link>
+                  <button 
+                    className="px-4 py-3"
+                    onClick={() => setWdOpen(!wdOpen)}
+                  >
+                    <ChevronDown className={`w-4 h-4 transition-transform ${wdOpen ? "rotate-180" : ""}`} />
+                  </button>
+                </div>
+                <AnimatePresence>
+                  {wdOpen && (
+                    <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="flex flex-col gap-1 px-4 overflow-hidden">
+                      <div className="flex flex-col gap-1 mb-2 mt-1">
+                        <Link href="/website-development/custom-web-apps" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Custom Web Apps</Link>
+                        <Link href="/website-development/wordpress" onClick={() => setIsOpen(false)} className="px-4 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">WordPress Development</Link>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
 
             <Link 
               href="/faq" 
-              className="px-4 py-3 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-white/10 transition-colors"
+              className="px-4 py-3 rounded-xl font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               FAQ
