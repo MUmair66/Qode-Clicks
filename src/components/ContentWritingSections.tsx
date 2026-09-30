@@ -72,7 +72,7 @@ export function ContentHero() {
               Send us the site. We will tell you which existing pages to rewrite, which to merge, which to delete, and what is actually worth commissioning new.
             </p>
 
-            <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="space-y-5">
               <div>
                 <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Your name</label>
                 <input name="name" type="text" placeholder="Priya Raman" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
