@@ -10,13 +10,13 @@ export function ContentProcess() {
     { num: "2", title: "Brief", desc: "Angle, structure, sources, internal links, word count and the point the piece has to make. You approve it.", time: "Day 1 to 2" },
     { num: "3", title: "Draft", desc: "Written by a person who has read the sources, with original examples rather than a paraphrase of the competition.", time: "Day 2 to 4", active: true },
     { num: "4", title: "Edit and fact check", desc: "A second person edits, verifies every claim and checks the piece delivers what the brief promised.", time: "Day 4 to 5" },
-    { num: "5", title: "Optimise and publish", desc: "Meta, schema, internal links and formatting. We can publish it on your site or hand over the file.", time: "Day 5 to 6" },
+    { num: "5", title: "Optimize and publish", desc: "Meta, schema, internal links and formatting. We can publish it on your site or hand over the file.", time: "Day 5 to 6" },
   ];
 
   return (
-    <section id="process" className="px-5 py-24 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
+    <section id="process" className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-12">
           <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">How a piece gets made</span>
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Five stages, and you see the brief before we write.
@@ -45,9 +45,9 @@ export function ContentProcess() {
 
 export function ContentRefreshing() {
   return (
-    <section className="px-5 py-24 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950/50">
+    <section className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950/50">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-12">
           <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Refreshing</span>
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Rewriting beats publishing more, most of the time.
@@ -61,7 +61,7 @@ export function ContentRefreshing() {
           {[
             { num: "01", title: "Decay analysis", desc: "We pull every page losing impressions or slipping position over the last twelve months and rank them by how much traffic is recoverable.", tag: "Included in the free content audit" },
             { num: "02", title: "Rewrite, merge or delete", desc: "Some pages need updating, some need consolidating into one stronger page, and some should be removed because they are diluting everything else.", tag: "Merging is the most commonly missed action" },
-            { num: "03", title: "Re-optimise against today", desc: "Search results change. A page written for what ranked in 2023 is competing against a page layout that no longer exists.", tag: "Cheaper per page than new commissions" }
+            { num: "03", title: "Re-optimize against today", desc: "Search results change. A page written for what ranked in 2023 is competing against a page layout that no longer exists.", tag: "Cheaper per page than new commissions" }
           ].map((item, i) => (
             <div key={i} className="rounded-2xl bg-white dark:bg-slate-900 p-8 shadow-sm">
               <span className="text-3xl font-bold text-cyan-600 dark:text-cyan-500 mb-4 block leading-none tracking-tighter">{item.num}</span>
@@ -98,17 +98,17 @@ export function ContentPricing() {
     },
     {
       name: "Authority",
-      desc: "Full content programme including long form and executive ghostwriting.",
+      desc: "Full content program including long form and executive ghostwriting.",
       price: "$2,400",
       extra: "16 pieces plus long form, roughly 28% below piece rates",
-      features: ["16 pieces monthly", "One long form asset per quarter", "Ghostwriting with monthly interview", "4 content refreshes monthly", "Digital PR and press support", "Fortnightly review calls"]
+      features: ["16 pieces monthly", "One long form asset per quarter", "Ghostwriting with monthly interview", "4 content refreshes monthly", "Digital PR and press support", "Review calls every two weeks"]
     }
   ];
 
   return (
-    <section id="pricing" className="px-5 py-24 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
+    <section id="pricing" className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mb-10 md:mb-12">
           <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Pricing</span>
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-4">
             Per piece, not per word.
@@ -122,7 +122,7 @@ export function ContentPricing() {
           {plans.map((plan, i) => (
             <div key={i} className={`rounded-2xl p-8 flex flex-col ${plan.highlight ? 'border-2 border-cyan-500 bg-white dark:bg-slate-900 shadow-xl relative' : 'border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-900/50'}`}>
               {plan.tag && (
-                <span className="absolute -top-3 left-8 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                <span className="absolute -top-3 left-8 bg-cyan-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                   {plan.tag}
                 </span>
               )}
@@ -147,7 +147,7 @@ export function ContentPricing() {
                 ))}
               </ul>
 
-              <Link href="#quote" className={`w-full py-3.5 rounded-xl text-center text-sm font-bold transition-all ${plan.highlight ? 'bg-cyan-600 text-white hover:bg-cyan-700 dark:bg-cyan-500 dark:hover:bg-cyan-400' : 'bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100'}`}>
+              <Link href="#audit" className={`w-full py-3.5 rounded-xl text-center text-sm font-bold transition-all ${plan.highlight ? 'bg-cyan-600 text-white hover:bg-cyan-700 dark:bg-cyan-500 dark:hover:bg-cyan-400' : 'bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100'}`}>
                 Get started
               </Link>
             </div>
@@ -160,13 +160,13 @@ export function ContentPricing() {
 
 export function ContentResult() {
   return (
-    <section className="px-5 py-24 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950/50">
+    <section className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950/50">
       <div className="mx-auto max-w-7xl">
-        <div className="rounded-3xl bg-white dark:bg-slate-900 p-8 md:p-12 lg:p-16 shadow-sm border border-slate-200 dark:border-white/10">
+        <div className="rounded-3xl bg-white dark:bg-slate-900 p-8 md:p-12 lg:p-12 shadow-sm border border-slate-200 dark:border-white/10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block rounded-full bg-slate-100 dark:bg-slate-800 px-3 py-1 text-xs font-bold text-slate-700 dark:text-slate-300 mb-6">
-                B2B SaaS, content and SEO
+                Professional services firm, content and SEO
               </span>
               <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
                 Ninety published posts and almost no traffic.
@@ -174,15 +174,15 @@ export function ContentResult() {
               <p className="text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed">
                 Written by a general agency from the top three results, with no clusters and no commercial pages behind any of it. We merged forty pieces into twelve, deleted twenty three, rewrote the rest around a proper cluster map, and built the pillar pages the supporting content should always have pointed at.
               </p>
-              <Link href="#quote" className="inline-flex items-center gap-2 text-sm font-bold text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">
-                Book a discovery call <ArrowRight className="w-4 h-4" />
+              <Link href="#audit" className="inline-flex items-center gap-2 text-sm font-bold text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">
+                Get a free content audit <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
             
             <div className="grid gap-4">
               {[
-                { label: "Monthly organic sessions", was: "4,200", now: "17,300" },
-                { label: "Organic demo requests", was: "31", now: "148" },
+                { label: "Monthly organic sessions", was: "2,600", now: "9,800" },
+                { label: "Organic inquiries", was: "18", now: "71" },
                 { label: "Published pages", was: "90", now: "39" },
                 { label: "Pages with any traffic", was: "11", now: "34" }
               ].map((stat, i) => (

@@ -29,16 +29,16 @@ export function SeoTimeline() {
   ];
 
   return (
-    <section className="py-24 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
+    <section className="py-14 md:py-20 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
-        <div className="bg-slate-50 dark:bg-[#0a0d14] rounded-[2.5rem] p-10 lg:p-16 border border-slate-200 dark:border-white/10 shadow-2xl relative overflow-hidden">
+        <div className="bg-slate-50 dark:bg-[#0a0d14] rounded-[2.5rem] p-10 lg:p-12 border border-slate-200 dark:border-white/10 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-500/5 rounded-full blur-[100px]" />
           
           <p className="text-yellow-500 font-bold text-xs uppercase tracking-wider mb-4">The first twelve months</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-10 tracking-tight leading-tight max-w-xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-10 tracking-tight leading-tight max-w-xl">
             What actually happens, month by month.
           </h2>
-          <p className="text-slate-500 dark:text-slate-400 text-lg mb-16 max-w-2xl leading-relaxed">
+          <p className="text-slate-500 dark:text-slate-400 text-lg mb-10 md:mb-12 max-w-2xl leading-relaxed">
             SEO takes time, but it should not be opaque. Here is the sequence we follow and roughly when you should expect to see something.
           </p>
 
@@ -68,11 +68,11 @@ export function SeoTimeline() {
 
 export function SeoCaseStudy() {
   return (
-    <section className="py-24 px-5 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#080b12] border-t border-slate-100 dark:border-white/5">
+    <section id="casestudies" className="scroll-mt-24 py-14 md:py-20 px-5 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#080b12] border-t border-slate-100 dark:border-white/5">
       <div className="mx-auto max-w-7xl">
-        <p className="text-blue-500 font-semibold text-sm mb-3">Result</p>
-        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-16 tracking-tight leading-tight">
-          Stackhouse, eleven months of SEO.
+        <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3">Result</p>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-10 md:mb-12 tracking-tight leading-tight">
+          A B2B SaaS company, eleven months of SEO.
         </h2>
         
         <div className="bg-slate-50 dark:bg-[#0a0d14] border border-slate-200 dark:border-white/10 rounded-[2rem] p-8 lg:p-12 text-slate-900 dark:text-white grid lg:grid-cols-2 gap-12 items-center shadow-xl">
@@ -84,8 +84,8 @@ export function SeoCaseStudy() {
             <p className="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
               The demand existed, the pages did not. We built a programmatic page template, cleaned up an index bloated with 4,000 thin URLs, and rebuilt internal linking so authority reached the pages that mattered. Content followed the cluster map rather than a publishing calendar.
             </p>
-            <Link href="#casestudies" className="inline-flex rounded-full border-2 border-slate-300 dark:border-white/20 px-6 py-3 font-bold hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
-              Read the full case study
+            <Link href="#audit" className="inline-flex rounded-full border-2 border-slate-300 dark:border-white/20 px-6 py-3 font-bold hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
+              Get an audit of your site
             </Link>
           </div>
           
@@ -139,7 +139,7 @@ export function SeoPricing() {
       name: "Growth",
       target: "National reach, competitive keywords, and a site that needs technical work as well as content.",
       price: "$3,400",
-      features: ["Includes everything in Local, plus", "Full technical SEO programme", "Four content pieces monthly", "Digital PR and link acquisition", "Conversion testing on key pages", "15 developer hours monthly", "Quarterly strategy reset"],
+      features: ["Includes everything in Local, plus", "Full technical SEO program", "Four content pieces monthly", "Digital PR and link acquisition", "Conversion testing on key pages", "15 developer hours monthly", "Quarterly strategy reset"],
       btn: "Request a proposal",
       popular: true
     },
@@ -147,18 +147,18 @@ export function SeoPricing() {
       name: "Ecommerce and enterprise",
       target: "Large catalogs, multiple markets, or sites where crawl budget is a real constraint.",
       price: "$6,200",
-      features: ["Includes everything in Growth, plus", "Log file analysis and crawl management", "Category and faceted navigation strategy", "International and hreflang setup", "Six or more content pieces monthly", "30 developer hours monthly", "Fortnightly review calls"],
+      features: ["Includes everything in Growth, plus", "Log file analysis and crawl management", "Category and faceted navigation strategy", "International and hreflang setup", "Six or more content pieces monthly", "30 developer hours monthly", "Review calls every two weeks"],
       btn: "Talk to us",
       popular: false
     }
   ];
 
   return (
-    <section className="py-24 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
+    <section id="pricing" className="scroll-mt-24 py-14 md:py-20 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 max-w-2xl">
-          <p className="text-blue-500 font-semibold text-sm mb-3">Pricing</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
+        <div className="mb-10 md:mb-12 max-w-2xl">
+          <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3">Pricing</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
             Three SEO plans. Media budget not included, because we do not resell it.
           </h2>
           <p className="text-slate-500 dark:text-slate-400 text-lg">Every plan includes developer hours, which is the part most agencies leave out and then blame you for not implementing.</p>
@@ -166,9 +166,9 @@ export function SeoPricing() {
         
         <div className="grid lg:grid-cols-3 gap-8">
           {plans.map((p, i) => (
-            <div key={i} className={`bg-slate-50 dark:bg-[#0a0d14] rounded-3xl p-8 flex flex-col relative ${p.popular ? 'border-2 border-blue-500 scale-105 shadow-2xl z-10' : 'border border-slate-200 dark:border-white/10'}`}>
+            <div key={i} className={`bg-slate-50 dark:bg-[#0a0d14] rounded-3xl p-8 flex flex-col relative ${p.popular ? 'border-2 border-cyan-500 lg:scale-105 shadow-2xl z-10' : 'border border-slate-200 dark:border-white/10'}`}>
               {p.popular && (
-                <div className="absolute -top-4 left-6 bg-blue-500 text-slate-900 dark:text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Most clients start here</div>
+                <div className="absolute -top-4 left-6 bg-cyan-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Most clients start here</div>
               )}
               <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">{p.name}</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 h-10">{p.target}</p>
@@ -188,7 +188,7 @@ export function SeoPricing() {
                 ))}
               </ul>
               
-              <Link href="#contact" className={`w-full py-4 rounded-xl text-center font-bold transition-colors ${p.popular ? 'bg-blue-600 text-slate-900 dark:text-white hover:bg-blue-500' : 'bg-slate-100 dark:bg-white/5 border-2 border-slate-200 dark:border-white/10 text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-white/10'}`}>
+              <Link href="#audit" className={`w-full py-4 rounded-xl text-center font-bold transition-colors ${p.popular ? 'bg-cyan-500 text-slate-950 hover:bg-cyan-400' : 'bg-slate-100 dark:bg-white/5 border-2 border-slate-200 dark:border-white/10 text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-white/10'}`}>
                 {p.btn}
               </Link>
             </div>

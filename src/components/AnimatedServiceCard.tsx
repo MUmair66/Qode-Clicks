@@ -10,8 +10,8 @@ type IconItem = {
 };
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 36, filter: "blur(10px)" },
-  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0 },
 };
 
 export function AnimatedServiceCard({ item, index }: { item: IconItem; index: number }) {
@@ -21,9 +21,9 @@ export function AnimatedServiceCard({ item, index }: { item: IconItem; index: nu
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, margin: "-40px" }}
       variants={fadeUp}
-      transition={{ duration: 0.85, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.45, delay: index * 0.05, ease: [0.22, 1, 0.36, 1] }}
       whileHover="hover"
       className="group relative overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-100/50 dark:bg-slate-900/40 p-8 transition-all duration-500 hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-500/20"
     >
@@ -40,11 +40,11 @@ export function AnimatedServiceCard({ item, index }: { item: IconItem; index: nu
           <Icon className="h-6 w-6" />
         </div>
         
-        <h3 className="mb-3 text-xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors duration-300 group-hover:text-cyan-600 dark:hover:text-cyan-300">
+        <h3 className="mb-3 text-xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors duration-300 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">
           {item.title}
         </h3>
         
-        <p className="text-sm leading-relaxed text-slate-500 dark:text-slate-400 transition-colors duration-300 group-hover:text-slate-600 dark:text-slate-300">
+        <p className="text-sm leading-relaxed text-slate-500 dark:text-slate-400 transition-colors duration-300 group-hover:text-slate-600 dark:group-hover:text-slate-300">
           {item.description}
         </p>
 

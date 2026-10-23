@@ -4,38 +4,43 @@ import { motion } from "framer-motion";
 import { ChevronRight, FileText, CheckCircle2, XCircle, Search, PenLine, Megaphone, Monitor, BookOpen } from "lucide-react";
 import Link from "next/link";
 import { AnimatedServiceCard } from "./AnimatedServiceCard";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { LeadForm } from "@/components/LeadForm";
+
+const cwLabel = "block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2";
+const cwField = "w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all";
 
 export function ContentHero() {
   return (
-    <section className="relative px-5 pt-32 pb-16 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-white/10 bg-white dark:bg-[#05070d] overflow-hidden">
+    <section className="relative px-5 pt-28 pb-16 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-white/10 bg-white dark:bg-[#05070d] overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,rgba(34,211,238,0.08),transparent_50%)]" />
       <div className="mx-auto max-w-7xl">
-        <div className="mb-8 flex items-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400">
-          <Link href="/" className="hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors">Home</Link>
-          <ChevronRight className="w-4 h-4" />
-          <Link href="/" className="hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors">Services</Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="text-slate-900 dark:text-white">Content Writing</span>
-        </div>
+        <Breadcrumbs
+          className="mb-8"
+          items={[
+            { name: "Digital Marketing", path: "/digital-marketing" },
+            { name: "Content Writing", path: "/digital-marketing/content-writing" },
+          ]}
+        />
 
-        <div className="grid lg:grid-cols-[1.08fr_0.92fr] gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-[1.08fr_0.92fr] gap-12 lg:gap-12 items-start">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
           >
             <span className="mb-4 inline-block text-sm font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">
               Content Writing
             </span>
-            <h1 className="mb-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+            <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
               Written by people who <span className="bg-gradient-to-r from-cyan-600 to-cyan-400 dark:from-cyan-400 dark:to-cyan-200 bg-clip-text text-transparent">read the source,</span> not the top three results.
             </h1>
             <p className="mb-10 text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
-              SEO articles, service and location pages, landing page copy, ad and email sequences, brand messaging, case studies and whitepapers. Researched properly, briefed against real search intent, and edited by someone who will send it back.
+              SEO articles, service and location pages, pillar pages, product copy, landing pages, email and ad copy. Researched properly, briefed against real search intent, and edited by someone who will send it back.
             </p>
             
             <div className="flex flex-wrap items-center gap-4">
-              <Link href="#quote" className="inline-flex h-12 items-center justify-center rounded-full bg-slate-900 dark:bg-white px-8 text-sm font-semibold text-white dark:text-slate-900 transition-all hover:bg-cyan-600 dark:hover:bg-cyan-300 hover:scale-105">
+              <Link href="#audit" className="inline-flex h-12 items-center justify-center rounded-full bg-cyan-500 px-8 text-sm font-semibold text-slate-950 transition-colors hover:bg-cyan-400">
                 Get a free content audit
               </Link>
               <Link href="#pricing" className="inline-flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-white/20 bg-transparent px-8 text-sm font-semibold text-slate-900 dark:text-white transition-all hover:border-slate-900 dark:hover:border-white hover:bg-slate-50 dark:hover:bg-white/5">
@@ -45,12 +50,12 @@ export function ContentHero() {
 
             <div className="mt-12 pt-8 border-t border-slate-200 dark:border-white/10 grid grid-cols-3 gap-6">
               <div>
-                <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">18</strong>
+                <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">9</strong>
                 <span className="text-sm text-slate-500 dark:text-slate-400">Content formats we produce</span>
               </div>
               <div>
-                <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">+312%</strong>
-                <span className="text-sm text-slate-500 dark:text-slate-400">Median organic growth</span>
+                <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">+277%</strong>
+                <span className="text-sm text-slate-500 dark:text-slate-400">Organic sessions, content client, 9 months</span>
               </div>
               <div>
                 <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">3 to 6</strong>
@@ -60,34 +65,35 @@ export function ContentHero() {
           </motion.div>
 
           <motion.div
-            id="quote"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900/50 p-8 shadow-xl backdrop-blur-sm relative overflow-hidden"
+            id="audit"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="scroll-mt-24 rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900/50 p-6 sm:p-8 shadow-xl relative overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-full h-1.5 bg-cyan-500" />
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Free content audit</h3>
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Free content audit</h2>
             <p className="text-slate-600 dark:text-slate-400 text-sm mb-8">
               Send us the site. We will tell you which existing pages to rewrite, which to merge, which to delete, and what is actually worth commissioning new.
             </p>
 
-            <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="space-y-5">
+            <LeadForm source="Content audit" className="space-y-5">
               <div>
-                <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Your name</label>
-                <input name="name" type="text" placeholder="Priya Raman" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <label htmlFor="cw-name" className={cwLabel}>Your name</label>
+                <input id="cw-name" name="name" type="text" required autoComplete="name" placeholder="Your name" className={cwField} />
               </div>
               <div>
-                <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Work email</label>
-                <input name="email" type="email" placeholder="priya@company.com" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <label htmlFor="cw-email" className={cwLabel}>Work email</label>
+                <input id="cw-email" name="email" type="email" required autoComplete="email" placeholder="priya@company.com" className={cwField} />
               </div>
               <div>
-                <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Website</label>
-                <input name="website" type="url" placeholder="company.com" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <label htmlFor="cw-website" className={cwLabel}>Website</label>
+                <input id="cw-website" name="website" type="text" inputMode="url" autoComplete="url" placeholder="company.com" className={cwField} />
               </div>
               <div>
-                <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">What do you need most</label>
-                <select className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all">
+                <label htmlFor="cw-need" className={cwLabel}>What do you need most</label>
+                <select id="cw-need" name="content_need" defaultValue="" className={cwField}>
+                  <option value="" disabled>Choose what you need most</option>
                   <option>SEO articles and blog content</option>
                   <option>Service and location pages</option>
                   <option>Landing page and conversion copy</option>
@@ -99,8 +105,9 @@ export function ContentHero() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Rough monthly volume</label>
-                <select className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all">
+                <label htmlFor="cw-volume" className={cwLabel}>Rough monthly volume</label>
+                <select id="cw-volume" name="monthly_volume" defaultValue="" className={cwField}>
+                  <option value="" disabled>Choose a rough volume</option>
                   <option>A few pieces to start</option>
                   <option>4 to 8 pieces a month</option>
                   <option>9 to 20 pieces a month</option>
@@ -108,11 +115,11 @@ export function ContentHero() {
                   <option>One off project</option>
                 </select>
               </div>
-              <button className="w-full rounded-xl bg-cyan-600 dark:bg-cyan-500 py-3.5 text-sm font-bold text-white transition-colors hover:bg-cyan-700 dark:hover:bg-cyan-400">
+              <button type="submit" className="w-full rounded-xl bg-cyan-500 py-3.5 text-sm font-bold text-slate-950 transition-colors hover:bg-cyan-400">
                 Request my content audit
               </button>
               <p className="text-center text-xs text-slate-500 dark:text-slate-400">Five working day turnaround. Yours to keep either way.</p>
-            </form>
+            </LeadForm>
           </motion.div>
         </div>
       </div>
@@ -129,7 +136,7 @@ export function ContentProblems() {
   ];
 
   return (
-    <section className="px-5 py-24 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950/50">
+    <section className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950/50">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl mb-12">
           <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">What we usually find</span>
@@ -171,19 +178,19 @@ export function ContentCategories() {
   ];
 
   return (
-    <section id="types" className="px-5 py-24 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
+    <section id="types" className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-12">
           <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">What we write</span>
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
-            Eighteen formats, grouped by the job they do.
+            Nine formats, grouped by the job they do.
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400">
             Most clients buy from two or three of these groups. The audit tells you which, based on where your funnel actually leaks.
           </p>
         </div>
 
-        <div className="mb-16">
+        <div className="mb-10 md:mb-12">
           <h3 className="text-sm font-bold text-slate-900 dark:text-white mb-6 pb-2 border-b border-slate-200 dark:border-white/10">Search content, written to rank</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {searchContent.map((s, i) => (
@@ -207,9 +214,9 @@ export function ContentCategories() {
 
 export function ContentAIPolicy() {
   return (
-    <section id="ai" className="px-5 py-24 sm:px-6 lg:px-8 bg-slate-900 dark:bg-slate-950 text-white border-y border-slate-800 dark:border-white/5">
+    <section id="ai" className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-slate-900 dark:bg-slate-950 text-white border-y border-slate-800 dark:border-white/5">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-12">
           <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-amber-500">Our AI Policy</span>
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Where AI touches your content, and where it never does.
@@ -227,7 +234,7 @@ export function ContentAIPolicy() {
             <ul className="space-y-4">
               {[
                 "Clustering keyword sets and spotting intent patterns",
-                "Summarising what currently ranks and where the gaps are",
+                "Summarizing what currently ranks and where the gaps are",
                 "Generating meta title and description variants to choose from",
                 "Building schema markup and formatting output",
                 "Checking a finished draft for things we missed"

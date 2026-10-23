@@ -14,19 +14,19 @@ export function SeoReporting() {
   ];
 
   return (
-    <section className="py-24 px-5 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#080b12] border-t border-slate-100 dark:border-white/5">
+    <section className="py-14 md:py-20 px-5 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#080b12] border-t border-slate-100 dark:border-white/5">
       <div className="mx-auto max-w-7xl">
-        <div className="bg-slate-50 dark:bg-[#0a0d14] border border-slate-200 dark:border-white/10 rounded-[2rem] p-10 lg:p-16 grid lg:grid-cols-[1fr_1.5fr] gap-12 items-start shadow-2xl">
+        <div className="bg-slate-50 dark:bg-[#0a0d14] border border-slate-200 dark:border-white/10 rounded-[2rem] p-10 lg:p-12 grid lg:grid-cols-[1fr_1.5fr] gap-12 items-start shadow-2xl">
           <div>
-            <p className="text-blue-500 font-semibold text-sm mb-3">Reporting</p>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
+            <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3">Reporting</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
               Six numbers at the top of every report.
             </h2>
             <p className="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed text-lg">
               Rankings appear further down where they belong. If your last agency led with impressions and keyword counts, this will look unfamiliar.
             </p>
-            <Link href="#sample" className="inline-flex rounded-full border-2 border-slate-300 dark:border-white/20 px-6 py-3 font-bold text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
-              See a sample report
+            <Link href="#audit" className="inline-flex rounded-full border-2 border-slate-300 dark:border-white/20 px-6 py-3 font-bold text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
+              Ask for a sample report
             </Link>
           </div>
           
@@ -53,11 +53,11 @@ export function SeoNotSell() {
   ];
 
   return (
-    <section className="py-24 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
+    <section className="py-14 md:py-20 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-2xl">
           <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3">Straight answers</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
             Four things we will not sell you.
           </h2>
         </div>
@@ -99,19 +99,19 @@ export function SeoTools() {
 
 export function SeoWorksWellWith() {
   const services = [
-    { title: "Speed and Core Web Vitals", desc: "A slow site caps how far SEO can take you, whatever the content does.", link: "/services/speed" },
-    { title: "WordPress development", desc: "Template level fixes scale across thousands of pages at once.", link: "/services/custom-wordpress-development" },
-    { title: "Conversion rate optimization", desc: "Organic traffic is worth nothing until the page converts it.", link: "/services/cro" },
-    { title: "Google Ads", desc: "Buys revenue in the six months SEO takes to compound.", link: "/services/google-ads" },
-    { title: "Analytics and tracking", desc: "Without clean attribution you cannot prove SEO earned anything.", link: "/services/analytics" }
+    { title: "WordPress development", desc: "Template level fixes and Core Web Vitals work scale across thousands of pages at once. A slow site caps how far SEO can go.", link: "/website-development/wordpress" },
+    { title: "Google Ads", desc: "Buys revenue in the three to six months SEO takes to compound.", link: "/ppc/google-ads" },
+    { title: "Content writing", desc: "Pages written for the searches that convert, by people who understand the subject.", link: "/digital-marketing/content-writing" },
+    { title: "Google Business Profile", desc: "For local businesses, the map pack often brings more calls than the organic results below it.", link: "/digital-marketing/google-business-profile" },
+    { title: "AI SEO", desc: "Get cited in Google AI Overviews, ChatGPT and Perplexity answers, not just the blue links.", link: "/digital-marketing/ai-seo" }
   ];
 
   return (
-    <section className="py-24 px-5 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#080b12] border-t border-slate-100 dark:border-white/5">
+    <section className="py-14 md:py-20 px-5 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#080b12] border-t border-slate-100 dark:border-white/5">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-2xl">
           <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3">Works well with</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
             SEO rarely performs alone.
           </h2>
           <p className="text-slate-500 dark:text-slate-400">These are the services we most often run alongside it, and why.</p>

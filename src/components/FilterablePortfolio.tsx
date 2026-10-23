@@ -1,110 +1,93 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles } from "lucide-react";
-import Link from "next/link";
 
-const categories = ["All", "Wordpress", "Custom", "Apps", "Ecommerce"];
+const categories = ["All", "WordPress", "Custom", "Apps", "Ecommerce"];
 
+// Sample builds that show the range of work we design and develop.
+// Imagery is illustrative. Replace with real client projects once approved for publication.
 const projects = [
   {
     id: 1,
-    title: "FinTech Mobile App",
+    title: "Fintech Mobile App",
     category: "Apps",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
-    desc: "A sleek, secure mobile banking experience built for Gen Z users.",
+    image: "/projects/fintech-app.jpg",
+    desc: "A secure, mobile-first banking experience with clear onboarding and account insights.",
   },
   {
     id: 2,
-    title: "Luxury Fashion Store",
+    title: "Fashion Ecommerce Store",
     category: "Ecommerce",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop",
-    desc: "High-end ecommerce platform with seamless checkout and 3D product views.",
+    image: "/projects/fashion-store.jpg",
+    desc: "Premium storefront concept with a fast, simple checkout and rich product pages.",
   },
   {
     id: 3,
-    title: "Corporate Law Firm",
-    category: "Wordpress",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
-    desc: "A professional, fast-loading WordPress site focusing on lead generation.",
+    title: "Law Firm Website",
+    category: "WordPress",
+    image: "/projects/law-firm.jpg",
+    desc: "A professional, fast-loading WordPress site built around consultation requests.",
   },
   {
     id: 4,
-    title: "SaaS Dashboard AI",
+    title: "SaaS Analytics Dashboard",
     category: "Custom",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800&auto=format&fit=crop",
-    desc: "React-based analytics dashboard with real-time AI insights and reporting.",
+    image: "/projects/saas-dashboard.jpg",
+    desc: "React-based analytics dashboard with real-time reporting and role-based access.",
   },
   {
     id: 5,
-    title: "Health & Fitness App",
-    category: "Apps",
-    image: "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=800&auto=format&fit=crop",
-    desc: "Cross-platform mobile application for workout tracking and diet plans.",
+    title: "Real Estate Portal",
+    category: "Custom",
+    image: "/projects/real-estate.jpg",
+    desc: "Custom Next.js platform for property listings, search filters and inquiry routing.",
   },
   {
     id: 6,
-    title: "Organic Food Market",
-    category: "Ecommerce",
-    image: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop",
-    desc: "Scalable Shopify headless storefront for a growing organic food brand.",
-  },
-  {
-    id: 7,
-    title: "Real Estate Portal",
-    category: "Custom",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop",
-    desc: "Custom built Next.js platform for property listings and virtual tours.",
-  },
-  {
-    id: 8,
     title: "Creative Agency Portfolio",
-    category: "Wordpress",
-    image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=800&auto=format&fit=crop",
-    desc: "Award-winning headless WordPress build with WebGL animations.",
-  }
+    category: "WordPress",
+    image: "/projects/agency-portfolio.jpg",
+    desc: "Headless WordPress build with smooth page transitions and an easy editing workflow.",
+  },
 ];
 
 export function FilterablePortfolio() {
   const [activeTab, setActiveTab] = useState("All");
 
-  const filteredProjects = activeTab === "All" 
-    ? projects 
-    : projects.filter(p => p.category === activeTab);
+  const filteredProjects = activeTab === "All" ? projects : projects.filter((p) => p.category === activeTab);
 
   return (
-    <section id="projects" className="bg-white dark:bg-[#05070d] px-5 py-24 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-white/10">
+    <section id="projects" className="bg-white dark:bg-[#05070d] px-5 py-16 sm:px-6 md:py-20 lg:px-8 border-t border-slate-200 dark:border-white/10">
       <div className="mx-auto max-w-7xl">
-        {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div>
-            <div className="flex items-center gap-1 mb-4 text-cyan-600 dark:text-cyan-300">
-              <Sparkles className="h-6 w-6 fill-current" />
-              <Sparkles className="h-4 w-4 fill-current opacity-70" />
-              <Sparkles className="h-3 w-3 fill-current opacity-40" />
-            </div>
-            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
-              Success Stories That Inspire
-            </h2>
+        <div className="mb-8 md:mb-12">
+          <div className="flex items-center gap-1 mb-4 text-cyan-600 dark:text-cyan-300" aria-hidden="true">
+            <Sparkles className="h-6 w-6 fill-current" />
+            <Sparkles className="h-4 w-4 fill-current opacity-70" />
+            <Sparkles className="h-3 w-3 fill-current opacity-40" />
           </div>
-          <Link
-            href="#contact"
-            className="inline-flex items-center justify-center rounded-xl border border-slate-300 dark:border-white/20 bg-transparent px-6 py-3 text-sm font-semibold text-slate-900 dark:text-white transition hover:bg-slate-100 dark:hover:bg-white/5"
-          >
-            View All Projects
-          </Link>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-600 dark:text-cyan-300">Sample builds</p>
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+            The kind of work we design and build
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-300">
+            Sample concepts across WordPress, custom builds, apps and ecommerce. Imagery is illustrative; ask us for live client examples in your industry.
+          </p>
         </div>
 
-        {/* Tabs Section */}
-        <div className="flex justify-center mb-16">
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.02] p-1.5 backdrop-blur-md">
+        {/* Filter pills: one horizontally scrollable row on small screens */}
+        <div className="mb-10 md:mb-12 -mx-5 px-5 overflow-x-auto sm:mx-0 sm:px-0 md:flex md:justify-center [scrollbar-width:none]">
+          <div className="inline-flex flex-nowrap items-center gap-2 rounded-full border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.02] p-1.5" role="group" aria-label="Filter sample builds">
             {categories.map((category) => (
               <button
                 key={category}
+                type="button"
                 onClick={() => setActiveTab(category)}
-                className={`relative rounded-full px-6 py-2.5 text-sm font-medium transition-colors ${
-                  activeTab === category ? "text-slate-950 font-bold" : "text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:text-white"
+                aria-pressed={activeTab === category}
+                className={`relative min-h-[44px] shrink-0 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-medium transition-colors ${
+                  activeTab === category ? "text-slate-950 font-bold" : "text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
                 }`}
               >
                 {activeTab === category && (
@@ -120,45 +103,46 @@ export function FilterablePortfolio() {
           </div>
         </div>
 
-        {/* Projects Grid */}
-        <motion.div layout className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {/* Mobile: horizontal swipe carousel. md and up: 3-column grid. */}
+        <motion.div
+          layout
+          className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-3"
+        >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
-              <motion.div
+              <motion.article
                 key={project.id}
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
-                className="group overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.02] hover:border-cyan-300/30 transition-colors"
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.25 }}
+                className="w-[80%] shrink-0 snap-start overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.02] sm:w-[60%] md:w-auto"
               >
                 <div className="aspect-[4/3] overflow-hidden relative">
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={project.image}
-                    alt={project.title}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt={`${project.title} sample build`}
+                    width={800}
+                    height={533}
+                    sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 80vw"
+                    className="h-full w-full object-cover"
                   />
                   <div className="absolute top-4 left-4 z-20">
-                    <span className="rounded-full bg-white/80 dark:bg-slate-950/80 px-3 py-1 text-xs font-medium text-cyan-500 dark:text-cyan-300 backdrop-blur-md border border-slate-200 dark:border-white/10">
+                    <span className="rounded-full bg-white/90 dark:bg-slate-950/80 px-3 py-1 text-xs font-medium text-cyan-700 dark:text-cyan-300 border border-slate-200 dark:border-white/10">
                       {project.category}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="mb-2 text-xl font-semibold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">
-                    {project.desc}
-                  </p>
+                  <h3 className="mb-2 text-xl font-semibold text-slate-900 dark:text-white">{project.title}</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">{project.desc}</p>
                 </div>
-              </motion.div>
+              </motion.article>
             ))}
           </AnimatePresence>
         </motion.div>
+        <p className="mt-2 text-center text-xs text-slate-500 md:hidden">Swipe to see more →</p>
       </div>
     </section>
   );

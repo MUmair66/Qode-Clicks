@@ -3,33 +3,40 @@
 import { motion } from "framer-motion";
 import { Check, ArrowRight, TrendingUp, Search, Activity, Link as LinkIcon, BarChart3, AlertCircle } from "lucide-react";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { LeadForm } from "@/components/LeadForm";
+
+const seoField = "w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors";
 
 export function SeoHero() {
   return (
-    <section className="relative pt-28 pb-20 lg:pt-28 lg:pb-28 px-5 sm:px-6 lg:px-8 overflow-hidden bg-white dark:bg-[#05070d] border-b border-slate-100 dark:border-white/5">
+    <section className="relative pt-28 pb-14 lg:pt-28 lg:pb-20 px-5 sm:px-6 lg:px-8 overflow-hidden bg-white dark:bg-[#05070d] border-b border-slate-100 dark:border-white/5">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(34,211,238,0.1),transparent_50%)]" />
-      <div className="mx-auto max-w-7xl grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-start relative z-10">
-        
+      <div className="mx-auto max-w-7xl relative z-10 mb-8">
+        <Breadcrumbs
+          items={[
+            { name: "Digital Marketing", path: "/digital-marketing" },
+            { name: "SEO", path: "/digital-marketing/seo" },
+          ]}
+        />
+      </div>
+      <div className="mx-auto max-w-7xl grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-12 items-start relative z-10">
+
         {/* Left Side */}
-        <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
+        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
           <p className="text-cyan-700 dark:text-cyan-400 font-bold text-sm mb-6 uppercase tracking-wider">SEO Services</p>
-          <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]">
             Rankings are not the goal. <br />
-            <motion.span 
-              animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-              style={{ backgroundSize: "200% auto" }}
-              className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 font-serif italic pr-2"
-            >
+            <span className="inline-block text-cyan-600 dark:text-cyan-400 font-serif italic pr-2">
               Revenue is.
-            </motion.span>
+            </span>
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-10 max-w-xl leading-relaxed">
             Plenty of agencies will get you to position three for a keyword nobody buys from. We build SEO around the searches that convert, fix the technical issues stopping them landing, and report in revenue rather than rankings.
           </p>
           
-          <div className="flex flex-wrap gap-4 mb-16">
-            <Link href="#audit" className="rounded-full bg-cyan-400 px-8 py-4 text-slate-950 font-bold hover:bg-white transition-colors text-lg">
+          <div className="flex flex-wrap gap-4 mb-10 md:mb-12">
+            <Link href="#audit" className="rounded-full bg-cyan-500 px-8 py-4 text-slate-950 font-bold hover:bg-cyan-400 transition-colors text-lg">
               Get a free SEO audit
             </Link>
             <Link href="#pricing" className="rounded-full bg-transparent border-2 border-slate-200 dark:border-white/10 px-8 py-4 text-slate-900 dark:text-white font-bold hover:bg-slate-100 dark:hover:bg-white/5 transition-colors text-lg">
@@ -39,55 +46,56 @@ export function SeoHero() {
 
           <div className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200 dark:border-white/10">
             <div>
-              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">+312%</div>
-              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">Median organic growth, 11 months</div>
+              <div className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2">+312%</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">Organic sessions, SaaS client, 11 months</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">40+</div>
-              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">Accounts managed</div>
+              <div className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2">30 days</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">For technical fixes to start showing</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">8 to 12 wks</div>
-              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">To first measurable movement</div>
+              <div className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2">3 to 6 mo</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">For content and links to compound</div>
             </div>
           </div>
         </motion.div>
 
         {/* Right Form */}
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} id="audit">
-          <div className="bg-slate-50 dark:bg-[#0a0d14] border border-slate-200 dark:border-white/10 p-8 lg:p-10 rounded-[2rem] shadow-2xl relative overflow-hidden">
+        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.1 }} id="audit" className="scroll-mt-24">
+          <div className="bg-slate-50 dark:bg-[#0a0d14] border border-slate-200 dark:border-white/10 p-6 sm:p-8 lg:p-10 rounded-[2rem] shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-[80px]" />
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Free SEO audit</h3>
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Free SEO audit</h2>
             <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 leading-relaxed">
               A specialist reviews your site, then sends a written document covering what is broken, what it is costing you, and what we would fix first.
             </p>
             
-            <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="space-y-5 relative z-10">
+            <LeadForm source="SEO audit" className="space-y-5 relative z-10">
               <div className="space-y-1.5">
-                <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Your name</label>
-                <input name="name" type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Priya Raman" />
+                <label htmlFor="seo-name" className="text-sm font-medium text-slate-600 dark:text-slate-300">Your name</label>
+                <input id="seo-name" name="name" type="text" required autoComplete="name" className={seoField} placeholder="Your name" />
               </div>
               <div className="space-y-1.5">
-                <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Work email</label>
-                <input name="email" type="email" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="priya@company.com" />
+                <label htmlFor="seo-email" className="text-sm font-medium text-slate-600 dark:text-slate-300">Work email</label>
+                <input id="seo-email" name="email" type="email" required autoComplete="email" className={seoField} placeholder="priya@company.com" />
               </div>
               <div className="space-y-1.5">
-                <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Website</label>
-                <input name="name" type="text" className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors" placeholder="company.com" />
+                <label htmlFor="seo-website" className="text-sm font-medium text-slate-600 dark:text-slate-300">Website</label>
+                <input id="seo-website" name="website" type="text" inputMode="url" autoComplete="url" className={seoField} placeholder="company.com" />
               </div>
               <div className="space-y-1.5">
-                <label className="text-sm font-medium text-slate-600 dark:text-slate-300">Main goal</label>
-                <select className="w-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors appearance-none">
+                <label htmlFor="seo-goal" className="text-sm font-medium text-slate-600 dark:text-slate-300">Main goal</label>
+                <select id="seo-goal" name="goal" defaultValue="" className={`${seoField} appearance-none`}>
+                  <option value="" disabled className="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white">Choose your main goal</option>
                   <option className="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white">More organic leads</option>
                   <option className="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white">More ecommerce sales</option>
                   <option className="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white">Fix technical issues</option>
                 </select>
               </div>
-              <button type="button" className="w-full bg-blue-600 hover:bg-blue-500 text-slate-900 dark:text-white font-bold rounded-xl px-4 py-4 transition-colors mt-4 text-lg">
+              <button type="submit" className="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl px-4 py-4 transition-colors mt-4 text-lg">
                 Request my free audit
               </button>
               <p className="text-center text-xs text-slate-500 mt-4">Five working day turnaround. No sales deck attached.</p>
-            </form>
+            </LeadForm>
           </div>
         </motion.div>
 
@@ -105,11 +113,11 @@ export function SeoReasons() {
   ];
 
   return (
-    <section className="py-24 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
+    <section className="py-14 md:py-20 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 max-w-2xl">
+        <div className="mb-10 md:mb-12 max-w-2xl">
           <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3">The usual problem</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
             Four reasons SEO stops working, in rough order of how often we see them.
           </h2>
           <p className="text-slate-500 dark:text-slate-400 text-lg">If two or more of these sound familiar, the audit will confirm it in about a week.</p>
@@ -141,7 +149,7 @@ export function SeoPillars() {
       percent: "40%",
       time: "Typical first six months",
       title: "Content",
-      desc: "Targeting the searches that end in a purchase or an enquiry, and building pages good enough to deserve the position.",
+      desc: "Targeting the searches that end in a purchase or an inquiry, and building pages good enough to deserve the position.",
       items: ["Keyword research and intent clustering", "Content roadmap tied to the funnel", "New page briefs and production", "Rewriting and merging underperformers", "Internal linking architecture", "On page optimization at template level"]
     },
     {
@@ -154,11 +162,11 @@ export function SeoPillars() {
   ];
 
   return (
-    <section className="py-24 px-5 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#080b12] border-t border-slate-100 dark:border-white/5">
+    <section className="py-14 md:py-20 px-5 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#080b12] border-t border-slate-100 dark:border-white/5">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 max-w-2xl">
+        <div className="mb-10 md:mb-12 max-w-2xl">
           <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3">How we split the work</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
             Three pillars, weighted by what your site actually needs.
           </h2>
           <p className="text-slate-500 dark:text-slate-400 text-lg">The split below is a typical first six months. A technically broken site gets more of the first pillar. A clean site with no content gets more of the second.</p>
@@ -197,11 +205,11 @@ export function SeoDeliverables() {
   ];
 
   return (
-    <section className="py-24 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
+    <section className="py-14 md:py-20 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 max-w-2xl">
+        <div className="mb-10 md:mb-12 max-w-2xl">
           <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3">What you get</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
             Eight deliverables, every month.
           </h2>
           <p className="text-slate-500 dark:text-slate-400 text-lg">Written into your scope, so you can hold us to it rather than wondering what the retainer bought.</p>

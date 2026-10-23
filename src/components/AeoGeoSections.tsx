@@ -3,38 +3,43 @@
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, ChevronRight, Search, Zap, Globe, FileText, Database, ShieldAlert } from "lucide-react";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { LeadForm } from "@/components/LeadForm";
+
+const aeoLabel = "block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2";
+const aeoField = "w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all";
 
 export function AeoGeoHero() {
   return (
-    <section className="relative px-5 pt-32 pb-16 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-white/10 bg-white dark:bg-[#05070d] overflow-hidden">
+    <section className="relative px-5 pt-28 pb-16 sm:px-6 lg:px-8 border-b border-slate-200 dark:border-white/10 bg-white dark:bg-[#05070d] overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,rgba(34,211,238,0.08),transparent_50%)]" />
       <div className="mx-auto max-w-7xl">
-        <div className="mb-8 flex items-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400">
-          <Link href="/" className="hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors">Home</Link>
-          <ChevronRight className="w-4 h-4" />
-          <Link href="/" className="hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors">Services</Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="text-slate-900 dark:text-white">AEO and GEO</span>
-        </div>
+        <Breadcrumbs
+          className="mb-8"
+          items={[
+            { name: "Digital Marketing", path: "/digital-marketing" },
+            { name: "AI SEO", path: "/digital-marketing/ai-seo" },
+          ]}
+        />
 
-        <div className="grid lg:grid-cols-[1.08fr_0.92fr] gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-[1.08fr_0.92fr] gap-12 lg:gap-12 items-start">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
           >
             <span className="mb-4 inline-block text-sm font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">
               Answer & Generative Engine Optimization
             </span>
-            <h1 className="mb-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+            <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
               Getting cited when the answer <span className="bg-gradient-to-r from-cyan-600 to-cyan-400 dark:from-cyan-400 dark:to-cyan-200 bg-clip-text text-transparent">replaces the click.</span>
             </h1>
             <p className="mb-10 text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
-              A growing share of buying research now ends inside an AI answer rather than on your website. This is the work of being the source that answer is built from, across AI Overviews, ChatGPT, Perplexity and Gemini.
+              A growing share of buying research now ends inside an AI answer rather than on your website. This is the work of being the source that answer is built from, across Google AI Overviews and AI Mode, ChatGPT, Perplexity, Gemini and Claude.
             </p>
-            
+
             <div className="flex flex-wrap items-center gap-4">
-              <Link href="#quote" className="inline-flex h-12 items-center justify-center rounded-full bg-slate-900 dark:bg-white px-8 text-sm font-semibold text-white dark:text-slate-900 transition-all hover:bg-cyan-600 dark:hover:bg-cyan-300 hover:scale-105">
+              <Link href="#audit" className="inline-flex h-12 items-center justify-center rounded-full bg-cyan-500 px-8 text-sm font-semibold text-slate-950 transition-colors hover:bg-cyan-400">
                 Get a free visibility report
               </Link>
               <Link href="#evidence" className="inline-flex h-12 items-center justify-center rounded-full border border-slate-200 dark:border-white/20 bg-transparent px-8 text-sm font-semibold text-slate-900 dark:text-white transition-all hover:border-slate-900 dark:hover:border-white hover:bg-slate-50 dark:hover:bg-white/5">
@@ -48,8 +53,8 @@ export function AeoGeoHero() {
                 <span className="text-sm text-slate-500 dark:text-slate-400">AI surfaces tracked</span>
               </div>
               <div>
-                <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">25-40%</strong>
-                <span className="text-sm text-slate-500 dark:text-slate-400">Citation lift from evidence</span>
+                <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">25 to 40%</strong>
+                <span className="text-sm text-slate-500 dark:text-slate-400">Visibility lift from evidence in published research</span>
               </div>
               <div>
                 <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">Monthly</strong>
@@ -59,44 +64,44 @@ export function AeoGeoHero() {
           </motion.div>
 
           <motion.div
-            id="quote"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900/50 p-8 shadow-xl backdrop-blur-sm relative overflow-hidden"
+            id="audit"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="scroll-mt-24 rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900/50 p-6 sm:p-8 shadow-xl relative overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-full h-1.5 bg-cyan-500" />
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Free AI visibility report</h3>
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Free AI visibility report</h2>
             <p className="text-slate-600 dark:text-slate-400 text-sm mb-8">
-              We run a set of real buying questions from your category across six AI surfaces and send you what they say, who they cite, and whether you appear at all.
+              We run a set of real buying questions from your category across six AI surfaces (Google AI Overviews and AI Mode, ChatGPT, Perplexity, Gemini and Claude) and send you what they say, who they cite, and whether you appear at all.
             </p>
 
-            <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="space-y-5">
+            <LeadForm source="AI SEO visibility report" className="space-y-5">
               <div>
-                <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Your name</label>
-                <input name="name" type="text" placeholder="Priya Raman" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <label htmlFor="aeo-name" className={aeoLabel}>Your name</label>
+                <input id="aeo-name" name="name" type="text" required autoComplete="name" placeholder="Your name" className={aeoField} />
               </div>
               <div>
-                <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Work email</label>
-                <input name="email" type="email" placeholder="priya@company.com" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <label htmlFor="aeo-email" className={aeoLabel}>Work email</label>
+                <input id="aeo-email" name="email" type="email" required autoComplete="email" placeholder="priya@company.com" className={aeoField} />
               </div>
               <div>
-                <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Website</label>
-                <input name="website" type="url" placeholder="company.com" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <label htmlFor="aeo-website" className={aeoLabel}>Website</label>
+                <input id="aeo-website" name="website" type="text" inputMode="url" autoComplete="url" placeholder="company.com" className={aeoField} />
               </div>
               <div>
-                <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">What do you sell, in a sentence</label>
-                <input name="name" type="text" placeholder="Workflow software for logistics teams" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <label htmlFor="aeo-offering" className={aeoLabel}>What do you sell, in a sentence</label>
+                <input id="aeo-offering" name="offering" type="text" placeholder="Workflow software for logistics teams" className={aeoField} />
               </div>
               <div>
-                <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Main competitors, comma separated</label>
-                <input name="name" type="text" placeholder="Competitor A, Competitor B" className="w-full rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-950/50 px-4 py-3 text-sm text-slate-900 dark:text-white outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" />
+                <label htmlFor="aeo-competitors" className={aeoLabel}>Main competitors, comma separated</label>
+                <input id="aeo-competitors" name="competitors" type="text" placeholder="Competitor A, Competitor B" className={aeoField} />
               </div>
-              <button className="w-full rounded-xl bg-cyan-600 dark:bg-cyan-500 py-3.5 text-sm font-bold text-white transition-colors hover:bg-cyan-700 dark:hover:bg-cyan-400">
+              <button type="submit" className="w-full rounded-xl bg-cyan-500 py-3.5 text-sm font-bold text-slate-950 transition-colors hover:bg-cyan-400">
                 Send me the report
               </button>
               <p className="text-center text-xs text-slate-500 dark:text-slate-400">Five working day turnaround. Yours to keep either way.</p>
-            </form>
+            </LeadForm>
           </motion.div>
         </div>
       </div>
@@ -125,7 +130,7 @@ export function AeoGeoTerms() {
     {
       abbr: "GEO",
       title: "Generative Engine Optimization",
-      desc: "Being cited and recommended when a model synthesises an answer from many sources. Broader than any one page, involving what the model knows about you as an entity.",
+      desc: "Being cited and recommended when a model synthesizes an answer from many sources. Broader than any one page, involving what the model knows about you as an entity.",
       q: "Does the model recommend us, and in what terms?",
       color: "text-cyan-600 dark:text-cyan-400",
       borderColor: "border-cyan-600 dark:border-cyan-400"
@@ -133,9 +138,9 @@ export function AeoGeoTerms() {
   ];
 
   return (
-    <section className="px-5 py-24 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950/50">
+    <section className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950/50">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-12">
           <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">The Terminology</span>
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Three acronyms, and the industry has not settled on them.
@@ -151,8 +156,8 @@ export function AeoGeoTerms() {
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
               className={`rounded-2xl bg-white dark:bg-slate-900 p-8 shadow-sm border-t-4 ${t.borderColor}`}
             >
               <h3 className={`text-4xl font-bold mb-4 ${t.color}`}>{t.abbr}</h3>
@@ -167,7 +172,7 @@ export function AeoGeoTerms() {
         </div>
         
         <div className="mt-12 rounded-2xl bg-white dark:bg-slate-900 p-6 border-l-4 border-amber-500 text-sm text-slate-600 dark:text-slate-400">
-          In practice they overlap heavily and Google treats optimisation for its own generative features as part of ordinary SEO, stating that AI Overviews draw on the same ranking and quality systems as Search. That is why we do not sell GEO as a replacement for <Link href="/digital-marketing/seo" className="text-cyan-600 dark:text-cyan-400 hover:underline">SEO</Link>. It is an extension of it.
+          In practice they overlap heavily and Google treats optimization for its own generative features as part of ordinary SEO, stating that AI Overviews draw on the same ranking and quality systems as Search. That is why we do not sell GEO as a replacement for <Link href="/digital-marketing/seo" className="text-cyan-600 dark:text-cyan-400 hover:underline">SEO</Link>. It is an extension of it.
         </div>
       </div>
     </section>
@@ -176,14 +181,14 @@ export function AeoGeoTerms() {
 
 export function AeoGeoProblems() {
   const problems = [
-    { title: "The answer is the destination", desc: "Someone asks a question, gets a synthesised answer naming three vendors, and contacts one. If you were not named, you were never in the running and you see nothing in analytics." },
+    { title: "The answer is the destination", desc: "Someone asks a question, gets a synthesized answer naming three vendors, and contacts one. If you were not named, you were never in the running and you see nothing in analytics." },
     { title: "Your crawlers may be blocked", desc: "Many sites block AI crawlers without knowing it, sometimes through a CDN default rather than a deliberate choice. If the bots cannot read you, nothing else matters." },
-    { title: "Most citations are not from your site", desc: "A large share of what AI systems reference comes from third party sources: directories, reviews, forums and press. Optimising only your own pages leaves most of the surface untouched." },
+    { title: "Most citations are not from your site", desc: "A large share of what AI systems reference comes from third party sources: directories, reviews, forums and press. Optimizing only your own pages leaves most of the surface untouched." },
     { title: "Nobody is measuring it", desc: "None of this appears in Google Analytics. Without deliberate tracking you have no idea whether you are recommended, ignored, or described inaccurately." }
   ];
 
   return (
-    <section className="px-5 py-24 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
+    <section className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl mb-12">
           <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">Why it matters now</span>
@@ -207,15 +212,15 @@ export function AeoGeoProblems() {
 
 export function AeoGeoEvidence() {
   const evidence = [
-    { source: "Princeton, KDD 2024", title: "Evidence markers work", desc: "The foundational GEO study ran 10k queries testing content changes against whether an answer cited the page. Adding machine extractable provenance produced the biggest gains: direct quotations, statistics and citations, each worth roughly 25 to 40% more visibility.", take: "Every page we optimise carries verifiable, attributable evidence rather than assertion." },
+    { source: "Princeton, KDD 2024", title: "Evidence markers work", desc: "The foundational GEO study ran 10k queries testing content changes against whether an answer cited the page. Adding machine extractable provenance produced the biggest gains: direct quotations, statistics and citations, each worth roughly 25 to 40% more visibility.", take: "Every page we optimize carries verifiable, attributable evidence rather than assertion." },
     { source: "C-SEO Bench, 2025", title: "Most tactics do not help", desc: "The first systematic benchmark of conversational SEO techniques reached a blunt conclusion: the majority of popular tactics produce no benefit, several actively hurt, and plain source relevance keeps working.", take: "We test page quality on the source side rather than chasing prompt engineering tricks." },
     { source: "2026 survey, 45 studies", title: "It is a pipeline, not a score", desc: "A critical survey reviewing 45 studies found that generative visibility is not one ranking factor but a chain of stages, and that winning one stage does not guarantee the next.", take: "We diagnose which stage you are failing at before changing anything." }
   ];
 
   return (
-    <section id="evidence" className="px-5 py-24 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950/50 border-t border-slate-200 dark:border-white/10">
+    <section id="evidence" className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950/50 border-t border-slate-200 dark:border-white/10">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-12">
           <span className="mb-3 block text-sm font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">What the research shows</span>
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Most GEO advice has never been tested. Some of it has.

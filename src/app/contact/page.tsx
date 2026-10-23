@@ -1,7 +1,13 @@
-"use client";
-
 import { ContactHero, ContactMain, ContactSteps } from "@/components/ContactSections";
-import { ContactTeam, ContactOffices, ContactDepartments, ContactFaq } from "@/components/ContactSections2";
+import { ContactOffices, ContactDepartments, ContactFaq } from "@/components/ContactSections2";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Contact Us: Free Marketing Audit and Quote | Qode Clicks",
+  description:
+    "Contact Qode Clicks for SEO, Google Ads and web development. Teams in Frisco, Texas and Lahore, Pakistan. A specialist replies within one working day.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
@@ -9,7 +15,6 @@ export default function ContactPage() {
       <ContactHero />
       <ContactMain />
       <ContactSteps />
-      <ContactTeam />
       <ContactOffices />
       <ContactDepartments />
       <ContactFaq />

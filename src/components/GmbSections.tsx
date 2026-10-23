@@ -5,32 +5,40 @@ import {
   MapPin, CheckCircle, Clock, Image as ImageIcon, Map, FileCode2,
   MessageSquare, Star, Tags, MessageCircle, Phone, ShieldAlert
 } from "lucide-react";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { LeadForm } from "@/components/LeadForm";
+
+const gbpLabel = "block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2 uppercase tracking-wider";
+const gbpField = "w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50";
 
 export function GmbHero() {
   return (
-    <section className="relative pt-28 pb-20 lg:pt-28 lg:pb-28 px-5 sm:px-6 lg:px-8 overflow-hidden bg-white dark:bg-[#05070d] border-b border-slate-200 dark:border-white/5">
+    <section className="relative pt-28 pb-14 lg:pt-28 lg:pb-20 px-5 sm:px-6 lg:px-8 overflow-hidden bg-white dark:bg-[#05070d] border-b border-slate-200 dark:border-white/5">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(34,211,238,0.1),transparent_50%)]" />
-      <div className="mx-auto max-w-7xl grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-start relative z-10">
-        
-        <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
+      <div className="mx-auto max-w-7xl relative z-10 mb-8">
+        <Breadcrumbs
+          items={[
+            { name: "Digital Marketing", path: "/digital-marketing" },
+            { name: "Google Business Profile", path: "/digital-marketing/google-business-profile" },
+          ]}
+        />
+      </div>
+      <div className="mx-auto max-w-7xl grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-12 items-start relative z-10">
+
+        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
           <p className="text-cyan-600 dark:text-cyan-400 font-bold text-sm mb-6 uppercase tracking-wider">Google Business Profile, formerly GMB</p>
-          <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]">
             The listing that{" "}
-            <motion.span 
-              animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-              style={{ backgroundSize: "200% auto" }}
-              className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 dark:from-cyan-400 dark:via-blue-400 dark:to-cyan-400 font-serif italic pr-2"
-            >
-              rings your phone
-            </motion.span>{" "}
+            <span className="inline-block text-cyan-600 dark:text-cyan-400 font-serif italic pr-1">
+              rings your phone,
+            </span>{" "}
             not the one that looks tidy.
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-10 max-w-xl leading-relaxed">
-            Most GMB work stops at filling in fields. We optimise for the three things Google actually ranks on, then measure it with a geo-grid so you can see visibility across your whole service area rather than from wherever you happen to be standing.
+            Most Google Business Profile work stops at filling in fields. We optimize for the three things Google actually ranks on, then measure it with a geo-grid so you can see visibility across your whole service area rather than from wherever you happen to be standing.
           </p>
           <div className="flex flex-wrap gap-4 mb-12">
-            <a href="#quote" className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-100 dark:bg-slate-900 dark:bg-cyan-400 px-8 py-4 text-sm font-semibold text-slate-900 dark:text-white dark:text-slate-950 transition hover:bg-slate-800 dark:hover:bg-cyan-300">
+            <a href="#audit" className="inline-flex items-center justify-center gap-2 rounded-full bg-cyan-500 px-8 py-4 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400">
               Get a free grid report
             </a>
             <a href="#geo" className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 dark:border-white/20 bg-transparent px-8 py-4 text-sm font-semibold text-slate-900 dark:text-white transition hover:bg-slate-50 dark:hover:bg-white/5">
@@ -54,63 +62,65 @@ export function GmbHero() {
           </div>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} id="quote" className="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-3xl p-8 backdrop-blur-xl relative overflow-hidden shadow-2xl">
+        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.1 }} id="audit" className="scroll-mt-24 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-3xl p-6 sm:p-8 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-cyan-400 to-blue-500" />
-          <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Free geo-grid report</h3>
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Free geo-grid report</h2>
           <p className="text-sm text-slate-600 dark:text-slate-300 mb-8">We run a 7 by 7 grid across your service area and send you a map showing where you rank, where you disappear, and who is beating you in each square.</p>
-          
-          <form action="https://formsubmit.co/info@qodeclicks.com" method="POST" className="space-y-4">
+
+          <LeadForm source="GBP geo-grid audit" className="space-y-4">
             <div>
-              <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2 uppercase tracking-wider">Your name</label>
-              <input name="name" type="text" placeholder="Priya Raman" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
+              <label htmlFor="gbp-name" className={gbpLabel}>Your name</label>
+              <input id="gbp-name" name="name" type="text" required autoComplete="name" placeholder="Your name" className={gbpField} />
             </div>
             <div>
-              <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2 uppercase tracking-wider">Work email</label>
-              <input name="email" type="email" placeholder="priya@company.com" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
+              <label htmlFor="gbp-email" className={gbpLabel}>Work email</label>
+              <input id="gbp-email" name="email" type="email" required autoComplete="email" placeholder="priya@company.com" className={gbpField} />
             </div>
             <div>
-              <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2 uppercase tracking-wider">Business name</label>
-              <input name="name" type="text" placeholder="Raman Plumbing" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
+              <label htmlFor="gbp-business" className={gbpLabel}>Business name</label>
+              <input id="gbp-business" name="business_name" type="text" required autoComplete="organization" placeholder="Raman Plumbing" className={gbpField} />
             </div>
             <div>
-              <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2 uppercase tracking-wider">City or service area</label>
-              <input name="name" type="text" placeholder="Dallas TX, or Manchester" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
+              <label htmlFor="gbp-city" className={gbpLabel}>City or service area</label>
+              <input id="gbp-city" name="city" type="text" required placeholder="Dallas, TX" className={gbpField} />
             </div>
             <div>
-              <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2 uppercase tracking-wider">Main search term you want to win</label>
-              <input name="name" type="text" placeholder="emergency plumber, dental implants" className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50" />
+              <label htmlFor="gbp-keyword" className={gbpLabel}>Main search term you want to win</label>
+              <input id="gbp-keyword" name="keyword" type="text" placeholder="emergency plumber, dental implants" className={gbpField} />
             </div>
             <div>
-              <label className="block text-xs font-semibold text-slate-600 dark:text-slate-300 mb-2 uppercase tracking-wider">Number of locations</label>
-              <select className="w-full bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white text-sm outline-none transition focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50 appearance-none">
+              <label htmlFor="gbp-locations" className={gbpLabel}>Number of locations</label>
+              <select id="gbp-locations" name="locations" defaultValue="" className={`${gbpField} appearance-none`}>
+                <option value="" disabled>Choose number of locations</option>
                 <option>1 location</option>
                 <option>2 to 5 locations</option>
                 <option>6 to 20 locations</option>
                 <option>More than 20 locations</option>
               </select>
             </div>
-            <button className="w-full mt-4 bg-blue-600 dark:bg-cyan-500 text-white dark:text-slate-950 font-bold py-4 rounded-xl transition hover:opacity-90">
+            <button type="submit" className="w-full mt-4 bg-cyan-500 text-slate-950 font-bold py-4 rounded-xl transition hover:bg-cyan-400">
               Send me the grid report
             </button>
             <p className="text-center text-xs text-slate-500 mt-4">Back within three working days. Yours to keep either way.</p>
-          </form>
+          </LeadForm>
         </motion.div>
       </div>
     </section>
   );
 }
 
+// Neutral "industries we serve" strip (replaces the old client logo strip, which used unverified brand names).
 export function GmbLogos() {
-  const logos = ["Kestrel Health", "Miravel", "Northbeam", "Onwardly", "Verdea"];
+  const industries = ["Home services", "Dental and medical clinics", "Legal practices", "Restaurants", "Multi-location retail"];
   return (
     <div className="border-b border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.02]">
-      <div className="mx-auto max-w-7xl px-5 py-8 sm:px-6 lg:px-8 flex flex-wrap items-center gap-x-12 gap-y-6">
-        <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Managing profiles for</p>
-        <div className="flex flex-wrap items-center gap-8 md:gap-12">
-          {logos.map(logo => (
-            <span key={logo} className="font-serif text-xl font-bold tracking-tight text-slate-500">{logo}</span>
+      <div className="mx-auto max-w-7xl px-5 py-8 sm:px-6 lg:px-8 flex flex-wrap items-center gap-x-12 gap-y-4">
+        <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Industries we manage profiles for</p>
+        <ul className="flex flex-wrap items-center gap-3">
+          {industries.map(name => (
+            <li key={name} className="rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-300">{name}</li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );
@@ -125,11 +135,11 @@ export function GmbProblems() {
   ];
 
   return (
-    <section className="px-5 py-24 sm:px-6 lg:px-8 bg-slate-50 dark:bg-[#05070d]">
+    <section className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-slate-50 dark:bg-[#05070d]">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-12">
           <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-sm mb-4 uppercase tracking-wider">What we usually find</p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
             Four reasons a profile looks fine and still produces nothing.
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-300">
@@ -239,18 +249,18 @@ export function GmbIncluded() {
     },
     {
       icon: <MessageCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />,
-      title: "Questions and answers",
-      desc: "The most ignored section on the profile. We seed the questions customers actually ask, answer them properly, and monitor for anyone else answering wrongly.",
-      items: ["Question set seeded from real enquiries", "Answers written and upvoted", "Monitoring for competitor interference", "Monthly review of new questions"],
-      foot: "Anyone can answer. Often they answer badly",
+      title: "Products and services catalog",
+      desc: "The products and services sections show up in search and Maps, yet most profiles leave them empty. We build them out with clear names, descriptions, prices where you publish them, and photos.",
+      items: ["Full services list with descriptions", "Products added with photos and prices", "FAQ content moved to your website with schema", "Quarterly review as your offer changes"],
+      foot: "Customer questions belong on your site, not left to strangers",
       color: "border-emerald-500",
       bg: "bg-emerald-50 dark:bg-emerald-500/10"
     },
     {
       icon: <Phone className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />,
-      title: "Calls, messaging and booking",
-      desc: "Call tracking that does not break your NAP consistency, messaging enabled and monitored, and booking links wired to your actual calendar.",
-      items: ["Call tracking with correct configuration", "Messaging enabled and response monitored", "Booking and appointment links", "Call recording and quality review"],
+      title: "Calls and booking",
+      desc: "Call tracking that does not break your NAP consistency, and booking links wired to your actual calendar so ready buyers can act straight from the profile.",
+      items: ["Call tracking with correct configuration", "Booking and appointment links", "Website and directions clicks tracked", "Call recording and quality review"],
       foot: "Half of local leads never visit the website",
       color: "border-emerald-500",
       bg: "bg-emerald-50 dark:bg-emerald-500/10"
@@ -267,11 +277,11 @@ export function GmbIncluded() {
   ];
 
   return (
-    <section className="px-5 py-24 sm:px-6 lg:px-8 bg-slate-50 dark:bg-[#05070d]" id="included">
+    <section className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-slate-50 dark:bg-[#05070d]" id="included">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-12">
           <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-sm mb-4 uppercase tracking-wider">What we do</p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
             Twelve things, split into setup and the part that never stops.
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-300">
@@ -280,7 +290,7 @@ export function GmbIncluded() {
         </div>
 
         <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-6 tracking-wide">Foundations, done once and done right</p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 md:mb-12">
           {foundations.map((c, i) => (
             <div key={i} className={`bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 rounded-2xl p-8 flex flex-col border-t-4 ${c.color} transition hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-black/50`}>
               <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${c.bg}`}>

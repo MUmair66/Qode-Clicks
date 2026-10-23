@@ -1,14 +1,48 @@
-"use client";
-
-import Link from "next/link";
 import { AdsHero, AdsReasons, AdsCampaignTypes, AdsLocalBanner, AdsMaps, AdsAuditCTA } from "@/components/AdsSections";
 import { AdsIncluded, AdsPricing, AdsOneOffWork } from "@/components/AdsSections2";
 import { AdsProcess } from "@/components/AdsSections3";
 import { FaqSection } from "@/components/FaqSection";
+import { CtaBanner } from "@/components/CtaBanner";
+import { JsonLd } from "@/components/JsonLd";
+import { pageMetadata, serviceJsonLd } from "@/lib/seo";
+import { PRICING } from "@/lib/site";
+
+const title = "Google Ads Management Agency, From $900/mo | Qode Clicks";
+const description =
+  "Google Ads management from $900/mo: Search, Shopping, Performance Max and remarketing, with landing pages built in. Get a free written account audit.";
+
+export const metadata = pageMetadata({ title, description, path: "/ppc/google-ads" });
+
+const faqs = [
+  {
+    question: "How soon will Google Ads start producing leads?",
+    answer:
+      "Most accounts see first leads within 2 to 4 weeks of launch. Cost per lead usually stabilizes around weeks 4 to 6, once search terms, negatives, bids and landing pages have had enough data to tune.",
+  },
+  {
+    question: "What does Google Ads management cost?",
+    answer: `Management starts at ${PRICING.googleAdsMonthly} for Search-only accounts with up to $8,000 in monthly media, $1,600/mo for multi-campaign accounts, and from $3,200/mo for multi-location. Above $60,000/mo in media, the fee is 10% of spend.`,
+  },
+  {
+    question: "Is there a minimum ad budget?",
+    answer: `We recommend at least ${PRICING.minAdSpendMonthly} in media so campaigns gather enough conversion data to optimize. Media is billed directly to your own card on your own account, and we never mark it up.`,
+  },
+  {
+    question: "What is included in the free account audit?",
+    answer:
+      "A specialist reviews your account structure, search terms, conversion tracking, bidding and landing pages, then sends a written report with wasted spend and the changes we would make first. Turnaround is five working days and the report is yours to keep.",
+  },
+  {
+    question: "Do you lock us into a long contract?",
+    answer:
+      "There is a three month minimum so changes have time to prove out, then it is rolling with thirty days' notice. Your ad accounts stay in your name and billing the whole time.",
+  },
+];
 
 export default function AdsPage() {
   return (
     <div className="bg-white dark:bg-[#05070d] text-slate-900 dark:text-white">
+      <JsonLd data={serviceJsonLd({ name: "Google Ads Management", description, path: "/ppc/google-ads" })} />
       <AdsHero />
       <AdsReasons />
       <AdsProcess />
@@ -19,33 +53,13 @@ export default function AdsPage() {
       <AdsIncluded />
       <AdsPricing />
       <AdsOneOffWork />
-      
-      {/* FAQs */}
-      <FaqSection />
-
-      {/* Bottom Solid CTA */}
-      <section className="py-24 px-5 sm:px-6 lg:px-8 border-t border-slate-100 dark:border-white/5 bg-white dark:bg-[#05070d]">
-        <div className="mx-auto max-w-5xl">
-          <div className="bg-gradient-to-r from-blue-600 to-cyan-500 rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%] animate-shine" />
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 relative z-10">
-              Stop funding traffic that never converts.
-            </h2>
-            <p className="text-blue-50 text-lg mb-10 max-w-2xl mx-auto relative z-10">
-              Book a call with our ads director to discuss your Google Ads account. We'll run a free audit and tell you exactly where you're wasting money.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-              <Link href="#audit" className="bg-blue-50 text-blue-600 dark:bg-white dark:text-blue-600 font-bold px-8 py-4 rounded-full hover:scale-105 transition-transform">
-                Get a free account audit
-              </Link>
-              <Link href="/#contact" className="bg-transparent text-slate-900 dark:text-white border-2 border-white/30 font-bold px-8 py-4 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
-                Book a Call
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FaqSection faqs={faqs} title="Google Ads questions" />
+      <CtaBanner
+        title="Stop funding traffic that never converts."
+        description="Book a call with our paid media lead to talk through your Google Ads account, or request a free written audit showing exactly where budget is being wasted."
+        primary={{ label: "Get a free account audit", href: "#audit" }}
+        secondary={{ label: "Book a call with our paid media lead", href: "/contact#contact-form" }}
+      />
     </div>
   );
 }

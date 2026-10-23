@@ -27,11 +27,11 @@ const timeline = [
 
 export function OnboardingTimeline() {
   return (
-    <section className="px-5 py-24 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl bg-[#0f1115] rounded-3xl p-10 md:p-16 border border-slate-100 dark:border-white/5 shadow-2xl">
-        <div className="max-w-2xl mb-20">
+    <section className="px-5 py-14 md:py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl bg-[#0f1115] rounded-3xl p-10 md:p-12 border border-slate-100 dark:border-white/5 shadow-2xl">
+        <div className="max-w-2xl mb-12">
           <p className="text-amber-400 font-bold text-sm tracking-wide uppercase mb-4">Onboarding</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
             Your first thirty days, week by week.
           </h2>
           <p className="text-lg text-slate-500 dark:text-slate-400">
