@@ -10,6 +10,8 @@ export const SITE = {
   phone: "",
   phoneHref: "",
   formAction: "https://formsubmit.co/info@qodeclicks.com",
+  // Google Analytics 4 measurement ID. NEXT_PUBLIC_GA_ID overrides it if set.
+  gaId: "G-22V32ZLLM7",
   // Client to supply a scheduling link (Calendly, Cal.com, etc.). Falls back to the contact form.
   bookingUrl: "/contact#contact-form",
   hours: "Frisco: Mon to Fri, 9am to 5pm CT. Lahore: Mon to Fri, 9am to 6pm PKT.",
