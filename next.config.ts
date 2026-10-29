@@ -3,6 +3,13 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      // One canonical host: send every www URL to the same path on qodeclicks.com.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.qodeclicks.com" }],
+        destination: "https://qodeclicks.com/:path*",
+        statusCode: 301,
+      },
       // Google Guaranteed is now Local Services Ads (Google Verified).
       { source: "/google-guarantee", destination: "/ppc/local-services-ads", permanent: true },
       { source: "/ppc/google-guaranteed", destination: "/ppc/local-services-ads", permanent: true },
