@@ -18,7 +18,7 @@ export const socialMediaMarketing: ServicePageData = {
     stats: [
       { value: "2 wks", label: "From kickoff to first scheduled posts" },
       { value: "30 days", label: "Content calendar planned ahead" },
-      { value: "100%", label: "Accounts, files and content you own" },
+      { value: "Yours", label: "Accounts, files and content you own" },
     ],
   },
 
@@ -42,7 +42,7 @@ export const socialMediaMarketing: ServicePageData = {
     items: [
       { title: "Posting in bursts", desc: "Three posts one week, nothing for a month. The algorithm and your followers both lose interest." },
       { title: "Every channel, same post", desc: "One graphic is pushed to Instagram, LinkedIn and TikTok unchanged, so it fits none of them." },
-      { title: "No video", desc: "Reels, TikTok and Shorts get most of the reach now, but nobody has time to plan, film and edit them." },
+      { title: "No video", desc: "Short-form video on Reels, TikTok and Shorts is where much of the reach is now, but nobody has time to plan, film and edit them." },
       { title: "Comments left unanswered", desc: "Questions and DMs sit for days, and potential customers quietly go to a competitor who replied." },
     ],
   },

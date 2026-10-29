@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronRight, FileText, CheckCircle2, XCircle, Search, PenLine, Megaphone, Monitor, BookOpen } from "lucide-react";
+import { FileText, CheckCircle2, XCircle, Search, PenLine, Megaphone, Monitor, BookOpen } from "lucide-react";
 import Link from "next/link";
 import { AnimatedServiceCard } from "./AnimatedServiceCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -50,12 +50,12 @@ export function ContentHero() {
 
             <div className="mt-12 pt-8 border-t border-slate-200 dark:border-white/10 grid grid-cols-3 gap-6">
               <div>
-                <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">9</strong>
+                <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">Nine</strong>
                 <span className="text-sm text-slate-500 dark:text-slate-400">Content formats we produce</span>
               </div>
               <div>
-                <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">+277%</strong>
-                <span className="text-sm text-slate-500 dark:text-slate-400">Organic sessions, content client, 9 months</span>
+                <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">Per piece</strong>
+                <span className="text-sm text-slate-500 dark:text-slate-400">Pricing, never per word</span>
               </div>
               <div>
                 <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">3 to 6</strong>
@@ -186,7 +186,7 @@ export function ContentCategories() {
             Nine formats, grouped by the job they do.
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400">
-            Most clients buy from two or three of these groups. The audit tells you which, based on where your funnel actually leaks.
+            The audit tells you which of these you need, based on where your funnel actually leaks.
           </p>
         </div>
 

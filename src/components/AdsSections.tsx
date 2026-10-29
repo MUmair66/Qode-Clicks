@@ -5,7 +5,6 @@ import { Search, ShoppingCart, Box, PlaySquare, RotateCcw, MapPin } from "lucide
 import Link from "next/link";
 import { LeadForm } from "@/components/LeadForm";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { STATS } from "@/lib/site";
 
 const fieldClass =
   "w-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:border-cyan-400 transition-colors";
@@ -50,16 +49,16 @@ export function AdsHero() {
 
           <div className="grid grid-cols-2 gap-6 pt-8 border-t border-slate-200 dark:border-white/10">
             <div>
-              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">-{STATS.cplReduction}</div>
-              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">Average cost per lead change across managed accounts</div>
+              <div className="text-2xl font-bold text-slate-900 dark:text-white mb-2">No media markup</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">Media billed directly to your own card</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">{STATS.roas}</div>
-              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">Average blended return on ad spend</div>
+              <div className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Accounts you own</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">Ad accounts stay in your name and billing</div>
             </div>
             <div className="col-span-2 pt-4">
-              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">{STATS.adSpend}</div>
-              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">Ad spend managed for clients</div>
+              <div className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Landing pages built in</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">Developer hours included in every plan</div>
             </div>
           </div>
         </motion.div>
@@ -120,7 +119,7 @@ export function AdsHero() {
 export function AdsReasons() {
   const reasons = [
     { title: "Brand traffic counted as a win", desc: "People already searching your name get claimed as campaign conversions. Strip those out and the real numbers look very different." },
-    { title: "Conversion tracking is broken", desc: "Roughly seven in ten accounts we audit have duplicate, missing or misattributed conversions. Every optimization on top of that is a guess." },
+    { title: "Conversion tracking is broken", desc: "Duplicate, missing or misattributed conversions are a common finding in the accounts we audit. Every optimization on top of that is a guess." },
     { title: "Performance Max eating everything", desc: "Left unstructured it absorbs brand and shopping traffic you were already winning, then takes credit for it." },
     { title: "Ads pointing at the homepage", desc: "Traffic bought for a specific search lands on a generic page. The click was fine, the page threw it away." }
   ];
@@ -321,7 +320,7 @@ export function AdsMaps() {
           </div>
           
           <p className="text-sm text-slate-500">
-            Maps advertising suits retail, clinics, showrooms, restaurants and anywhere a physical visit is the outcome. For urgent service calls, <Link href="/ppc/local-services-ads" className="text-cyan-700 dark:text-cyan-400 underline underline-offset-2">Local Services Ads</Link> usually produce cheaper leads. Many clients run both.
+            Maps advertising suits retail, clinics, showrooms, restaurants and anywhere a physical visit is the outcome. For urgent service calls, <Link href="/ppc/local-services-ads" className="text-cyan-700 dark:text-cyan-400 underline underline-offset-2">Local Services Ads</Link> usually produce cheaper leads. Many businesses run both.
           </p>
         </div>
       </div>
@@ -340,7 +339,7 @@ export function AdsAuditCTA() {
               Not sure how much of your spend is actually working?
             </h2>
             <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-8">
-              Most accounts we review are wasting somewhere between fifteen and forty percent of budget on brand traffic, broken tracking and search terms nobody would have bid on deliberately. We will tell you which, in writing, with the numbers attached.
+              Budget usually leaks through brand traffic, broken tracking and search terms nobody would have bid on deliberately. We will tell you which applies to your account, in writing, with figures from your own data attached.
             </p>
             <div className="flex flex-wrap gap-3">
               {["Five day turnaround", "Written findings", "Yours to keep", "No sales deck"].map((pill, i) => (

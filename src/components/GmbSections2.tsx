@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export function GmbBand() {
   return (
     <section className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-slate-50 dark:bg-[#05070d]">
@@ -50,65 +48,39 @@ export function GmbGeoGrid() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
-          {/* Before */}
+          {/* Weak coverage example */}
           <div className="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-white/10 rounded-2xl p-6 md:p-8">
             <div className="flex flex-wrap justify-between items-baseline gap-4 mb-6">
-              <b className="font-serif text-2xl font-bold text-slate-900 dark:text-white">Before</b>
-              <span className="text-sm text-slate-500 dark:text-slate-400">Month 0, 7 by 7 grid across a 5 mile radius</span>
+              <b className="font-serif text-2xl font-bold text-slate-900 dark:text-white">Weak coverage</b>
+              <span className="text-sm text-slate-500 dark:text-slate-400">7 by 7 grid across a service area</span>
             </div>
-            {/* 7x7 Grid */}
-            <div className="grid grid-cols-7 gap-1.5 aspect-square">
-              {/* Simplification: Just an illustrative pattern like the original */}
-              {Array.from({length: 49}).map((_, i) => {
-                // Approximate a bad grid (lots of 20+, some 10-15s, maybe a 7-9 in the middle)
-                let cls = "bg-slate-200 dark:bg-slate-800 text-slate-500";
-                let val = "20+";
-                if ([24].includes(i)) { cls = "bg-amber-400 text-amber-950"; val = "7"; }
-                else if ([17, 23, 25, 31, 32].includes(i)) { cls = "bg-amber-400/80 text-amber-950"; val = "9"; }
-                else if ([16, 18, 22, 26, 30, 33, 38].includes(i)) { cls = "bg-rose-500 text-white"; val = "14"; }
-                else if ([8, 9, 10, 11, 15, 21, 27, 29, 37, 39].includes(i)) { cls = "bg-rose-500/80 text-white"; val = "18"; }
-
-                return (
-                  <div key={i} className={`${cls} rounded-md flex items-center justify-center font-bold text-[10px] sm:text-xs`}>
-                    {val}
-                  </div>
-                );
+            {/* 7x7 Grid, illustrative pattern only */}
+            <div className="grid grid-cols-7 gap-1.5 aspect-square" aria-hidden="true">
+              {Array.from({ length: 49 }).map((_, i) => {
+                let cls = "bg-slate-200 dark:bg-slate-800";
+                if ([24].includes(i)) cls = "bg-yellow-400";
+                else if ([17, 23, 25, 31, 32].includes(i)) cls = "bg-amber-400";
+                else if ([16, 18, 22, 26, 30, 33, 38, 8, 9, 10, 11, 15, 21, 27, 29, 37, 39].includes(i)) cls = "bg-rose-500";
+                return <div key={i} className={`${cls} rounded-md`} />;
               })}
-            </div>
-            <div className="mt-6 pt-6 border-t border-slate-200 dark:border-white/10 flex justify-between items-center text-sm">
-              <span className="text-slate-600 dark:text-slate-300">Average grid position</span>
-              <b className="font-serif text-2xl text-slate-900 dark:text-white">16.7</b>
             </div>
           </div>
 
-          {/* After */}
+          {/* Strong coverage example */}
           <div className="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-white/10 rounded-2xl p-6 md:p-8">
             <div className="flex flex-wrap justify-between items-baseline gap-4 mb-6">
-              <b className="font-serif text-2xl font-bold text-slate-900 dark:text-white">After 5 months</b>
+              <b className="font-serif text-2xl font-bold text-slate-900 dark:text-white">Strong coverage</b>
               <span className="text-sm text-slate-500 dark:text-slate-400">Same grid, same radius, same tool</span>
             </div>
-            {/* 7x7 Grid */}
-            <div className="grid grid-cols-7 gap-1.5 aspect-square">
-              {Array.from({length: 49}).map((_, i) => {
-                let cls = "bg-emerald-600 text-white";
-                let val = "1";
-                // Inner core
-                if ([17,18, 23,24,25, 30,31,32].includes(i)) { cls = "bg-emerald-600 text-white"; val = ["1","2"][i%2]; }
-                else if ([9,10,11,12, 16,19, 22,26, 29,33, 37,38,39].includes(i)) { cls = "bg-emerald-400 text-emerald-950"; val = ["3","4","5"][i%3]; }
-                else if ([2,3,4, 8,13, 21,27, 36,40].includes(i)) { cls = "bg-yellow-400 text-yellow-950"; val = "7"; }
-                else if ([0,1,5,6, 7,14, 20,28, 35,41, 42,48].includes(i)) { cls = "bg-amber-400 text-amber-950"; val = "9"; }
-                else { cls = "bg-amber-400 text-amber-950"; val = "8"; }
-
-                return (
-                  <div key={i} className={`${cls} rounded-md flex items-center justify-center font-bold text-[10px] sm:text-xs`}>
-                    {val}
-                  </div>
-                );
+            {/* 7x7 Grid, illustrative pattern only */}
+            <div className="grid grid-cols-7 gap-1.5 aspect-square" aria-hidden="true">
+              {Array.from({ length: 49 }).map((_, i) => {
+                let cls = "bg-amber-400";
+                if ([17, 18, 23, 24, 25, 30, 31, 32].includes(i)) cls = "bg-emerald-600";
+                else if ([9, 10, 11, 12, 16, 19, 22, 26, 29, 33, 37, 38, 39].includes(i)) cls = "bg-emerald-400";
+                else if ([2, 3, 4, 8, 13, 21, 27, 36, 40].includes(i)) cls = "bg-yellow-400";
+                return <div key={i} className={`${cls} rounded-md`} />;
               })}
-            </div>
-            <div className="mt-6 pt-6 border-t border-slate-200 dark:border-white/10 flex justify-between items-center text-sm">
-              <span className="text-slate-600 dark:text-slate-300">Average grid position</span>
-              <b className="font-serif text-2xl text-slate-900 dark:text-white">6.1</b>
             </div>
           </div>
         </div>
@@ -123,7 +95,7 @@ export function GmbGeoGrid() {
         </div>
 
         <p className="text-sm text-slate-500 dark:text-slate-400 mb-10 md:mb-12 leading-relaxed max-w-4xl">
-          Illustrative of a typical result. The pattern is what matters: before, the business ranked reasonably at its own pin and disappeared past two miles. After, the top three extends across the center of the service area and the edges hold single figure positions. That expansion is where the extra calls come from.
+          An illustration, not client data. The pattern is what matters: a profile with weak coverage ranks reasonably at its own pin and disappears further out. Strong coverage extends the top positions across the center of the service area and holds the edges. That is the shape the work aims for, and the grid shows whether it is happening.
         </p>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -201,7 +173,7 @@ export function GmbGeoFencing() {
           <div className="bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 p-8 rounded-2xl">
             <span className="font-serif text-3xl font-bold text-blue-600 dark:text-cyan-400 mb-4 block">02</span>
             <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2">Competitor and venue</h3>
-            <p className="text-sm text-slate-600 dark:text-slate-300 mb-6">Targeting a boundary around a competitor's location, a trade show, a retail park or a stadium. Effective for footfall businesses, and worth knowing the limits before you plan around it.</p>
+            <p className="text-sm text-slate-600 dark:text-slate-300 mb-6">Targeting a boundary around a competitor&apos;s location, a trade show, a retail park or a stadium. Effective for footfall businesses, and worth knowing the limits before you plan around it.</p>
             <p className="text-xs text-slate-500 dark:text-slate-400 pt-4 border-t border-slate-200 dark:border-white/10">Not permitted around sensitive locations</p>
           </div>
           <div className="bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 p-8 rounded-2xl">

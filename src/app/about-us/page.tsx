@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "About Qode Clicks | Web, SEO and Paid Media Team",
-  description: "Meet Qode Clicks: a remote-first team of developers, SEO specialists and media buyers in Frisco and Lahore who build websites and campaigns for revenue.",
+  description: "Meet Qode Clicks: one in-house team of developers, SEO specialists and media buyers across the USA and Pakistan, building sites and campaigns for revenue.",
   path: "/about-us",
 });
 

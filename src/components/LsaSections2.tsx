@@ -173,7 +173,7 @@ export function LsaCompare() {
             Local Services Ads or standard Google Ads.
           </h2>
           <p className="text-slate-500 dark:text-slate-400 text-lg">
-            Most eligible clients end up running both. LSAs capture the top of the page for the queries they serve, Search covers everything else.
+            Many eligible businesses run both. LSAs capture the top of the page for the queries they serve, Search covers everything else.
           </p>
         </div>
         
@@ -296,7 +296,7 @@ export function LsaPricing() {
 
           {/* Managed */}
           <div className="bg-slate-50 dark:bg-[#0a0d14] rounded-3xl p-8 flex flex-col border-2 border-cyan-500 lg:scale-105 shadow-2xl relative z-10">
-            <div className="absolute -top-4 left-6 bg-cyan-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Most clients</div>
+            <div className="absolute -top-4 left-6 bg-cyan-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Recommended</div>
             <div className="h-7 mb-4"></div>
             <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">Managed</h3>
             <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 h-10">Setup included, then run monthly with disputes filed and reviews kept coming.</p>
@@ -359,55 +359,6 @@ export function LsaPricing() {
         <p className="text-sm text-slate-500 mt-10">
           Running standard Google Ads too? Take the combined retainer on the <Link href="/ppc/google-ads" className="text-cyan-700 dark:text-cyan-400 underline underline-offset-2">Google Ads page</Link> instead of paying for both separately. Three month minimum, then rolling with thirty days' notice.
         </p>
-      </div>
-    </section>
-  );
-}
-
-export function LsaResult() {
-  const metrics = [
-    { label: "Cost per booked visit", before: "$184", after: "$71" },
-    { label: "Lead response time", before: "6 hrs", after: "11 min" },
-    { label: "Share of leads credited back monthly", before: "0%", after: "14%" },
-    { label: "Clinics verified", before: "0 of 9", after: "6 of 9", note: "3 in markets where the category is not eligible" },
-  ];
-
-  return (
-    <section className="py-12 px-5 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#080b12]">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-8">
-          <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-2">One client example</p>
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Regional healthcare group, nine clinics.</h2>
-        </div>
-
-        <div className="bg-slate-50 dark:bg-[#0a0d14] rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-200 dark:border-white/10 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center shadow-xl">
-          <div>
-            <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-4 block">Healthcare, multi location, US</span>
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 leading-tight">Verified in six markets, paying per booking instead of per click</h3>
-            <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
-              Nine clinics, six of them in markets where the category was eligible. We ran verification for each location separately, split the service areas so they stopped competing, and rebuilt the phone handling because response time was the actual constraint on ranking.
-            </p>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              Figures are from this single engagement over twelve months, not an agency average. Client name withheld at their request.
-            </p>
-          </div>
-
-          <div className="grid gap-4">
-            {metrics.map((m) => (
-              <div key={m.label} className="bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl p-5 flex items-center justify-between gap-4">
-                <div>
-                  <span className="font-semibold text-slate-800 dark:text-slate-200">{m.label}</span>
-                  {m.note ? <span className="block text-xs text-slate-500 dark:text-slate-400 mt-1">{m.note}</span> : null}
-                </div>
-                <div className="flex gap-3 items-center shrink-0">
-                  <span className="text-slate-500 line-through text-sm"><span className="sr-only">Before: </span>{m.before}</span>
-                  <span aria-hidden="true" className="text-slate-400">→</span>
-                  <span className="text-emerald-700 dark:text-emerald-400 font-bold text-xl"><span className="sr-only">After: </span>{m.after}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Zap, Layout, Activity, MousePointerClick, BarChart, Server } from "lucide-react";
 
 export function SeoReporting() {
   const metrics = [

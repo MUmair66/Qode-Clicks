@@ -104,7 +104,7 @@ export const animation2d: ServicePageData = {
   faqs: [
     { question: "How long does a 2D explainer video take?", answer: "A 60 to 90 second explainer usually takes 3 to 5 weeks from brief to final files. Short ads and logo animations take 1 to 2 weeks, and series projects are scheduled in batches." },
     { question: "What is included in the price?", answer: "Script, storyboard, illustration, animation, voiceover, licensed music, two revision rounds, captions, SRT subtitles and delivery in 16:9, 9:16 and 1:1. Extra languages and premium voice talent are quoted upfront." },
-    { question: "Do you write the script?", answer: "Yes. Most clients ask us to write it. We interview your team, draft the script to the target length and revise it until you approve, before any animation starts." },
+    { question: "Do you write the script?", answer: "Yes, if you want us to. We interview your team, draft the script to the target length and revise it until you approve, before any animation starts." },
     { question: "Can you match our brand guidelines?", answer: "Yes. We build the style frames from your colors, fonts and existing illustrations, so the video feels like part of your brand rather than a template." },
     { question: "Do we get the source files?", answer: "Final videos are always yours. Source After Effects and Illustrator files are included in the Series plan and available on the other plans for a small handover fee." },
   ],

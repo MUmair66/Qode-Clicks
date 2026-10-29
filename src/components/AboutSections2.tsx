@@ -1,10 +1,5 @@
-import { MapPin, ArrowRight, Globe } from "lucide-react";
-import { SITE, STATS } from "@/lib/site";
-
-const hubs = [
-  { city: "Frisco, Texas", role: "Client strategy and account leadership for US clients" },
-  { city: "Lahore, Pakistan", role: "Development, SEO and campaign delivery" },
-];
+import { ArrowRight, Globe } from "lucide-react";
+import { SITE } from "@/lib/site";
 
 export function AboutLocations() {
   return (
@@ -15,13 +10,13 @@ export function AboutLocations() {
           <div className="relative z-10">
             <p className="text-cyan-700 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider mb-4">How we work</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
-              Remote-first, with two hubs.
+              One team, two countries.
             </h2>
             <p className="text-slate-500 dark:text-slate-400 text-lg mb-8 leading-relaxed">
-              Our team works remotely from two hubs. Frisco keeps us close to our US clients and time zones; Lahore is where most of our development and delivery happens. One team, one process, no outsourcing.
+              Our team works across the USA and Pakistan. One team, one process, no outsourcing.
             </p>
             <ul className="space-y-4">
-              {[`Serving clients in ${STATS.countries} countries`, "Shared tools, shared standups, one project board", "Overlapping hours with US and UK clients"].map((item) => (
+              {["Shared tools, shared standups, one project board", "Senior specialists on every account"].map((item) => (
                 <li key={item} className="text-slate-600 dark:text-slate-300 text-sm flex gap-3 items-center">
                   <span className="w-6 h-6 rounded-full bg-cyan-100 dark:bg-cyan-900/30 flex items-center justify-center text-cyan-700 dark:text-cyan-400"><Globe className="w-3 h-3" /></span>
                   {item}
@@ -30,16 +25,13 @@ export function AboutLocations() {
             </ul>
           </div>
 
-          <div className="grid gap-4">
-            {hubs.map((hub) => (
-              <div key={hub.city} className="flex gap-4 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6">
+          <div className="grid sm:grid-cols-2 gap-4">
+            {["USA", "Pakistan"].map((country) => (
+              <div key={country} className="flex items-center gap-4 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6">
                 <span className="w-12 h-12 rounded-xl bg-cyan-100 dark:bg-cyan-900/30 flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-cyan-700 dark:text-cyan-400" />
+                  <Globe className="w-5 h-5 text-cyan-700 dark:text-cyan-400" />
                 </span>
-                <div>
-                  <h3 className="font-bold text-slate-900 dark:text-white text-lg">{hub.city}</h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">{hub.role}</p>
-                </div>
+                <h3 className="font-bold text-slate-900 dark:text-white text-lg">{country}</h3>
               </div>
             ))}
           </div>

@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Target, Shield, Zap, Code2, LineChart, Users } from "lucide-react";
 import { Breadcrumbs } from "./Breadcrumbs";
-import { STATS } from "@/lib/site";
 
 export function AboutHero() {
   return (
@@ -36,10 +35,10 @@ export function AboutHero() {
 
 export function AboutStats() {
   const stats = [
-    { value: STATS.clients, label: "Clients served" },
-    { value: STATS.adSpend, label: "Ad spend managed" },
-    { value: STATS.retention, label: "Client retention rate" },
-    { value: STATS.years, label: "Years in business" }
+    { value: "In-house", label: "Developers, SEO and media buyers" },
+    { value: "Fixed price", label: "Written scope before work starts" },
+    { value: "Monthly", label: "Reporting and review calls" },
+    { value: "USA and Pakistan", label: "Where our team works" }
   ];
 
   return (
@@ -48,7 +47,7 @@ export function AboutStats() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-x-0 md:divide-x divide-slate-200 dark:divide-white/10 text-center">
           {stats.map((s, i) => (
             <div key={i} className="px-4">
-              <div className="text-4xl md:text-4xl font-bold text-slate-900 dark:text-white mb-2">{s.value}</div>
+              <div className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-2">{s.value}</div>
               <div className="text-sm font-medium text-slate-500 dark:text-slate-400">{s.label}</div>
             </div>
           ))}
@@ -129,7 +128,7 @@ export function AboutStory() {
                 We started Qode Clicks to fix that disconnect. We recognized that true performance requires both sides of the coin: elite technical infrastructure and aggressive, data-driven marketing.
               </p>
               <p>
-                Today, our developers, SEO specialists and media buyers work as one in-house team across our Frisco and Lahore hubs. When an ad campaign needs a lightning-fast landing page, it gets built immediately. When an SEO strategy requires schema changes, it gets pushed to production without waiting for a third-party IT team.
+                Today, our developers, SEO specialists and media buyers work as one in-house team across the USA and Pakistan. When an ad campaign needs a lightning-fast landing page, it gets built immediately. When an SEO strategy requires schema changes, it gets pushed to production without waiting for a third-party IT team.
               </p>
             </div>
           </div>

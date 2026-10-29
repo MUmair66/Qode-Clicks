@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, Target, Search, MapPin, BadgeCheck, TrendingUp, Users, BarChart3, ShieldCheck, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { STATS } from "@/lib/site";
 
 const adServices = [
   {
@@ -77,7 +76,7 @@ export function AdsHubHero() {
             </span>
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            We run data-driven advertising campaigns across Google and Meta. From capturing high-intent searchers to generating demand with visual creative, we turn ad spend into measurable profit. {STATS.adSpend} in ad spend managed so far.
+            We run data-driven advertising campaigns across Google and Meta. From capturing high-intent searchers to generating demand with visual creative, we turn ad spend into measurable profit.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

@@ -1,5 +1,5 @@
 import { LsaHero, LsaReasons, LsaBadges, LsaStickyCta } from "@/components/LsaSections";
-import { LsaEligibility, LsaBanner, LsaProcess, LsaCompare, LsaPricing, LsaResult, LsaWorksWellWith } from "@/components/LsaSections2";
+import { LsaEligibility, LsaBanner, LsaProcess, LsaCompare, LsaPricing, LsaWorksWellWith } from "@/components/LsaSections2";
 import { FaqSection } from "@/components/FaqSection";
 import { CtaBanner } from "@/components/CtaBanner";
 import { JsonLd } from "@/components/JsonLd";
@@ -51,7 +51,6 @@ export default function LsaPage() {
       <LsaProcess />
       <LsaCompare />
       <LsaPricing />
-      <LsaResult />
       <LsaWorksWellWith />
       <FaqSection faqs={faqs} title="Local Services Ads questions" />
       <CtaBanner

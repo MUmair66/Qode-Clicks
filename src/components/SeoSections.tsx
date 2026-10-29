@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, ArrowRight, TrendingUp, Search, Activity, Link as LinkIcon, BarChart3, AlertCircle } from "lucide-react";
+import { Check } from "lucide-react";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LeadForm } from "@/components/LeadForm";
@@ -46,8 +46,8 @@ export function SeoHero() {
 
           <div className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200 dark:border-white/10">
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2">+312%</div>
-              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">Organic sessions, SaaS client, 11 months</div>
+              <div className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2">Dev hours</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400 leading-snug">Included in every plan, so fixes get shipped</div>
             </div>
             <div>
               <div className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2">30 days</div>
@@ -139,22 +139,22 @@ export function SeoReasons() {
 export function SeoPillars() {
   const pillars = [
     {
-      percent: "40%",
-      time: "Typical first six months",
+      percent: "01",
+      time: "Pillar",
       title: "Technical",
       desc: "Making sure the site can be crawled, indexed and loaded fast enough to compete. Usually the cheapest wins available.",
       items: ["Full crawl and index coverage audit", "Site architecture and URL structure", "Core Web Vitals remediation", "Schema and structured data", "Redirect, canonical and pagination logic", "Log file analysis on larger sites"]
     },
     {
-      percent: "40%",
-      time: "Typical first six months",
+      percent: "02",
+      time: "Pillar",
       title: "Content",
       desc: "Targeting the searches that end in a purchase or an inquiry, and building pages good enough to deserve the position.",
       items: ["Keyword research and intent clustering", "Content roadmap tied to the funnel", "New page briefs and production", "Rewriting and merging underperformers", "Internal linking architecture", "On page optimization at template level"]
     },
     {
-      percent: "20%",
-      time: "Typical first six months",
+      percent: "03",
+      time: "Pillar",
       title: "Authority",
       desc: "Links earned through something worth linking to. Slower than buying them, and it does not evaporate after an update.",
       items: ["Link gap and competitor analysis", "Digital PR and data led outreach", "Unlinked mention reclamation", "Broken link and resource placement", "Toxic backlink review", "Local citations where relevant"]
@@ -169,13 +169,13 @@ export function SeoPillars() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight leading-tight">
             Three pillars, weighted by what your site actually needs.
           </h2>
-          <p className="text-slate-500 dark:text-slate-400 text-lg">The split below is a typical first six months. A technically broken site gets more of the first pillar. A clean site with no content gets more of the second.</p>
+          <p className="text-slate-500 dark:text-slate-400 text-lg">The balance depends on your site. A technically broken site gets more of the first pillar. A clean site with no content gets more of the second.</p>
         </div>
         
         <div className="grid lg:grid-cols-3 gap-6">
           {pillars.map((p, i) => (
             <div key={i} className="bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 rounded-[2rem] p-8 border-t-4 border-t-blue-500">
-              <div className="text-4xl font-bold text-blue-500 mb-1">{p.percent}</div>
+              <div className="text-4xl font-bold text-cyan-600 dark:text-cyan-400 mb-1">{p.percent}</div>
               <div className="text-xs text-slate-500 mb-6 font-medium uppercase tracking-wider">{p.time}</div>
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">{p.title}</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 leading-relaxed h-16">{p.desc}</p>

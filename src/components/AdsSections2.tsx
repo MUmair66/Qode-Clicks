@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function AdsIncluded() {
   const items = [
-    { title: "Search term review", desc: "Weekly, with negatives added. This is the unglamorous work that stops half of all wasted spend." },
+    { title: "Search term review", desc: "Weekly, with negatives added. This is the unglamorous work that keeps wasted spend in check." },
     { title: "Conversion tracking maintained", desc: "Checked monthly and after every site change. Tracking that breaks silently is the most expensive failure in paid media." },
     { title: "Bid strategy and budget pacing", desc: "Tested rather than set once. Budgets paced so you are not dark for the last week of the month." },
     { title: "Ad copy and creative testing", desc: "New variants monthly with enough volume behind them to call a winner honestly." },
@@ -97,7 +97,7 @@ export function AdsPricing() {
           {plans.map((p, i) => (
             <div key={i} className={`bg-slate-50 dark:bg-[#0a0d14] rounded-3xl p-8 flex flex-col relative ${p.popular ? 'border-2 border-cyan-500 lg:scale-105 shadow-2xl z-10' : 'border border-slate-200 dark:border-white/10'}`}>
               {p.popular && (
-                <div className="absolute -top-4 left-6 bg-cyan-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Most accounts</div>
+                <div className="absolute -top-4 left-6 bg-cyan-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Recommended</div>
               )}
               <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">{p.name}</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 h-10">{p.target}</p>

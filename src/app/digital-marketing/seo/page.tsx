@@ -1,5 +1,5 @@
 import { SeoHero, SeoReasons, SeoPillars, SeoDeliverables } from "@/components/SeoSections";
-import { SeoTimeline, SeoCaseStudy, SeoPricing } from "@/components/SeoSections2";
+import { SeoTimeline, SeoPricing } from "@/components/SeoSections2";
 import { SeoReporting, SeoNotSell, SeoTools, SeoWorksWellWith } from "@/components/SeoSections3";
 import { FaqSection } from "@/components/FaqSection";
 import { CtaBanner } from "@/components/CtaBanner";
@@ -53,7 +53,6 @@ export default function SeoPage() {
       <SeoPillars />
       <SeoDeliverables />
       <SeoTimeline />
-      <SeoCaseStudy />
       <SeoPricing />
       <SeoReporting />
       <SeoNotSell />

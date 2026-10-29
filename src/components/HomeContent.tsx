@@ -14,7 +14,6 @@ import {
   Database,
   Globe2,
   Layers3,
-  LineChart,
   Mail,
   MapPin,
   MessageSquareText,
@@ -26,7 +25,6 @@ import {
   ShieldCheck,
   Sparkles,
   Target,
-  TrendingUp,
   Share2,
   Megaphone,
   ShoppingBag,
@@ -37,7 +35,7 @@ import Link from "next/link";
 import { DigitalMarketingAccordion } from "@/components/DigitalMarketingAccordion";
 import { FilterablePortfolio } from "@/components/FilterablePortfolio";
 import { LeadForm } from "@/components/LeadForm";
-import { SITE, STATS, PRICING } from "@/lib/site";
+import { SITE, PRICING } from "@/lib/site";
 
 type IconItem = {
   title: string;
@@ -57,11 +55,11 @@ const inView = { once: true, margin: "-40px" } as const;
 
 const partners = ["Google Ads", "Local Services Ads", "WordPress", "Shopify", "Google Analytics", "Search Console"];
 
-const stats = [
-  [STATS.clients, "clients served"],
-  [STATS.years, "years in business"],
-  [STATS.roas, "average campaign ROAS"],
-  [STATS.retention, "client retention"],
+const facts = [
+  ["One connected team", "Website, search, ads and tracking under one roof"],
+  ["Discovery sprint first", "We audit before we build or spend"],
+  ["Platform fit, not habit", "WordPress, Shopify or Next.js chosen around your goal"],
+  ["Monthly reporting", "Plain-English updates on what changed and what is next"],
 ];
 
 const services: IconItem[] = [
@@ -146,11 +144,6 @@ const platforms: IconItem[] = [
   { title: "Data", description: "GA4, GTM, dashboards, attribution, reporting rhythm", icon: Database },
 ];
 
-const caseMetrics = [
-  [STATS.roas, "average campaign ROAS"],
-  [STATS.cplReduction, "lower cost per lead"],
-  [STATS.adSpend, "ad spend managed"],
-];
 
 const stack = [
   "Conversion copy",
@@ -288,11 +281,11 @@ export function HomeContent() {
   return (
     <MotionConfig reducedMotion="user">
       <div className="overflow-hidden">
-        <section id="home" className="relative px-5 pb-16 pt-28 sm:px-6 md:min-h-[92vh] lg:px-8 lg:pt-28">
+        <section id="home" className="relative px-5 pb-16 pt-28 sm:px-6 md:flex md:min-h-[80vh] md:items-center lg:px-8 lg:pt-28">
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(34,211,238,0.15),transparent_30%),radial-gradient(circle_at_88%_20%,rgba(245,158,11,0.10),transparent_26%),linear-gradient(180deg,#f8fafc_0%,#f1f5f9_78%)] dark:bg-[radial-gradient(circle_at_18%_18%,rgba(34,211,238,0.20),transparent_30%),radial-gradient(circle_at_88%_20%,rgba(245,158,11,0.15),transparent_26%),linear-gradient(180deg,#080b14_0%,#05070d_78%)]" />
           <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-cyan-500/30 dark:via-cyan-300/60 to-transparent" />
-          <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_0.88fr]">
-            <motion.div initial="hidden" animate="visible" variants={fadeUp} transition={{ duration: 0.5, ease }}>
+          <div className="mx-auto w-full max-w-7xl">
+            <motion.div initial="hidden" animate="visible" variants={fadeUp} transition={{ duration: 0.5, ease }} className="max-w-4xl">
               <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/[0.06] px-4 py-2 text-sm font-medium text-slate-800 dark:text-slate-200 shadow-sm">
                 <Sparkles className="h-4 w-4 text-cyan-600 dark:text-cyan-300" aria-hidden="true" />
                 {SITE.name}: growth for service businesses
@@ -321,79 +314,6 @@ export function HomeContent() {
                 </Link>
               </div>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1, ease }}
-              className="relative hidden md:block"
-              aria-hidden="true"
-            >
-              <div className="rounded-3xl border border-slate-200 dark:border-white/10 bg-white/[0.06] p-4 shadow-2xl shadow-black/20 dark:shadow-black/35 backdrop-blur-xl">
-                <div className="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-4">
-                  <div>
-                    <p className="text-sm font-semibold text-slate-900 dark:text-white">Growth Command Center</p>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">Averages across managed accounts</p>
-                  </div>
-                  <div className="rounded-full bg-emerald-400/10 px-3 py-1.5 text-xs font-semibold text-emerald-700 dark:text-emerald-300">Healthy</div>
-                </div>
-                <div className="grid gap-4 py-4 sm:grid-cols-3">
-                  {caseMetrics.map(([value, label]) => (
-                    <div key={label} className="rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-slate-950/60 p-4">
-                      <p className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">{value}</p>
-                      <p className="mt-1 text-xs leading-5 text-slate-500 dark:text-slate-400">{label}</p>
-                    </div>
-                  ))}
-                </div>
-                <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
-                  <div className="rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-slate-950/60 p-4">
-                    <div className="mb-5 flex items-center justify-between">
-                      <p className="text-sm font-semibold text-slate-900 dark:text-white">Channel Mix</p>
-                      <LineChart className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
-                    </div>
-                    <div className="space-y-4">
-                      {[
-                        ["Organic", "78%", "bg-teal-600"],
-                        ["Paid", "64%", "bg-amber-500"],
-                        ["Local", "52%", "bg-rose-500"],
-                      ].map(([label, value, color]) => (
-                        <div key={label}>
-                          <div className="mb-2 flex justify-between text-xs font-medium text-slate-500 dark:text-slate-400">
-                            <span>{label}</span>
-                            <span>{value}</span>
-                          </div>
-                          <div className="h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-white/10">
-                            <motion.div
-                              initial={{ width: 0 }}
-                              animate={{ width: value }}
-                              transition={{ duration: 0.5, delay: 0.3, ease }}
-                              className={`h-full rounded-full ${color}`}
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="rounded-2xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-slate-950/60 p-4">
-                    <div className="mb-4 flex items-center justify-between">
-                      <p className="text-sm font-semibold text-slate-900 dark:text-white">Revenue Path</p>
-                      <TrendingUp className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
-                    </div>
-                    <div className="flex h-44 items-end gap-2">
-                      {[36, 52, 44, 68, 61, 84, 74, 92, 88, 100].map((height, index) => (
-                        <motion.div
-                          key={height + index}
-                          initial={{ height: 8 }}
-                          animate={{ height: `${height}%` }}
-                          transition={{ duration: 0.5, delay: 0.2 + index * 0.03, ease }}
-                          className="flex-1 rounded-t-md bg-cyan-400 dark:bg-cyan-300"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
@@ -407,11 +327,11 @@ export function HomeContent() {
           </div>
         </section>
 
-        <section aria-label="Key figures" className="bg-white dark:bg-[#05070d] px-5 py-12 sm:px-6 md:py-16 lg:px-8">
+        <section aria-label="How we work" className="bg-white dark:bg-[#05070d] px-5 py-12 sm:px-6 md:py-16 lg:px-8">
           <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 lg:grid-cols-4">
-            {stats.map(([value, label], index) => (
+            {facts.map(([title, label], index) => (
               <motion.div
-                key={label}
+                key={title}
                 initial="hidden"
                 whileInView="visible"
                 viewport={inView}
@@ -419,7 +339,7 @@ export function HomeContent() {
                 transition={{ duration: 0.45, delay: index * 0.05, ease }}
                 className="rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.045] p-5 sm:p-6"
               >
-                <p className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-4xl">{value}</p>
+                <p className="text-lg font-semibold tracking-tight text-slate-900 dark:text-white sm:text-xl">{title}</p>
                 <p className="mt-2 text-sm font-medium text-slate-500 dark:text-slate-400">{label}</p>
               </motion.div>
             ))}
@@ -445,19 +365,6 @@ export function HomeContent() {
                 <Link href="/digital-marketing/content-writing" className={inlineLink}>content</Link> and win local searches with a strong{" "}
                 <Link href="/digital-marketing/google-business-profile" className={inlineLink}>Google Business Profile</Link>.
               </p>
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                {[
-                  ["Years in business", STATS.years],
-                  ["Client retention", STATS.retention],
-                  ["Countries served", STATS.countries],
-                  ["Ad spend managed", STATS.adSpend],
-                ].map(([label, value]) => (
-                  <div key={label} className="border-l-2 border-cyan-400/60 pl-4">
-                    <p className="text-2xl font-bold text-slate-900 dark:text-white">{value}</p>
-                    <p className="text-sm text-slate-500 dark:text-slate-400">{label}</p>
-                  </div>
-                ))}
-              </div>
             </motion.div>
 
             <motion.div

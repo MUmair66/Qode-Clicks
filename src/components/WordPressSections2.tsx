@@ -75,7 +75,7 @@ export function SixPhasesProcess() {
 export function EightThingsIncluded() {
   const items = [
     { title: "You own everything", desc: "Domain, hosting account, code and analytics all in your name from day one. Leaving costs you nothing but notice." },
-    { title: "Mobile first, tested on real devices", desc: "Not just a browser window resized. Most of your traffic is mobile and that is where we build and test first." },
+    { title: "Mobile first, tested on real devices", desc: "Not just a browser window resized. Mobile is where we build and test first." },
     { title: "SEO foundations in the templates", desc: "Clean URLs, heading structure, sitemaps, canonicals and meta handled at template level rather than page by page." },
     { title: "Analytics and conversion tracking", desc: "GA4 and Tag Manager with real form and call events, not a pageview tag pasted in the header." },
     { title: "Staging and version control", desc: "Git repository and a staging environment on every project. Nothing gets edited live, and every change is reversible." },
@@ -109,52 +109,6 @@ export function EightThingsIncluded() {
             ))}
           </div>
         </MobileCollapse>
-      </div>
-    </section>
-  );
-}
-
-// Anonymized client example. Figures are specific to this project and are not reused elsewhere on the site.
-export function WooCommerceCaseStudy() {
-  const metrics = [
-    { label: "Largest contentful paint", before: "4.1s", after: "1.4s" },
-    { label: "Mobile conversion rate", before: "0.9%", after: "2.6%" },
-    { label: "Homepage page weight", before: "4.2MB", after: "780KB" },
-    { label: "Active plugins", before: "41", after: "15" },
-  ];
-
-  return (
-    <section id="case-study" className="py-14 md:py-20 px-5 sm:px-6 lg:px-8 bg-white dark:bg-[#05070d]">
-      <div className="mx-auto max-w-6xl">
-        <div className="mb-10">
-          <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-sm mb-4 uppercase tracking-wider">Client result</p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">Skincare brand, WooCommerce rebuild.</h2>
-        </div>
-
-        <div className="bg-slate-50 dark:bg-white rounded-3xl p-6 sm:p-8 md:p-12 lg:p-12 grid lg:grid-cols-2 gap-12 items-center border border-slate-200 dark:border-transparent">
-          <div>
-            <p className="text-slate-500 text-sm mb-4 font-medium">Ecommerce, direct-to-consumer skincare</p>
-            <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 tracking-tight">A checkout losing a third of mobile sessions</h3>
-            <p className="text-slate-600 mb-10 leading-relaxed text-lg">
-              Built on a premium theme with a page builder and forty-one plugins. Mobile took 4.1 seconds and the checkout ran to five steps. We rebuilt on a custom theme with a twelve-block library, cut the checkout to two steps and removed twenty-six plugins by moving their work into the theme.
-            </p>
-            <Link href="#estimate" className="inline-flex min-h-[44px] items-center justify-center border-2 border-slate-300 text-slate-900 font-bold px-8 py-4 rounded-full hover:border-slate-900 transition-colors">
-              Get an estimate for your store
-            </Link>
-          </div>
-
-          <div className="space-y-4">
-            {metrics.map((m) => (
-              <div key={m.label} className="bg-white dark:bg-slate-100 rounded-xl p-5 sm:p-6 flex justify-between items-center gap-4">
-                <span className="text-slate-600 font-medium">{m.label}</span>
-                <div className="flex items-center gap-4 sm:gap-6">
-                  <span className="text-slate-500 line-through">{m.before}</span>
-                  <span className="text-2xl sm:text-3xl font-bold text-emerald-600">{m.after}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

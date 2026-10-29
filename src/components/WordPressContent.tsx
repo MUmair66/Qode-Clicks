@@ -6,7 +6,6 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LeadForm } from "@/components/LeadForm";
 import { MobileCollapse } from "@/components/WordPressSections2";
-import { STATS } from "@/lib/site";
 
 const inputClass =
   "w-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-400 transition-colors";
@@ -48,7 +47,6 @@ export function WordPressHero() {
               See Build Options
             </Link>
           </div>
-          <p className="mt-6 text-sm font-medium text-slate-500 dark:text-slate-400">Trusted by {STATS.clients} clients</p>
         </motion.div>
 
         {/* Right Form */}

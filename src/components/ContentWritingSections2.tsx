@@ -1,8 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 export function ContentProcess() {
   const phases = [
@@ -84,15 +83,15 @@ export function ContentPricing() {
       name: "Starter",
       desc: "Steady publishing for businesses that need consistency more than volume.",
       price: "$520",
-      extra: "4 pieces monthly, roughly 12% below piece rates",
+      extra: "4 pieces monthly, priced below single pieces",
       features: ["4 standard pieces monthly", "Briefs approved by you first", "Editor review on everything", "Meta, schema and internal links", "Published to your site", "Quarterly performance review"]
     },
     {
       name: "Growth",
-      tag: "Most clients",
+      tag: "Recommended",
       desc: "Enough volume to build clusters rather than publish isolated pieces.",
       price: "$1,150",
-      extra: "8 pieces plus social, roughly 20% below piece rates",
+      extra: "8 pieces plus social, priced below single pieces",
       features: ["8 pieces monthly, any mix of formats", "20 social posts monthly", "Topic cluster roadmap maintained", "2 content refreshes monthly", "Ad and email copy as needed", "Monthly review call"],
       highlight: true
     },
@@ -100,7 +99,7 @@ export function ContentPricing() {
       name: "Authority",
       desc: "Full content program including long form and executive ghostwriting.",
       price: "$2,400",
-      extra: "16 pieces plus long form, roughly 28% below piece rates",
+      extra: "16 pieces plus long form, priced below single pieces",
       features: ["16 pieces monthly", "One long form asset per quarter", "Ghostwriting with monthly interview", "4 content refreshes monthly", "Digital PR and press support", "Review calls every two weeks"]
     }
   ];
@@ -152,48 +151,6 @@ export function ContentPricing() {
               </Link>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function ContentResult() {
-  return (
-    <section className="px-5 py-14 md:py-20 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950/50">
-      <div className="mx-auto max-w-7xl">
-        <div className="rounded-3xl bg-white dark:bg-slate-900 p-8 md:p-12 lg:p-12 shadow-sm border border-slate-200 dark:border-white/10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="inline-block rounded-full bg-slate-100 dark:bg-slate-800 px-3 py-1 text-xs font-bold text-slate-700 dark:text-slate-300 mb-6">
-                Professional services firm, content and SEO
-              </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
-                Ninety published posts and almost no traffic.
-              </h2>
-              <p className="text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed">
-                Written by a general agency from the top three results, with no clusters and no commercial pages behind any of it. We merged forty pieces into twelve, deleted twenty three, rewrote the rest around a proper cluster map, and built the pillar pages the supporting content should always have pointed at.
-              </p>
-              <Link href="#audit" className="inline-flex items-center gap-2 text-sm font-bold text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">
-                Get a free content audit <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-            
-            <div className="grid gap-4">
-              {[
-                { label: "Monthly organic sessions", was: "2,600", now: "9,800" },
-                { label: "Organic inquiries", was: "18", now: "71" },
-                { label: "Published pages", was: "90", now: "39" },
-                { label: "Pages with any traffic", was: "11", now: "34" }
-              ].map((stat, i) => (
-                <div key={i} className="grid grid-cols-[1fr_auto_auto] items-center gap-6 p-5 rounded-xl bg-slate-50 dark:bg-slate-950/50 border border-slate-100 dark:border-white/5">
-                  <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{stat.label}</span>
-                  <span className="text-sm text-slate-400 line-through decoration-slate-300 dark:decoration-slate-600">{stat.was}</span>
-                  <span className="text-xl font-bold text-emerald-600 dark:text-emerald-400 text-right min-w-[4rem]">{stat.now}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>

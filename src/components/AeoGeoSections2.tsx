@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { CheckCircle2, XCircle, ArrowRight, Code2, FileText, Globe } from "lucide-react";
+import { CheckCircle2, XCircle, Code2, FileText, Globe } from "lucide-react";
 import Link from "next/link";
 import { AnimatedServiceCard } from "./AnimatedServiceCard";
 
@@ -132,12 +131,12 @@ export function AeoGeoWorkstreams() {
     { title: "Query fan-out mapping", desc: "AI systems break a question into sub questions and search each separately. We map the sub questions and make sure something of yours answers each one." },
     { title: "Extractable formatting", desc: "Clear definitions, direct answers near the top, self contained sections and unambiguous headings. Content that can be lifted cleanly without the surrounding page." },
     { title: "Question coverage", desc: "The literal questions buyers ask, answered directly on your site rather than implied across three paragraphs of positioning language." },
-    { title: "Comparison and alternatives", desc: "Buying prompts are overwhelmingly comparative. If no honest comparison of you against your competitors exists, the model will build one from whatever does exist." },
+    { title: "Comparison and alternatives", desc: "Buying prompts are often comparative. If no honest comparison of you against your competitors exists, the model will build one from whatever does exist." },
     { title: "Narrative accuracy", desc: "Models sometimes describe businesses incorrectly: wrong market, discontinued product, outdated pricing. We find those errors and correct the sources feeding them." }
   ];
 
   const entityStreams = [
-    { title: "Third party presence", desc: "A large majority of AI references come from sources other than the brand's own site. Directories, review platforms, industry lists and comparison sites do more work than your homepage." },
+    { title: "Third party presence", desc: "Much of what AI tools reference comes from sources other than the brand's own site. Directories, review platforms, industry lists and comparison sites do more work than your homepage." },
     { title: "Digital PR and citations", desc: "Press coverage, expert commentary and data led stories. Being quoted by sources the models already trust is more effective than asserting expertise on your own domain." },
     { title: "Entity consistency", desc: "Same name, same description, same category everywhere. Inconsistency across profiles gives a model conflicting information and it resolves that conflict unpredictably." }
   ];
@@ -196,7 +195,7 @@ export function AeoGeoLlmsText() {
             About llms.txt, which you have probably been pitched.
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-lg mb-8 max-w-3xl">
-            It is the most sold item in this category and the least supported. Many agencies sell the creation of an llms.txt file as an "optimization" that guarantees AI models will read your site properly. Currently, almost no major consumer LLM uses these files for crawling or indexing decisions. Focus on standard crawler access, rendering, and structured data instead.
+            It is the most sold item in this category and the least supported. Many agencies sell the creation of an llms.txt file as an &ldquo;optimization&rdquo; that guarantees AI models will read your site properly. Currently, almost no major consumer LLM uses these files for crawling or indexing decisions. Focus on standard crawler access, rendering, and structured data instead.
           </p>
         </div>
       </div>

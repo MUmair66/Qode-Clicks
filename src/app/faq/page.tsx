@@ -22,7 +22,7 @@ const faqData: FaqGroup[] = [
       { q: "How do we know if we are the right fit for you?", a: `For paid campaigns we work best with businesses spending at least ${minSpend} a month on media. Below that there is not enough volume to optimize against and you would get more from a good freelancer. Websites have no such minimum: WordPress builds start from ${PRICING.wordpressBuild}. We also turn down work where the product is the problem rather than the marketing, and where tracking is broken and the client will not let us fix it first.` },
       { q: "What do you need from us to begin?", a: "Admin access to Google Analytics, Search Console and Google Ads if you run them, plus access to your hosting and CMS. If you do not have some of these, we will set them up under your ownership rather than ours. We also want thirty minutes with whoever knows the sales process best." },
       { q: "How quickly can you start?", a: "Usually within one to two weeks of signing. Audits are faster and can often begin the same week. Larger builds get scheduled against current capacity, and we will tell you the honest start date rather than book you in and stall." },
-      { q: "Do you work with businesses outside your time zone?", a: "Yes. Qode Clicks is a remote-first team with two hubs: Frisco, Texas works US Central hours (Mon to Fri, 9am to 5pm CT) and our Lahore, Pakistan delivery team works 9am to 6pm PKT. Everything else runs asynchronously in a shared Slack channel, so nothing waits a full day for an answer." }
+      { q: "Where is your team based?", a: "Our team works across the USA and Pakistan. Day to day communication runs in a shared Slack channel and by email, so you always have a direct line to the people doing the work." }
     ]
   },
   {

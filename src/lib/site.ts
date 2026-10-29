@@ -14,19 +14,7 @@ export const SITE = {
   gaId: "G-1TQZGGDFQS",
   // Client to supply a scheduling link (Calendly, Cal.com, etc.). Falls back to the contact form.
   bookingUrl: "/contact#contact-form",
-  hours: "Frisco: Mon to Fri, 9am to 5pm CT. Lahore: Mon to Fri, 9am to 6pm PKT.",
   tagline: "Web design, SEO, paid ads and growth systems for service businesses.",
-} as const;
-
-// Headline figures (verify with client). Use these everywhere instead of hard-coding numbers.
-export const STATS = {
-  years: "8+",
-  clients: "120+",
-  retention: "95%",
-  adSpend: "$4M+",
-  roas: "4.2x",
-  cplReduction: "41%",
-  countries: "14+",
 } as const;
 
 // Canonical "from" prices (client to approve). Service pages hold the detailed tiers;

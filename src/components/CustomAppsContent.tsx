@@ -5,7 +5,6 @@ import { Check, ArrowRight, Shield, Code, Server, Search, Lock, Workflow, Activi
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LeadForm } from "@/components/LeadForm";
-import { STATS } from "@/lib/site";
 
 const inputClass =
   "w-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyan-400 transition-colors";
@@ -87,7 +86,6 @@ export function CustomAppsHero() {
             <Link href="#estimate" className="rounded-full bg-cyan-500 dark:bg-cyan-400 px-8 py-4 text-slate-950 font-bold hover:bg-cyan-400 dark:hover:bg-white transition-colors flex items-center gap-2">
               Request an Estimate <ArrowRight className="w-5 h-5" />
             </Link>
-            <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Trusted by {STATS.clients} clients</p>
           </div>
         </motion.div>
 
@@ -281,7 +279,7 @@ export function CustomAppsSections() {
 
             {/* Tier 2 */}
             <div className="p-8 rounded-3xl bg-gradient-to-b from-cyan-950 to-slate-900 border-2 border-cyan-400 relative md:-translate-y-4 shadow-xl shadow-cyan-900/20 flex flex-col">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-400 text-slate-950 text-xs font-bold px-4 py-1 rounded-full uppercase">Most Popular</div>
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-400 text-slate-950 text-xs font-bold px-4 py-1 rounded-full uppercase">Recommended</div>
               <div className="text-cyan-400 font-bold text-sm tracking-wider mb-2">TIER 02</div>
               <h3 className="text-xl font-bold mb-2 text-white">Custom Web App or Portal</h3>
               <p className="text-slate-300 text-sm mb-6">Dashboards, client portals and internal tools that automate your core workflows.</p>

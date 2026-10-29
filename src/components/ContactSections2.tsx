@@ -2,58 +2,19 @@ import { SITE, PRICING } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { faqJsonLd } from "@/lib/seo";
 
-const offices = [
-  {
-    region: "United States",
-    city: "Frisco, Texas",
-    address: ["2500 Legacy Drive, Suite 220", "Frisco, TX 75034"],
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=Frisco%2C+TX",
-    role: "Client-facing hub: strategy, account management and new business.",
-    hours: "Mon to Fri, 9am to 5pm CT",
-  },
-  {
-    region: "Pakistan",
-    city: "Lahore",
-    address: ["Arfa Software Technology Park", "Ferozepur Road, Lahore 54600"],
-    mapUrl: "https://www.google.com/maps/search/?api=1&query=Lahore%2C+Pakistan",
-    role: "Delivery hub: development, SEO, content and media buying.",
-    hours: "Mon to Fri, 9am to 6pm PKT",
-  },
-];
-
 export function ContactOffices() {
   return (
     <section className="py-12 md:py-16 px-5 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#080b12] border-t border-slate-100 dark:border-white/5">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">Where we are</h2>
-        <p className="text-slate-500 dark:text-slate-400 text-sm max-w-2xl mb-10 leading-relaxed">
-          Qode Clicks is a remote-first team with two hubs: Frisco, Texas for client-facing work in the US, and Lahore, Pakistan for delivery.
+        <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">Where we work</h2>
+        <p className="text-slate-500 dark:text-slate-400 text-sm max-w-2xl mb-8 leading-relaxed">
+          Qode Clicks is one team working across the USA and Pakistan.
         </p>
-
-        <div className="grid md:grid-cols-2 gap-10 lg:gap-12">
-          {offices.map((o) => (
-            <div key={o.city} className="border-t border-slate-200 dark:border-white/10 pt-6">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <p className="text-slate-500 text-xs font-bold uppercase tracking-wider mb-1">{o.region}</p>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white">{o.city}</h3>
-                </div>
-                <a
-                  href={o.mapUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-[44px] items-center text-cyan-700 dark:text-cyan-400 text-sm hover:underline"
-                >
-                  View on map
-                </a>
-              </div>
-              <address className="not-italic text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
-                {o.address[0]}<br />
-                {o.address[1]}
-              </address>
-              <p className="text-slate-600 dark:text-slate-300 text-sm mb-1">{o.role}</p>
-              <p className="text-slate-500 text-sm">{o.hours}</p>
-            </div>
+        <div className="flex flex-wrap gap-3">
+          {["USA", "Pakistan"].map((country) => (
+            <span key={country} className="rounded-full border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.04] px-5 py-2.5 text-sm font-semibold text-slate-900 dark:text-white">
+              {country}
+            </span>
           ))}
         </div>
       </div>

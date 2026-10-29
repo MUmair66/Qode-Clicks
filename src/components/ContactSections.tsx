@@ -183,12 +183,8 @@ export function ContactMain() {
             <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-5">When we are available</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex justify-between items-center gap-4 text-slate-500 dark:text-slate-400">
-                <span>Frisco, Texas</span>
-                <b className="text-slate-900 dark:text-white font-medium text-right">Mon to Fri, 9am to 5pm CT</b>
-              </li>
-              <li className="flex justify-between items-center gap-4 text-slate-500 dark:text-slate-400">
-                <span>Lahore, Pakistan</span>
-                <b className="text-slate-900 dark:text-white font-medium text-right">Mon to Fri, 9am to 6pm PKT</b>
+                <span>Monday to Friday</span>
+                <b className="text-slate-900 dark:text-white font-medium text-right">Open</b>
               </li>
               <li className="flex justify-between items-center gap-4 text-slate-500 dark:text-slate-400">
                 <span>Saturday and Sunday</span>

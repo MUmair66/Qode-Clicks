@@ -130,7 +130,7 @@ export function LsaHero() {
               </div>
               <div className="space-y-1.5">
                 <label htmlFor="lsa-city" className="text-sm font-medium text-slate-600 dark:text-slate-300">City or service area</label>
-                <input id="lsa-city" name="city" type="text" required className={fieldClass} placeholder="Dallas TX, or Manchester" />
+                <input id="lsa-city" name="city" type="text" required className={fieldClass} placeholder="Your city or service area" />
               </div>
               <button type="submit" className="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl px-4 py-4 transition-colors mt-4 text-lg">
                 Check my eligibility

@@ -48,16 +48,16 @@ export function GmbHero() {
 
           <div className="flex flex-wrap gap-x-12 gap-y-8 pt-8 border-t border-slate-200 dark:border-white/10">
             <div>
-              <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">+310%</strong>
-              <span className="text-sm text-slate-500 dark:text-slate-400">Median calls from search, 6 months</span>
+              <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">49 points</strong>
+              <span className="text-sm text-slate-500 dark:text-slate-400">Geo-grid scan across your service area</span>
             </div>
             <div>
-              <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">16.7 to 6.1</strong>
-              <span className="text-sm text-slate-500 dark:text-slate-400">Median grid position shift</span>
+              <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">Monthly</strong>
+              <span className="text-sm text-slate-500 dark:text-slate-400">Grid re-scans in every retainer</span>
             </div>
             <div>
-              <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">40+</strong>
-              <span className="text-sm text-slate-500 dark:text-slate-400">Profiles under management</span>
+              <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">3 days</strong>
+              <span className="text-sm text-slate-500 dark:text-slate-400">Free grid report turnaround</span>
             </div>
           </div>
         </motion.div>
@@ -82,7 +82,7 @@ export function GmbHero() {
             </div>
             <div>
               <label htmlFor="gbp-city" className={gbpLabel}>City or service area</label>
-              <input id="gbp-city" name="city" type="text" required placeholder="Dallas, TX" className={gbpField} />
+              <input id="gbp-city" name="city" type="text" required placeholder="Your city or service area" className={gbpField} />
             </div>
             <div>
               <label htmlFor="gbp-keyword" className={gbpLabel}>Main search term you want to win</label>
@@ -261,7 +261,7 @@ export function GmbIncluded() {
       title: "Calls and booking",
       desc: "Call tracking that does not break your NAP consistency, and booking links wired to your actual calendar so ready buyers can act straight from the profile.",
       items: ["Call tracking with correct configuration", "Booking and appointment links", "Website and directions clicks tracked", "Call recording and quality review"],
-      foot: "Half of local leads never visit the website",
+      foot: "Many local leads never visit the website",
       color: "border-emerald-500",
       bg: "bg-emerald-50 dark:bg-emerald-500/10"
     },

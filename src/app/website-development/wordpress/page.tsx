@@ -1,5 +1,5 @@
 import { BuildApproaches, SpecialistWork, BuildComparisonTable, SpeedCTA } from "@/components/WordPressSections";
-import { SixPhasesProcess, EightThingsIncluded, WooCommerceCaseStudy, WorksWellWith } from "@/components/WordPressSections2";
+import { SixPhasesProcess, EightThingsIncluded, WorksWellWith } from "@/components/WordPressSections2";
 import { WordPressHero, WordPressHighlights } from "@/components/WordPressContent";
 import { MobileStickyCta } from "@/components/CustomAppsContent";
 import { FaqSection } from "@/components/FaqSection";
@@ -50,7 +50,6 @@ export default function WordPressPage() {
       <BuildApproaches />
       <BuildComparisonTable />
       <SpecialistWork />
-      <WooCommerceCaseStudy />
       <SixPhasesProcess />
       <EightThingsIncluded />
       <WorksWellWith />

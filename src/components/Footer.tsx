@@ -39,7 +39,7 @@ export function Footer() {
             ) : null}
             <span className="inline-flex min-h-[44px] items-center gap-2">
               <MapPin className="h-4 w-4 text-cyan-600 dark:text-cyan-300" />
-              Serving clients worldwide
+              USA and Pakistan
             </span>
           </div>
         </div>

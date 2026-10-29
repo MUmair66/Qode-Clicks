@@ -1,5 +1,5 @@
 import { ContentHero, ContentProblems, ContentCategories, ContentAIPolicy } from "@/components/ContentWritingSections";
-import { ContentProcess, ContentRefreshing, ContentPricing, ContentResult } from "@/components/ContentWritingSections2";
+import { ContentProcess, ContentRefreshing, ContentPricing } from "@/components/ContentWritingSections2";
 import { FaqSection } from "@/components/FaqSection";
 import { CtaBanner } from "@/components/CtaBanner";
 import { JsonLd } from "@/components/JsonLd";
@@ -56,7 +56,6 @@ export default function ContentWritingPage() {
       <ContentProcess />
       <ContentRefreshing />
       <ContentPricing />
-      <ContentResult />
 
       <FaqSection faqs={faqs} title="Content writing questions" />
 

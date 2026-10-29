@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
+import { Check } from "lucide-react";
 import Link from "next/link";
 
 export function SeoTimeline() {
@@ -66,65 +65,6 @@ export function SeoTimeline() {
   );
 }
 
-export function SeoCaseStudy() {
-  return (
-    <section id="casestudies" className="scroll-mt-24 py-14 md:py-20 px-5 sm:px-6 lg:px-8 bg-slate-100 dark:bg-[#080b12] border-t border-slate-100 dark:border-white/5">
-      <div className="mx-auto max-w-7xl">
-        <p className="text-cyan-700 dark:text-cyan-400 font-semibold text-sm mb-3">Result</p>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-10 md:mb-12 tracking-tight leading-tight">
-          A B2B SaaS company, eleven months of SEO.
-        </h2>
-        
-        <div className="bg-slate-50 dark:bg-[#0a0d14] border border-slate-200 dark:border-white/10 rounded-[2rem] p-8 lg:p-12 text-slate-900 dark:text-white grid lg:grid-cols-2 gap-12 items-center shadow-xl">
-          <div>
-            <p className="text-cyan-700 dark:text-cyan-400 text-sm font-medium mb-4 uppercase tracking-wide">B2B SaaS, workflow tools</p>
-            <h3 className="text-3xl font-bold mb-6 leading-tight">
-              Eighteen thousand keywords and nothing to land on
-            </h3>
-            <p className="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
-              The demand existed, the pages did not. We built a programmatic page template, cleaned up an index bloated with 4,000 thin URLs, and rebuilt internal linking so authority reached the pages that mattered. Content followed the cluster map rather than a publishing calendar.
-            </p>
-            <Link href="#audit" className="inline-flex rounded-full border-2 border-slate-300 dark:border-white/20 px-6 py-3 font-bold hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
-              Get an audit of your site
-            </Link>
-          </div>
-          
-          <div className="bg-slate-100 dark:bg-white/5 rounded-2xl p-8 border border-slate-200 dark:border-white/10 flex flex-col gap-6">
-            <div className="flex justify-between items-center border-b border-slate-200 dark:border-white/10 pb-4">
-              <span className="font-semibold text-slate-800 dark:text-slate-200">Monthly organic sessions</span>
-              <div className="flex gap-6 items-center">
-                <span className="text-slate-500 line-through">4,200</span>
-                <span className="text-emerald-400 font-bold text-xl">17,300</span>
-              </div>
-            </div>
-            <div className="flex justify-between items-center border-b border-slate-200 dark:border-white/10 pb-4">
-              <span className="font-semibold text-slate-800 dark:text-slate-200">Organic demo requests</span>
-              <div className="flex gap-6 items-center">
-                <span className="text-slate-500 line-through">31</span>
-                <span className="text-emerald-400 font-bold text-xl">148</span>
-              </div>
-            </div>
-            <div className="flex justify-between items-center border-b border-slate-200 dark:border-white/10 pb-4">
-              <span className="font-semibold text-slate-800 dark:text-slate-200">Keywords in top 10</span>
-              <div className="flex gap-6 items-center">
-                <span className="text-slate-500 line-through">89</span>
-                <span className="text-emerald-400 font-bold text-xl">1,240</span>
-              </div>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="font-semibold text-slate-800 dark:text-slate-200">Indexed pages</span>
-              <div className="flex gap-6 items-center">
-                <span className="text-slate-500 line-through">6,100</span>
-                <span className="text-emerald-400 font-bold text-xl">2,050</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function SeoPricing() {
   const plans = [
     {
@@ -168,7 +108,7 @@ export function SeoPricing() {
           {plans.map((p, i) => (
             <div key={i} className={`bg-slate-50 dark:bg-[#0a0d14] rounded-3xl p-8 flex flex-col relative ${p.popular ? 'border-2 border-cyan-500 lg:scale-105 shadow-2xl z-10' : 'border border-slate-200 dark:border-white/10'}`}>
               {p.popular && (
-                <div className="absolute -top-4 left-6 bg-cyan-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Most clients start here</div>
+                <div className="absolute -top-4 left-6 bg-cyan-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Recommended starting point</div>
               )}
               <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white">{p.name}</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 h-10">{p.target}</p>

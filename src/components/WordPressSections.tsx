@@ -117,7 +117,7 @@ export function SpecialistWork() {
   const specials: Card[] = [
     {
       title: "Ecommerce and WooCommerce",
-      desc: "Stores that survive a traffic spike, with checkouts that do not lose a third of mobile sessions. Shopify work too where that is the better platform.",
+      desc: "Stores that survive a traffic spike, with checkouts built to keep mobile shoppers moving. Shopify work too where that is the better platform.",
       points: ["Custom checkout and payment gateways", "Subscriptions and recurring billing", "Inventory, ERP and 3PL integrations", "Product feeds ready for shopping ads"],
       price: `From ${PRICING.wooCommerce}`, time: "6 to 12 weeks", icon: ShoppingCart, color: "border-t-emerald-500",
     },
@@ -174,7 +174,7 @@ export function BuildComparisonTable() {
             Which build approach is right for you.
           </h2>
           <p className="text-slate-500 dark:text-slate-400 text-lg">
-            The honest comparison. Most businesses under $2M in revenue do not need a custom build, and we will say so before taking the larger fee.
+            The honest comparison. Many businesses do not need a custom build, and we will say so before taking the larger fee.
           </p>
         </div>
 
@@ -225,7 +225,7 @@ export function SpeedCTA() {
               Website slow? You are paying for visitors who leave before it loads.
             </h2>
             <p className="text-slate-500 dark:text-slate-400 text-lg mb-10 leading-relaxed max-w-2xl">
-              A three-second delay costs a meaningful share of every visitor you paid for. If your site takes four seconds on mobile, you are funding traffic that never sees your offer. Send us the URL and we will test it on real devices and tell you exactly what is slowing it down and what the fix costs.
+              Every extra second of loading loses visitors you paid for. If your site is slow on mobile, you are funding traffic that never sees your offer. Send us the URL and we will test it on real devices and tell you exactly what is slowing it down and what the fix costs.
             </p>
             <div className="flex flex-wrap gap-3">
               {["Free speed report", "Real device testing", "Fixed-price fixes from $680", "No rebuild needed in most cases"].map((pill, i) => (

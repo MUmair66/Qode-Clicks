@@ -40,7 +40,7 @@ export const shopify: ServicePageData = {
     title: "Why most Shopify stores leave money on the table.",
     intro: "Shopify makes it easy to open a store. Making it convert is a different job.",
     items: [
-      { title: "Too many apps", desc: "Every app adds scripts. Twenty apps later the store takes five seconds to load and nobody knows which ones are still needed." },
+      { title: "Too many apps", desc: "Every app adds scripts. Years of installs later the store loads slowly and nobody knows which apps are still needed." },
       { title: "A theme that fights you", desc: "A bought theme was bent into shape with custom code, and now every small change needs a developer." },
       { title: "Checkout drop-off", desc: "Shipping surprises, slow product pages and no trust signals send shoppers away at the last step." },
       { title: "Data that does not add up", desc: "GA4, Meta and Shopify all report different sales numbers, so nobody trusts the marketing reports." },

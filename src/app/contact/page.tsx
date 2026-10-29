@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Contact Us: Free Marketing Audit and Quote | Qode Clicks",
   description:
-    "Contact Qode Clicks for SEO, Google Ads and web development. Teams in Frisco, Texas and Lahore, Pakistan. A specialist replies within one working day.",
+    "Contact Qode Clicks for SEO, Google Ads, web development and video. Our team works across the USA and Pakistan and replies within one working day.",
   path: "/contact",
 });
 

@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, ChevronRight, Search, Zap, Globe, FileText, Database, ShieldAlert } from "lucide-react";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LeadForm } from "@/components/LeadForm";
@@ -53,8 +52,8 @@ export function AeoGeoHero() {
                 <span className="text-sm text-slate-500 dark:text-slate-400">AI surfaces tracked</span>
               </div>
               <div>
-                <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">25 to 40%</strong>
-                <span className="text-sm text-slate-500 dark:text-slate-400">Visibility lift from evidence in published research</span>
+                <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">Research-led</strong>
+                <span className="text-sm text-slate-500 dark:text-slate-400">Tactics chosen from published studies</span>
               </div>
               <div>
                 <strong className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">Monthly</strong>
@@ -212,9 +211,9 @@ export function AeoGeoProblems() {
 
 export function AeoGeoEvidence() {
   const evidence = [
-    { source: "Princeton, KDD 2024", title: "Evidence markers work", desc: "The foundational GEO study ran 10k queries testing content changes against whether an answer cited the page. Adding machine extractable provenance produced the biggest gains: direct quotations, statistics and citations, each worth roughly 25 to 40% more visibility.", take: "Every page we optimize carries verifiable, attributable evidence rather than assertion." },
+    { source: "Princeton, KDD 2024", title: "Evidence markers work", desc: "The foundational GEO study tested content changes across a large set of queries against whether an answer cited the page. Adding machine extractable provenance produced the biggest gains: direct quotations, statistics and cited sources.", take: "Every page we optimize carries verifiable, attributable evidence rather than assertion." },
     { source: "C-SEO Bench, 2025", title: "Most tactics do not help", desc: "The first systematic benchmark of conversational SEO techniques reached a blunt conclusion: the majority of popular tactics produce no benefit, several actively hurt, and plain source relevance keeps working.", take: "We test page quality on the source side rather than chasing prompt engineering tricks." },
-    { source: "2026 survey, 45 studies", title: "It is a pipeline, not a score", desc: "A critical survey reviewing 45 studies found that generative visibility is not one ranking factor but a chain of stages, and that winning one stage does not guarantee the next.", take: "We diagnose which stage you are failing at before changing anything." }
+    { source: "Survey research", title: "It is a pipeline, not a score", desc: "Survey work reviewing the published GEO studies found that generative visibility is not one ranking factor but a chain of stages, and that winning one stage does not guarantee the next.", take: "We diagnose which stage you are failing at before changing anything." }
   ];
 
   return (
